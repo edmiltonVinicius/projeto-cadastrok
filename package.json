@@ -1,0 +1,38 @@
+{
+  "name": "projeto-cadastrok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edmiltonvinicius/projeto-cadastrok.git"
+  },
+  "author": "Edmilton Vinicius - edmilton.vinicius2@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edmiltonvinicius/projeto-cadastrok/issues"
+  },
+  "homepage": "https://github.com/edmiltonvinicius/projeto-cadastrok#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

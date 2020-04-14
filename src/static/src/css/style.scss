@@ -1,0 +1,41 @@
+
+
+// Imagem 
+$font-text: 'Della Respira', serif;
+
+.img-login {
+    height: 100vh;
+    background: url('../../build/img/image-login.jpg');
+    background-size: 100% 100%;
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text {
+    .l1 {
+        font-family: $font-text;
+        color: #fff;    
+    }
+    .l2 {
+        font-family: $font-text;
+        font-size: 16pt;
+        color: #dad6d6;
+    }
+}
+
+// Login
+.back-form {
+    height: 100vh;
+    background-size: 100% 100%;
+    //background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(20, 17, 0));
+    background-image: linear-gradient(rgb(8, 7, 0), rgb(22, 12, 3), rgb(0, 0, 0));
+}
+
+form {
+    input {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        color: rgb(170, 168, 168) !important;
+    }
+}
