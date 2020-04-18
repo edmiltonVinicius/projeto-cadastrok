@@ -31,17 +31,14 @@ const minifyJs = () => {
         }))
         .pipe(concat('index.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('src/biuld/js/'))
+        .pipe(gulp.dest('src/static/build/js/'))
 }
 
-const watchJs = () => {
-    gulp.watch('src/static/src/js/*.js', minifyJs)
+const server = () => {
+    gulp.watch(['src/static/src/js/*.js', 'src/static/src/css/*.scss'],
+    gulp.series(minifyJs, compilerSass))
 }
-
-const watchSass = () => {
-    gulp.watch('src/static/src/css/*.scss', compilerSass)
-}
-
 
 exports.default = gulp.parallel(minifyImage, compilerSass, minifyJs,
-    gulp.series(watchSass, watchJs))
+    gulp.series(server))
+    

@@ -27,7 +27,7 @@
                 <div class="text-center pt-5">
                     <img class="border rounded-pill border-dark img-fluid" src="../../static/build/img/test-logo.png" alt="Logo CadastroOK">
                 </div>
-                <div class="col-12 col-md-9 col-lg-12 mt-4">
+                <div class="col-12 col-md-9 col-lg-12 mt-4 cont">
                     <form action="/login" method="post">
                         <div class="form-group mb-4">
                             <label for="user" class="d-none">User</label>
@@ -42,9 +42,9 @@
                             <button class="btn btn-outline-light px-5">Sing in</button>
                         </div>
                     </form>
-                </div>
-                <div class="col mt-5 text-center">
-                    <a href="/register" class="text-decoration-none text-warning" style="font-size: 14pt;">Ok, I want to register!</a>
+                    <div class="col mt-5 text-center">
+                        <a href="/register" id="btnRegister" class="text-decoration-none text-warning" style="font-size: 14pt;">Ok, I want to register!</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,7 +54,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-   
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../static/build/js/index.min.js"></script>
 
 </body>
 </html>
