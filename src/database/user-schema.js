@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
-UserSchema.pre('save', (next) => {
+UserSchema.pre('save', function(next) {
     const saltRounds = 10
     bcrypt.hash(this.password, saltRounds, (err, hash) => {
         if(err) return next(err)
