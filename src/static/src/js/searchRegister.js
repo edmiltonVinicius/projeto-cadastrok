@@ -12,19 +12,19 @@ function showLoading(){
 }
 
 function showAnswer(res){
-    divLoad.style.display='none'
-    divLogin.innerHTML=res.data
-    divLogin.style.display='block'
+    setTimeout(() => {
+        divLoad.style.display='none'
+        divLogin.innerHTML=res.data
+        divLogin.style.display='block'        
+    }, 2000);
 } 
 
 function funcRegister() {
     showLoading()
-    setInterval(() => {
-        axios.get('/register')
-            .then((res) => {
-                showAnswer(res)
-            })
-    }, 2000);
+    axios.get('/register')
+        .then((res) => {
+            showAnswer(res)
+     })
 }
 
 myLink.addEventListener('click', funcRegister)
