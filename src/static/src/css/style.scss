@@ -28,8 +28,7 @@ $font-text: 'Della Respira', serif;
 // Login
 .back-form {
     height: 100vh;
-    background-size: 100% 100%;
-    //background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(20, 17, 0));
+    background-size: 100% 100%;//background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(20, 17, 0));
     background-image: linear-gradient(rgb(8, 7, 0), rgb(22, 12, 3), rgb(0, 0, 0));
 }
 
@@ -39,4 +38,38 @@ form {
         color: rgb(170, 168, 168) !important;
     }
 }
-//ddddd
+
+// Div Loading
+$bg-divs: #333232;
+
+.loading {
+    width: 90%;
+    height: 370px;
+    background-color: rgb(22, 22, 22);
+    display: none;
+
+    @mixin pattrendivs($width-div, $height-div) {
+        background-color: $bg-divs;
+        width: $width-div;
+        height: $height-div;
+    }
+
+    .dtitle {
+        @include pattrendivs(47%, 32px)
+    }
+    .dname {
+        @include pattrendivs(73%, 35px);
+    }
+    .dpass {
+        @include pattrendivs(47%, 35px);
+    }
+    .demail {
+        @extend .dname;
+    }
+    .dlogin {
+        @include pattrendivs(40%, 45px);
+    }
+    .dlink {
+        @include pattrendivs(30%, 10px);
+    }
+}
