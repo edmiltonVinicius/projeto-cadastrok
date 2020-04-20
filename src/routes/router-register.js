@@ -12,6 +12,7 @@ router.post('/', (req, res) => {
     const { userName, userPassword, userEmail} = req.body
     User.findOne({userName}, (err, arq) => {
         if(err) return res.json(err)
+        if(arq) return res.json(arq)
     })
     
     const newUser = new User({
@@ -20,7 +21,7 @@ router.post('/', (req, res) => {
         email: userEmail
     })
     newUser.save(err => {
-        if(err) res.json(err)
+        if(err) return res.send('Ocorreu algum erro, por favor tente novamente!')
         res.send('Registrado com sucesso!')
     })
 })
