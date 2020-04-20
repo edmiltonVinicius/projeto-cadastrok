@@ -2,4 +2,9 @@
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
 .back-form{height:100vh;background-size:100% 100%;background-image:linear-gradient(#080700,#160c03,black)}
+form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}.containerForm{width:90%;background-color:rgba(23,24,23,0.5)}
+.containerForm .h2{font-size:1.5em}.containerForm a{text-decoration:none}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
+.shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
+.text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
+.back-form{height:100vh;background-size:100% 100%;background-image:linear-gradient(#080700,#160c03,black)}
 form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}

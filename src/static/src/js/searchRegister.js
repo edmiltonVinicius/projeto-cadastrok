@@ -1,4 +1,4 @@
-const myLink = document.getElementById('btnRegister')
+const myLink = document.getElementById('btnRegister-js')
 
 function stopPadrao(event) {
     event.preventDefault()
