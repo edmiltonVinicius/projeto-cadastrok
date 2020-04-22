@@ -35,7 +35,6 @@
                     <div class="demail rounded mx-auto mb-4"></div>
                     <div class="dlogin rounded mx-auto mb-4"></div>
                     <div class="dlink rounded-pill mx-auto"></div>
-
                 </div>
 
                 <div class="containerForm mx-auto text-center rounded mt-4">
@@ -43,23 +42,23 @@
                     <form id="for" class="mt-4">
                         <div class="form-group">
                             <label for="user" class="w-75">
-                                <input type="text" class="form-control" name="userName" placeholder="Type your name" />
+                                <input type="text" class="form-control" id="entName" oninput="validationInput('entName','3')" name="userName" placeholder="Type your name" required/>
                             </label>
                         </div>
                         <div class="form-group w-100 mb-2">
                             <label for="password" class="w-75">
-                                <input type="password" class="form-control w-75" name="userPassword" placeholder="Choose a password" />
+                                <input type="password" class="form-control w-75" id="entPass" oninput="validationInput('entPass','6')" name="userPassword" placeholder="Choose a password" required/>
                                 <small class="form-text text-muted text-left">Add at least 6 characters</small>
                             </label>
                         </div>
                         <div class="form-group">
                             <label for="email" class="w-75">
-                                <input type="email" class="form-control" name="userEmail" placeholder="Now your e-mail" />
+                                <input type="email" class="form-control" name="userEmail" placeholder="Now your e-mail"/>
                             </label>
                         </div>
                         <div class="pb-5 text-center">
                             <button class="btn btn-outline-light py-2 d-block mx-auto mb-4" onclick="createUser()">Create my user</button>             
-                            <a href="/" class="text-warning pt-2">←Come Back</a>
+                            <a href="/" class="text-warning pt-2 link">←Come Back</a>
                         </div>
                     </form>
                 </div>                

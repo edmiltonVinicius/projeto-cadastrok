@@ -2,15 +2,12 @@
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
 .back-form{height:100vh;background-size:100% 100%;background-image:linear-gradient(#080700,#160c03,black)}
-form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}.loading{width:90%;height:370px;background-color:#161616;display:none}
+form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}.containerForm{width:90%;background-color:rgba(23,24,23,0.5);display:none}
+.containerForm .h2{font-size:1.5em}.containerForm a{text-decoration:none}.loading{width:90%;height:370px;background-color:#161616;display:none}
 .loading .dtitle{background-color:#333232;width:47%;height:32px}.loading .dname,.loading .demail{background-color:#333232;width:73%;height:35px}
 .loading .dpass{background-color:#333232;width:47%;height:35px}.loading .dlogin{background-color:#333232;width:40%;height:45px}
-.loading .dlink{background-color:#333232;width:30%;height:10px}.containerForm{width:90%;background-color:rgba(23,24,23,0.5);display:none}
-.containerForm .h2{font-size:1.5em}.containerForm a{text-decoration:none}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
+.loading .dlink{background-color:#333232;width:30%;height:10px}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
 .back-form{height:100vh;background-size:100% 100%;background-image:linear-gradient(#080700,#160c03,black)}
-form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}.loading{width:90%;height:370px;background-color:#161616;display:none}
-.loading .dtitle{background-color:#333232;width:47%;height:32px}.loading .dname,.loading .demail{background-color:#333232;width:73%;height:35px}
-.loading .dpass{background-color:#333232;width:47%;height:35px}.loading .dlogin{background-color:#333232;width:40%;height:45px}
-.loading .dlink{background-color:#333232;width:30%;height:10px}
+form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}
