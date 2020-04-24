@@ -7,19 +7,19 @@ router.post('/', (req, res) => {
     const { userName, userPassword, userEmail} = req.body
 
     User.findOne({userName}, (err, arq) => {
-        if(err) return res.json(err)
-        if(arq) return res.json(arq)
+        if(err) res.json({message: 'Error occurred, try again'})
+        if(arq) res.json({message: 'User already Registered'})
+        const newUser = new User({
+            name: userName,
+            password: userPassword,
+            email: userEmail
+        })
+        newUser.save(err => {
+            if(err) res.json({message: 'Erro on Register'})
+            res.json({message: 'Register Successfully'})
+        })
     })
     
-    const newUser = new User({
-        name: userName,
-        password: userPassword,
-        email: userEmail
-    })
-    newUser.save(err => {
-        if(err) return res.send(err)
-        return res.json(newUser)
-    })
 })
 
 

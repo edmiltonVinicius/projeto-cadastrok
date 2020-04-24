@@ -13,8 +13,8 @@ function createUser() {
 
     axios.post('/register', { userName, userPassword, userEmail })
         .then((res) => {
-            alert(res)
-            console.log(res)
+            alert(res.data.message)
+            console.log(res.data)
         })
-        .catch(err => alert(err))
+        .catch(err => alert(err.data.message))
 }
