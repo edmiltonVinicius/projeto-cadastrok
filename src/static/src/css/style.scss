@@ -27,9 +27,9 @@ $font-text: 'Della Respira', serif;
 
 // Login
 .back-form {
-    height: 100vh;
+    min-height: 100vh !important;
     background-size: 100% 100%;//background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(20, 17, 0));
-    background-image: linear-gradient(rgb(8, 7, 0), rgb(22, 12, 3), rgb(0, 0, 0));
+    background-color: rgb(0, 0, 0);
 }
 
 form {

@@ -1,5 +1,5 @@
-require('dotenv').config()
-global.banco = require('./src/database/connection')
+/*require('dotenv').config()
+global.banco = require('./src/database/connection')*/
 
 const express = require('express')
 const app = express()
