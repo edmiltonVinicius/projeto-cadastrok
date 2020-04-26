@@ -7,8 +7,8 @@
     <link rel="icon" href="../../static/build/img/test-logo.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/build/css/style.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/cc25343ae0.js"></script>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
                         </div>
                     </form>
                     <div class="col mt-5 text-center">
-                        <button class="btn btn-outline-warning border-0" id="btnRegister-js" onclick="showAnswer()">Ok, I want to register</button>
+                        <button class="btn btn-outline-warning border-0" id="btnRegister-js" onclick="showAnswer()" style="font-size: 14pt;">Ok, I want to register!</button>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                         <div class="form-group w-100 mb-2">
                             <label for="password" class="w-75">
                                 <input type="password" class="form-control d-inline w-75" id="entPass" oninput="validationInput('entPass','6')" name="userPassword" placeholder="Choose a password" required/>
-                                <button type="button" class="iconPass ml-3 pb-3 btn btn-light" onclick="showHide()"></button>
+                                <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide()"><i class="fa fa-unlock-alt fa-1x" aria-hidden="true"></i></button>
                                 <small class="form-text ml-2 text-muted text-left">Add at least 6 characters</small>
                             </label>
                         </div>

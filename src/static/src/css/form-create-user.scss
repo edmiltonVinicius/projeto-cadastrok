@@ -1,8 +1,10 @@
 @import "style.scss";
 
+
+$bg-cinza: rgba(23, 24, 23, 0.5);
 .containerForm {
     width: 90%;
-    background-color: rgba(23, 24, 23, 0.5);
+    background-color: $bg-cinza;
     display: none;
     .h2 {
        font-size: 1.5em; 
@@ -12,11 +14,10 @@
         text-decoration: none;
     }
 
-    .iconPass {
-        width: 30px;
-        height: 28px;
-        background-image: url('../../build/img/icon-show-pass.png');
-        background-size: 100% 100%;
-        margin-top: -5px;
+    .btnPassword {
+        background-color: $bg-cinza;
+        font-size: 15pt;
+        margin-top: -6px;
+        
     }
 }
