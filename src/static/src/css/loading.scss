@@ -20,7 +20,8 @@ $bg-divs: #333232;
         @include pattrendivs(73%, 35px);
     }
     .dpass {
-        @include pattrendivs(47%, 35px);
+        @include pattrendivs(49%, 35px);
+        
     }
     .demail {
         @extend .dname;
