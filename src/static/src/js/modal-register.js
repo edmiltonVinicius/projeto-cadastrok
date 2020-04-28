@@ -3,8 +3,18 @@ function hideLoading(text){
     const textModal = document.getElementById('textModal')
     const btnModal = document.getElementById('modal-footer')
 
-    bodyModal.style.display='none'
-    textModal.innerHTML=text
-    btnModal.style.display='block'
+    setTimeout(() => {
+        bodyModal.style.display='none'
+        textModal.innerHTML=text
+        btnModal.style.display='block'
+    }, 1100);
+}
+
+function actionBtnModal() {
+    const btnCloseModal = document.getElementById('btnCloseModal')
+    btnCloseModal.addEventListener('click', () => {
+        document.getElementById('cont').style.display='block'
+        document.getElementById('containerForm').style.display='none'
+    })
 }
 

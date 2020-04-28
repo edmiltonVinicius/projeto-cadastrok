@@ -23,8 +23,13 @@ function createUser() {
                 clearInput('entEmail')
                 clearInput('entPass')
                 hideLoading(res.data.message)
-            }else if(res.data.message === 'Email already Registered') {
+                actionBtnModal()
+
+            } else if(res.data.message === 'Email already Registered') {
                 hideLoading(res.data.message)
+
+            } else {
+                hideLoading('Sorry, an error occurred try again')
             }
         })
         .catch(err => {

@@ -3,12 +3,12 @@
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
 .back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
 form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important}.containerForm{width:90%;background-color:rgba(23,24,23,0.5);display:none}
-.containerForm .h2{font-size:1.5em}.containerForm a{text-decoration:none}.containerForm .btnPassword{background-color:rgba(23,24,23,0.5);font-size:15pt;margin-top:-6px}
+.containerForm .h2{font-size:1.5em}.containerForm a{text-decoration:none}.containerForm .btnPassword{background-color:rgba(23,24,23,0.5);font-size:15pt;margin-top:-4px}
 .loading{width:90%;height:370px;background-color:#161616;display:none}.loading .dtitle{background-color:#333232;width:47%;height:32px}
 .loading .dname,.loading .demail{background-color:#333232;width:73%;height:35px}.loading .dpass{background-color:#333232;width:49%;height:35px}
 .loading .dlogin{background-color:#333232;width:40%;height:45px}.loading .dlink{background-color:#333232;width:30%;height:10px}
 .styleModal{background-color:rgba(0,0,0,0.7);min-height:160px}.styleModal .bodyModal{width:100%;height:130px}
-.styleModal .imageModal{max-width:100%;max-height:100%}.styleModal #textModal{font-size:17px}
+.styleModal .imageModal{max-width:100%;max-height:100%}.styleModal #textModal{font-size:18px}
 .styleModal #modal-footer{display:none}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}

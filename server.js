@@ -1,7 +1,6 @@
 require('dotenv').config()
 global.banco = require('./src/database/connection')
 
-
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
