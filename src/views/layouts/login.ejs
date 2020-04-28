@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastrOK</title>
-    <link rel="icon" href="../../static/build/img/test-logo.png"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="../../static/build/img/test-logo.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/build/css/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/cc25343ae0.js"></script>
 
 </head>
+
 <body>
-    
+
     <div class="containner-fluid">
         <div class="row no-gutters">
             <div class="img-login col-lg-7 d-none d-lg-block">
@@ -24,29 +27,34 @@
                 </div>
             </div>
             <div class="back-form col-12 col-lg-5 pt-2">
-                
+
                 <div class="text-center pt-4">
-                    <img class="border rounded-pill border-dark img-fluid" src="../../static/build/img/test-logo.png" alt="Logo CadastroOK">
+                    <img class="border rounded-pill border-dark img-fluid" src="../../static/build/img/test-logo.png"
+                        alt="Logo CadastroOK">
                 </div>
 
                 <div class="col-12 col-md-9 col-lg-12 mt-4 cont">
                     <form action="/login" method="post">
                         <div class="form-group mb-4">
                             <label for="user" class="d-none">User</label>
-                            <input type="text" class="form-control border border-info w-75 mx-auto" name="login-user" placeholder="Type your user">
+                            <input type="text" class="form-control border border-info w-75 mx-auto" name="login-user"
+                                placeholder="Type your user">
                         </div>
 
                         <div class="form-group mb-4">
                             <label for="password" class="d-none">password</label>
-                            <input type="password" class="form-control border border-info w-75 mx-auto" name="password-user" placeholder="Type your password">
+                            <input type="password" class="form-control border border-info w-75 mx-auto"
+                                name="password-user" placeholder="Type your password">
                         </div>
                         <div class="text-center">
                             <button class="btn btn-outline-light py-2 px-5">Login</button>
                         </div>
                     </form>
                     <div class="col mt-5 text-center">
-                        <button class="btn btn-outline-warning border-0" id="btnRegister-js" onclick="showAnswer()" style="font-size: 14pt;">Ok, I want to register!</button>
+                        <button class="btn btn-outline-warning border-0" id="btnRegister-js" onclick="showAnswer()"
+                            style="font-size: 14pt;">Ok, I want to register!</button>
                     </div>
+
                 </div>
 
                 <div class="loading mx-auto rounded mt-4 pt-4">
@@ -63,39 +71,75 @@
                     <form id="for" class="mt-4" autocapitalize="off">
                         <div class="form-group">
                             <label for="user" class="w-75">
-                                <input type="text" class="form-control" id="entName" oninput="validationInput('entName','3')" name="userName" placeholder="Type your name" required/>
+                                <input type="text" class="form-control" id="entName"
+                                    oninput="validationInput('entName','3')" name="userName"
+                                    placeholder="Type your name" required />
                             </label>
                         </div>
                         <div class="form-group w-100 mb-2">
                             <label for="password" class="w-75">
-                                <input type="password" class="form-control d-inline w-75" id="entPass" oninput="validationInput('entPass','6')" name="userPassword" placeholder="Choose a password" required/>
-                                <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide()"><i class="fa fa-unlock-alt fa-1x" aria-hidden="true"></i></button>
+                                <input type="password" class="form-control d-inline w-75" id="entPass"
+                                    oninput="validationInput('entPass','6')" name="userPassword"
+                                    placeholder="Choose a password" required />
+                                <button type="button" class="btn border-0 text-light btnPassword"
+                                    onclick="showHide()"><i class="fa fa-unlock-alt fa-1x"
+                                        aria-hidden="true"></i></button>
                                 <small class="form-text ml-2 text-muted text-left">Add at least 6 characters</small>
                             </label>
                         </div>
                         <div class="form-group">
                             <label for="email" class="w-75">
-                                <input type="email" class="form-control" id="entEmail" oninput="validationEmail()" name="userEmail" placeholder="Now your e-mail"/>
+                                <input type="email" class="form-control" id="entEmail" oninput="validationEmail()"
+                                    name="userEmail" placeholder="Now your e-mail" />
                             </label>
                         </div>
                         <div class="pb-5 text-center">
-                            <button class="btn btn-outline-secondary py-2 d-block mx-auto mb-4 btnCreate-js" disabled onclick="createUser()">Create my user</button>             
+                            <button class="btn btn-outline-secondary py-2 d-block mx-auto mb-4 btnCreate-js"
+                                data-toggle="modal" data-target="#modalRegister" disabled onclick="createUser()">
+                                Create my user
+                            </button>
                             <a href="/" class="text-warning pt-2 link">←Come Back</a>
+
+                            <div class="modal fade" role="dialog" id="modalRegister" aria-labelledby="modalRegister">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content border-warning styleModal">
+                                        <div class="modal-body">
+                                            <div class="text-center bodyModal">
+                                                <img src="../../static/build/img/loading.gif" 
+                                                class="imageModal" alt="Image center Loding">
+                                            </div>
+                                            <p class="text-white pt-2" id="textModal"></p>
+                                        </div>
+                                        <div class="modal-footer w-75 mx-auto" id="modal-footer">
+                                            <button class="btn btn-warning mx-auto px-4" data-dismiss="modal" type="button">OK</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </form>
-                </div>                
+                </div>
 
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../../static/build/js/index.min.js"></script>
 
 </body>
-</html>
 
+</html>

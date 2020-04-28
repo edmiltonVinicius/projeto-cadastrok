@@ -5,7 +5,6 @@ function clearInput(id){
     input.style.borderColor='#fff'
 }
 
-
 function createUser() {
     const f = document.getElementById('for')
     function stopPadrao2(event) {
@@ -13,9 +12,9 @@ function createUser() {
     }
     f.addEventListener('submit', stopPadrao2)
 
-    let userName = document.getElementById('entName').value
-    let userPassword = document.getElementById('entPass').value
-    let userEmail = document.getElementById('entEmail').value
+    const userName = document.getElementById('entName').value
+    const userPassword = document.getElementById('entPass').value
+    const userEmail = document.getElementById('entEmail').value
 
     axios.post('/register', { userName, userPassword, userEmail })
         .then((res) => {
@@ -23,9 +22,9 @@ function createUser() {
                 clearInput('entName')
                 clearInput('entEmail')
                 clearInput('entPass')
-                alert(res.data.message)
+                hideLoading(res.data.message)
             }else if(res.data.message === 'Email already Registered') {
-                alert(res.data.message)
+                hideLoading(res.data.message)
             }
         })
         .catch(err => {
