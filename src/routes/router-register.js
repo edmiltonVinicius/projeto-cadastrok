@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
         })
         newUser.save(err => {
             if(err) return res.json({message: 'Erro on Register'})
-            res.json({message: 'Register Successfully'})
+            res.json({message: 'User created'})
         })
     })
     
