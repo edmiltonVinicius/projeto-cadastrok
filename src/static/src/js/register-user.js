@@ -15,6 +15,9 @@ function createUser() {
     const userName = document.getElementById('entName').value
     const userPassword = document.getElementById('entPass').value
     const userEmail = document.getElementById('entEmail').value
+    
+    document.getElementById('textModal').style.display='none'
+    document.querySelector('.bodyModal').style.display='block'
 
     axios.post('/register', { userName, userPassword, userEmail })
         .then((res) => {

@@ -6,6 +6,7 @@ function hideLoading(text){
     setTimeout(() => {
         bodyModal.style.display='none'
         textModal.innerHTML=text
+        textModal.style.display='block'
         btnModal.style.display='block'
     }, 1100);
 }
