@@ -12,15 +12,16 @@ function createUser() {
     }
     f.addEventListener('submit', stopPadrao2)
 
-    const userName = document.getElementById('entName').value
-    const userPassword = document.getElementById('entPass').value
-    const userEmail = document.getElementById('entEmail').value
     
     document.getElementById('letsIndex').style.display='none'
     document.getElementById('btnCloseModal').style.display='none'
     document.getElementById('modal-footer').style.display='none'
     document.getElementById('textModal').style.display='none'
     document.querySelector('.bodyModal').style.display='block'
+    
+    const userName = document.getElementById('entName').value
+    const userPassword = document.getElementById('entPass').value
+    const userEmail = document.getElementById('entEmail').value
 
     axios.post('/register', { userName, userPassword, userEmail })
         .then((res) => {
@@ -29,7 +30,7 @@ function createUser() {
                 clearInput('entEmail')
                 clearInput('entPass')
                 hideLoading(res.data.message)
-                actionfooterModal()
+                returnLogin()
 
             } else if(res.data.message === 'Email already Registered') {
                 hideLoading(res.data.message)
@@ -37,10 +38,11 @@ function createUser() {
 
             } else {
                 hideLoading('Sorry, an error occurred try again')
+                closeModal()
             }
         })
         .catch(err => {
-            alert(err)
-            console.log('erro: ' + err)
+            hideLoading('Sorry, an error occurred try again')
+            closeModal()
         })
 }

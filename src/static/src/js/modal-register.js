@@ -2,19 +2,19 @@ function hideLoading(text){
     const bodyModal = document.querySelector('.bodyModal')
     const textModal = document.getElementById('textModal')
     const footerModal = document.getElementById('modal-footer')
-    const btnletsIndex = document.getElementById('letsIndex')
 
     setTimeout(() => {
         bodyModal.style.display='none'
         textModal.innerHTML=text
         textModal.style.display='block'
-        // btnletsIndex.style.display='block'
         footerModal.style.display='block'
     }, 1100);
 }
 
-function actionfooterModal() {
-    const btnletsIndex = document.getElementById('letsIndex')
+const btnletsIndex = document.getElementById('letsIndex')
+const btnCloseModal = document.getElementById('btnCloseModal')
+
+function returnLogin() {
     btnletsIndex.style.display='block'
     btnletsIndex.addEventListener('click', () => {
         document.getElementById('cont').style.display='block'
@@ -23,9 +23,7 @@ function actionfooterModal() {
 }
 
 function closeModal() {
-    document.getElementById('letsIndex').style.display='none'
-    document.getElementById('btnCloseModal').style.display='block'
-    const btnCloseModal = document.getElementById('btnCloseModal')
+    btnCloseModal.style.display='block'
     btnCloseModal.addEventListener('click', () => {
         document.getElementById('modalRegister').style.display='none'
     })
