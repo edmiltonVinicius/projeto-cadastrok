@@ -16,6 +16,9 @@ function createUser() {
     const userPassword = document.getElementById('entPass').value
     const userEmail = document.getElementById('entEmail').value
     
+    document.getElementById('letsIndex').style.display='none'
+    document.getElementById('btnCloseModal').style.display='none'
+    document.getElementById('modal-footer').style.display='none'
     document.getElementById('textModal').style.display='none'
     document.querySelector('.bodyModal').style.display='block'
 
@@ -26,10 +29,11 @@ function createUser() {
                 clearInput('entEmail')
                 clearInput('entPass')
                 hideLoading(res.data.message)
-                actionBtnModal()
+                actionfooterModal()
 
             } else if(res.data.message === 'Email already Registered') {
                 hideLoading(res.data.message)
+                closeModal()
 
             } else {
                 hideLoading('Sorry, an error occurred try again')
