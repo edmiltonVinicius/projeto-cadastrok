@@ -1,6 +1,6 @@
 
-function showHide() {
-    const inputPass = document.getElementById('entPass')
+function showHide(id) {
+    const inputPass = document.getElementById(id)
 
     if(inputPass.type == 'password'){
         inputPass.type = 'text'

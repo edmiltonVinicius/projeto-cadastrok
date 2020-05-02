@@ -3,7 +3,8 @@ function validationInput(id, q) {
     const camp = document.getElementById(id)
     
     if (input.length >= Number(q)) {
-        camp.style.borderColor = "green"
+        camp.classList.remove('border-danger')
+        camp.classList.add('border-success')
         camp.style.background = "url('../static/build/img/certo.png') 95% 50% no-repeat"
         
     } else if(input.length == ''){
@@ -12,14 +13,17 @@ function validationInput(id, q) {
     } else {
         camp.classList.remove('border-light')
         camp.style.background = "none"
-        camp.style.borderColor = "red"  
+        camp.classList.add('border-danger')  
     }
 }
 
+const buttonCreate = document.querySelector('.btnCreate-js')
+const buttonLogin = document.querySelector('.btnLogin-js')
+let valid = false
 
-function validationEmail(){
-    const input = document.getElementById('entEmail').value
-    const camp = document.getElementById('entEmail')
+function validationEmail(id){
+    const input = document.getElementById(id).value
+    const camp = document.getElementById(id)
     const user = input.substring(0, input.indexOf('@'))
     const domain = input.substring(input.indexOf('@') + 1, input.length)
     
@@ -29,24 +33,27 @@ function validationEmail(){
         (domain.search(' ') === -1) &&
         (domain.indexOf('.') != -1)
     ){
-        camp.style.borderColor="green"
+        camp.classList.remove('border-danger')
+        camp.classList.add('border-success')
         camp.style.background="url('../static/build/img/certo.png') 95% 50% no-repeat"
+        valid = true
         verificationButtonCreate()
 
     } else if(input.length == 0) {
+        valid = false
         camp.classList.add('border-light')
         disableButtonCreate()
         
     } else {
-        camp.classList.remove('border-light')
-        camp.style.borderColor="red"
-        camp.style.background="none" 
         disableButtonCreate()
+        valid = false
+        camp.style.background='none'
+        camp.classList.remove('border-light')
+        camp.classList.add('border-danger')
     }
 }
 
 
-const buttonCreate = document.querySelector('.btnCreate-js')
 
 function disableButtonCreate(){
     buttonCreate.setAttribute('disabled', 'disabled')
@@ -58,13 +65,21 @@ function enableButtonCreate(){
     buttonCreate.removeAttribute('disabled')
     buttonCreate.classList.add('btn-outline-light')
 }
+function enableButtonLogin(){
+    buttonLogin.removeAttribute('disabled')
+    buttonLogin.classList.add('btn-outline-light')
+}
 
 function verificationButtonCreate(){
     setInterval(() => {
         if( (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
-            (document.getElementById('entEmail').style.borderColor == 'green') ){
-            enableButtonCreate()
+            (valid === true) ){
+                enableButtonCreate()
+
+        } else if(valid === true && document.getElementById('pass').value.length >= 6) {
+            enableButtonLogin()
+
         } else {
             disableButtonCreate()
         }
