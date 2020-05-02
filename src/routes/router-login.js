@@ -12,22 +12,22 @@ router.post('/', (req, res) => {
     const { loginUser, passUser} = req.body
     
     User.findOne({email: loginUser}, (err, arq) => {
-        if(err) return res.json({erroFind: 'erro no query'})
+        if(err) return res.json({message: 'Sorry, there was an error, please try again.'})
         if(arq){
             bcrypt.compare(passUser, arq.password, (err, result) => {
-                if(err) return res.json({erroBcrpt: 'err on encrypted password'})
+                if(err) return res.json({message: 'Sorry, there was an error, please try again.'})
                 if(result === true){
                     const token = jwt.sign({_id: arq._id}, process.env.TOKEN_KEY, 
                         {expiresIn: '1d'}, (err, token) => {
-                            if(err) return res.json({erroJwt: 'erro no Jwt'})
-                            return res.json({token: token, status: result})
+                            if(err) return res.json({message: 'Sorry, there was an error, please try again'})
+                            return res.json({message: `Hi, ${arq.name}, you is cadastred.`})
                     })
                 }else {
-                    return res.json({erroCompare: 'Senha inválida!'})
+                    return res.json({message: 'Invalid username or password!'})
                 } 
             })
         }else {
-            return res.json({erro: 'usuario ou senha inválidos!'})            
+            return res.json({message: 'User not Cadastred!'})            
         }
     })    
       
