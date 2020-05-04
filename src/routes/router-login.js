@@ -5,7 +5,7 @@ const router = express.Router()
 const User = require('../database/user-schema')
 
 router.get('/', (req, res) => {
-    res.render('layouts/login', {})
+    res.status(200).render('layouts/login')
 })
 
 router.post('/', (req, res) => {
@@ -20,14 +20,14 @@ router.post('/', (req, res) => {
                     const token = jwt.sign({_id: arq._id}, process.env.TOKEN_KEY, 
                         {expiresIn: '1d'}, (err, token) => {
                             if(err) return res.json({message: 'Sorry, there was an error, please try again'})
-                            return res.json({message: `Hi, ${arq.name}, you is cadastred.`})
+                            return res.status(200).json({message: 'valid data', token, code: 200})
                     })
                 }else {
-                    return res.json({message: 'Invalid username or password!'})
+                    return res.json({message: 'Invalid username or password!', code: 401})
                 } 
             })
         }else {
-            return res.json({message: 'User not Cadastred!'})            
+            return res.json({message: 'Invalid username or password!', code: 401})            
         }
     })    
       

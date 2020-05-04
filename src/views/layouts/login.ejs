@@ -45,11 +45,14 @@
                             <label for="password" class="d-none">password</label>
                             <input type="password" class="form-control d-inline border border-light w-75"
                                 id="pass" oninput="validationInput('pass', '6')" name="passUser" placeholder="Type your password">
-                            <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
+                            
+                                <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
                                     aria-hidden="true"></i></button>
+                                
+                                <div class="errorLogin d-none mt-2 text-danger" style="font-size: 13pt;"></div>
                             </div>
                         <div class="text-center">
-                            <button class="btn btn-outline-light py-2 px-5 btnLogin-js" disabled type="submit" onclick="LoginUser()">Login</button>
+                            <button class="btn btn-outline-secondary py-2 px-5 btnLogin-js" disabled type="submit" onclick="LoginUser()">Login</button>
                         </div>
                     </form>
                     <div class="col mt-5 text-center">

@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000
 
 const routerLogin = require('./src/routes/router-login')
 const routerRegister = require('./src/routes/router-register')
+const routerDashboard = require('./src/routes/router-dashboard')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/src/views')
@@ -18,5 +19,6 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/', routerLogin)
 app.use('/register', routerRegister)
+app.use('/dashboard', routerDashboard)
 
 app.listen(port, () => console.log('Servidor Node ON.'))
