@@ -69,6 +69,11 @@ function enableButtonLogin(){
     buttonLogin.removeAttribute('disabled')
     buttonLogin.classList.add('btn-outline-light')
 }
+function disableButtonLogin(){
+    buttonLogin.setAttribute('disabled', 'disabled')
+    buttonLogin.classList.remove('btn-outline-light')
+    buttonLogin.classList.add('btn-outline-secondary')
+}
 
 function verificationButtonCreate(){
     setInterval(() => {
@@ -82,6 +87,7 @@ function verificationButtonCreate(){
 
         } else {
             disableButtonCreate()
+            disableButtonLogin()
         }
     }, 100);
 }
