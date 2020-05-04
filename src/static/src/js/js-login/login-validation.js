@@ -25,7 +25,7 @@ const LoginUser = () => {
                     divErro.classList.remove('d-none')
                     
                 }
-            }, 1100);
+            }, 1000);
         })
         .catch(err => {
             divErro.innerHTML=res.data.message

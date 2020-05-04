@@ -14,7 +14,7 @@ const minifyImage = () => {
 }
 
 const compilerSass = () => {
-    return gulp.src('src/static/src/css/*.scss')
+    return gulp.src('src/static/src/css/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.min.css'))
         .pipe(uglifycss({
@@ -24,8 +24,8 @@ const compilerSass = () => {
         .pipe(gulp.dest('src/static/build/css/'))
 }
 
-const minifyJs = () => {
-    return gulp.src('src/static/src/js/*.js')
+const minifyJsLogin = () => {
+    return gulp.src('src/static/src/js/js-login/*.js')
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
@@ -33,12 +33,21 @@ const minifyJs = () => {
         .pipe(uglify())
         .pipe(gulp.dest('src/static/build/js/'))
 }
-
-const server = () => {
-    gulp.watch(['src/static/src/js/*.js', 'src/static/src/css/*.scss'],
-    gulp.series(minifyJs, compilerSass))
+const minifyJsDashboard = () => {
+    return gulp.src('src/static/src/js/js-dashboard/*.js')
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
+        .pipe(concat('dashboard.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('src/static/build/js/'))
 }
 
-exports.default = gulp.parallel(minifyImage, compilerSass, minifyJs,
+const server = () => {
+    gulp.watch(['src/static/src/js/js-login/*.js', 'src/static/src/js/js-dashboard/*.js', 'src/static/src/css/**/*.scss'],
+    gulp.series(minifyJsLogin, minifyJsDashboard, compilerSass))
+}
+
+exports.default = gulp.parallel(minifyImage, compilerSass, minifyJsLogin, minifyJsDashboard,
     gulp.series(server))
     
