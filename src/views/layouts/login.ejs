@@ -38,7 +38,7 @@
                         <div class="form-group mb-4">
                             <label for="user" class="d-none">User</label>
                             <input type="text" class="form-control border border-light w-100 mx-auto" name="loginUser"
-                                id="user" oninput="validationEmail('user')" placeholder="Type your user">
+                                id="user" oninput="validationEmail('user', '.btnLogin-js')" placeholder="Type your user">
                         </div>
 
                         <div class="form-group mb-4 text-center">
@@ -94,7 +94,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email" class="w-75">
-                                <input type="email" class="form-control" id="entEmail" oninput="validationEmail('entEmail')"
+                                <input type="email" class="form-control" id="entEmail" oninput="validationEmail('entEmail', '.btnCreate-js')"
                                     name="userEmail" placeholder="Now your e-mail" />
                             </label>
                         </div>

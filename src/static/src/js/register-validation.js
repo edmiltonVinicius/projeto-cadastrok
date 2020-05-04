@@ -17,11 +17,10 @@ function validationInput(id, q) {
     }
 }
 
-const buttonCreate = document.querySelector('.btnCreate-js')
-const buttonLogin = document.querySelector('.btnLogin-js')
-let valid = false
+let emailCreate = false
+let emailLogin = false
 
-function validationEmail(id){
+function validationEmail(id, btn){
     const input = document.getElementById(id).value
     const camp = document.getElementById(id)
     const user = input.substring(0, input.indexOf('@'))
@@ -36,17 +35,20 @@ function validationEmail(id){
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
         camp.style.background="url('../static/build/img/certo.png') 95% 50% no-repeat"
-        valid = true
-        verificationButtonCreate()
+        emailCreate = true
+        emailLogin = true
+        verificationButton(btn)
 
     } else if(input.length == 0) {
-        valid = false
+        emailCreate = false
+        emailCreate = false
         camp.classList.add('border-light')
-        disableButtonCreate()
+        disableButton(btn)
         
     } else {
-        disableButtonCreate()
-        valid = false
+        disableButton(btn)
+        emailCreate = false
+        emailLogin = false
         camp.style.background='none'
         camp.classList.remove('border-light')
         camp.classList.add('border-danger')
@@ -54,40 +56,32 @@ function validationEmail(id){
 }
 
 
-
-function disableButtonCreate(){
-    buttonCreate.setAttribute('disabled', 'disabled')
-    buttonCreate.classList.remove('btn-outline-light')
-    buttonCreate.classList.add('btn-outline-secondary')
+function disableButton(btn){
+    const b = document.querySelector(btn)
+    b.setAttribute('disabled', 'disabled')
+    b.classList.remove('btn-outline-light')
+    b.classList.add('btn-outline-secondary')
 }
 
-function enableButtonCreate(){
-    buttonCreate.removeAttribute('disabled')
-    buttonCreate.classList.add('btn-outline-light')
-}
-function enableButtonLogin(){
-    buttonLogin.removeAttribute('disabled')
-    buttonLogin.classList.add('btn-outline-light')
-}
-function disableButtonLogin(){
-    buttonLogin.setAttribute('disabled', 'disabled')
-    buttonLogin.classList.remove('btn-outline-light')
-    buttonLogin.classList.add('btn-outline-secondary')
+function enableButton(btn){
+    const b = document.querySelector(btn)
+    b.removeAttribute('disabled')
+    b.classList.add('btn-outline-light')
 }
 
-function verificationButtonCreate(){
+
+function verificationButton(btn){
     setInterval(() => {
         if( (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
-            (valid === true) ){
-                enableButtonCreate()
+            (emailCreate === true) ){
+                enableButton(btn)
 
-        } else if(valid === true && document.getElementById('pass').value.length >= 6) {
-            enableButtonLogin()
+        } else if(emailLogin === true && document.getElementById('pass').value.length >= 6) {
+            enableButton(btn)
 
         } else {
-            disableButtonCreate()
-            disableButtonLogin()
+            disableButton(btn)
         }
     }, 100);
 }
