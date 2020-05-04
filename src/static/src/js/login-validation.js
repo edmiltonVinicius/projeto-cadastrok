@@ -10,19 +10,22 @@ const LoginUser = () => {
     const passUser = document.getElementById('pass').value
 
     const divErro = document.querySelector('.errorLogin')
+    divErro.classList.add('d-none')
 
     axios.post('/', { loginUser, passUser })
         .then(res => {
-            if(res.data.message === 'valid data' && res.data.code === 200){
-                sessionStorage.setItem('token', res.data.token)
-                window.location.replace('/dashboard')
-
-            } 
-            if(res.data.code === 401){
-                divErro.innerHTML=res.data.message
-                divErro.classList.remove('d-none')
-                
-            }
+            setTimeout(() => {
+                if(res.data.message === 'valid data' && res.data.code === 200){
+                    sessionStorage.setItem('token', res.data.token)
+                    window.location.replace('/dashboard')
+    
+                } 
+                if(res.data.code === 401){
+                    divErro.innerHTML=res.data.message
+                    divErro.classList.remove('d-none')
+                    
+                }
+            }, 1100);
         })
         .catch(err => {
             divErro.innerHTML=res.data.message
