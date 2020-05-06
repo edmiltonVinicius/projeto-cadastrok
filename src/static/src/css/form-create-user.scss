@@ -1,7 +1,7 @@
 @import "style.scss";
 
-
 $bg-cinza: rgba(23, 24, 23, 0.5);
+
 .containerForm {
     width: 90%;
     background-color: $bg-cinza;
@@ -12,6 +12,9 @@ $bg-cinza: rgba(23, 24, 23, 0.5);
 
     a {
         text-decoration: none;
+    }
+    input {
+        height: 40px !important;
     }
 
     .btnPassword {
