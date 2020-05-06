@@ -50,8 +50,12 @@
                                 <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
                                     aria-hidden="true"></i></button>
                                 
-                                <div class="errorLogin d-none mt-2 text-danger" style="font-size: 13pt;"></div>
-                            </div>
+                                <div class="errorLogin d-none mt-2 text-danger text-center style="font-size: 13pt;">
+                                    <p class="textErro d-none"></p>
+                                    <img class="d-none" id="imgLoading" src="../../static/build/img/iconLoadingLogin.gif" alt="Gif loading Login">
+                                </div>
+                        </div>
+
                         <div class="text-center">
                             <button class="btn btn-outline-secondary py-2 px-5 btnLogin-js" disabled type="submit" onclick="LoginUser()">Log in</button>
                         </div>
