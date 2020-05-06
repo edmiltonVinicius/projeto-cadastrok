@@ -32,7 +32,7 @@ const LoginUser = () => {
                     textErro.classList.remove('d-none')
                     
                 }
-            }, 1000);
+            }, 2000);
         })
         .catch(err => {
             textErro.innerHTML=res.data.message
