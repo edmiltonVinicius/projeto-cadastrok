@@ -1,3 +1,6 @@
+body{background-color:#252424}.navIndex{background-color:#111010;height:90px}.navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:18pt}
+.navIndex img{height:60px}.buttons{max-width:90% !important;height:45px;background-color:rgba(95,91,91,0.4);margin:auto}
+.buttons .btnCreate{width:40px;height:35px;background-image:url("../../build/img/icon-create.png");background-repeat:no-repeat;background-size:100% 100%}
 body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
