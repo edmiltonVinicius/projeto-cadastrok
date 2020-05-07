@@ -4,7 +4,7 @@ body {
 
 .navIndex {
     background-color: rgb(17, 16, 16);
-    height: 90px;
+    height: 75px;
 
     .navbar-brand {
         font-family: 'Della Respira', serif;
@@ -17,9 +17,9 @@ body {
 
 }
 
-.buttons {
-    max-width: 90% !important;
-    height: 45px;
+.buttonsCrud {
+    width: 80% !important;
+    height: 40px;
     background-color: rgba(95, 91, 91, 0.4);
     margin: auto;
     
@@ -29,5 +29,9 @@ body {
         background-image: url('../../build/img/icon-create.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
+    }
+    
+    li {
+        display: inline-block;
     }
 }
