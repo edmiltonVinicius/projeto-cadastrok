@@ -28,10 +28,20 @@
                 </div>
             </div>
             <div class="back-form col-12 col-lg-5 pt-2">
-
                 <div class="text-center pt-4">
                     <img class="border rounded-pill border-dark img-fluid" src="../../static/build/img/test-logo.png"
                         alt="Logo CadastroOK">
+                </div>
+
+
+                <div class="loadingLogin mx-auto rounded mt-4 d-none text-center">
+                    <div class="dlogin mx-auto rounded mb-4"></div>
+                    <div class="linePass mx-auto mb-4">
+                        <div class="dPassword rounded d-inline-block mr-2"></div>
+                        <div class="dPadlock rounded d-inline-block"></div>
+                    </div>
+                    <div class="dBtnlogin mx-auto rounded mb-5"></div>
+                    <div class="dLink mx-auto rounded-pill"></div>
                 </div>
 
                 <div class="col-12 col-md-9 col-lg-12 mt-4 cont" id="cont">
@@ -108,7 +118,7 @@
                                 data-toggle="modal" data-target="#modalRegister" disabled onclick="createUser()">
                                 Create my user
                             </button>
-                            <a href="/" class="text-warning pt-2 link">←Come Back</a>
+                            <p class="text-warning pt-2 link" id="back" onclick="showFormLogin('.containerForm')">←Come Back</p>
 
                             <div class="modal fade" role="dialog" id="modalRegister" aria-labelledby="modalRegister">
                                 <div class="modal-dialog" role="document">
@@ -122,7 +132,7 @@
                                         </div>
                                         <div class="modal-footer w-75 mx-auto" id="modal-footer">
                                             <button class="btn btn-warning mx-auto px-4" id="btnCloseModal" data-dismiss="modal" type="button">OK</button>
-                                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button">lets Login</button>
+                                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button" onclick="showFormLogin('.containerForm')">lets Login</button>
                                         </div>
                                     </div>
                                 </div>

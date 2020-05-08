@@ -3,6 +3,7 @@ function validationInput(id, q) {
     const camp = document.getElementById(id)
     
     if (input.length >= Number(q)) {
+        camp.classList.remove('border-light')
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
         camp.style.background = "url('../static/build/img/certo.png') 95% 50% no-repeat"
@@ -32,6 +33,7 @@ function validationEmail(id, btn){
         (domain.search(' ') === -1) &&
         (domain.indexOf('.') != -1)
     ){
+        camp.classList.remove('border-light')
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
         camp.style.background="url('../static/build/img/certo.png') 95% 50% no-repeat"

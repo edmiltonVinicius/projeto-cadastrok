@@ -1,7 +1,6 @@
 body{background-color:#252424}.navIndex{background-color:#111010;height:75px}.navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:18pt}
-.navIndex img{height:60px}.buttonsCrud{width:80% !important;height:40px;background-color:rgba(95,91,91,0.4);margin:auto}
-.buttonsCrud .btnCreate{width:40px;height:35px;background-image:url("../../build/img/icon-create.png");background-repeat:no-repeat;background-size:100% 100%}
-.buttonsCrud li{display:inline-block}body{font-family:'Poppins',sans-serif}
+.navIndex img{height:60px}.divBtnsCrud{width:80% !important;height:40px;background-color:rgba(95,91,91,0.4);margin:auto}
+.divBtnsCrud li{display:inline-block}body{font-family:'Poppins',sans-serif}
 .img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
@@ -12,7 +11,14 @@ form .btnLogin-js{font-size:13pt}.containerForm{width:90%;background-color:rgba(
 .containerForm .btnPassword{background-color:rgba(23,24,23,0.5);font-size:15pt}.loading{width:90%;height:370px;background-color:#161616;display:none}
 .loading .dtitle{background-color:#333232;width:47%;height:32px}.loading .dname,.loading .demail{background-color:#333232;width:73%;height:35px}
 .loading .dpass{background-color:#333232;width:49%;height:35px}.loading .dlogin{background-color:#333232;width:40%;height:45px}
-.loading .dlink{background-color:#333232;width:30%;height:10px}.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+.loading .dlink{background-color:#333232;width:30%;height:10px}.loading{width:90%;height:370px;background-color:#161616;display:none}
+.loading .dtitle{background-color:#333232;width:47%;height:32px}.loading .dname,.loading .demail{background-color:#333232;width:73%;height:35px}
+.loading .dpass{background-color:#333232;width:49%;height:35px}.loading .dlogin{background-color:#333232;width:40%;height:45px}
+.loading .dlink{background-color:#333232;width:30%;height:10px}.loadingLogin{width:90%;height:370px;background-color:black}
+.loadingLogin .dlogin{background-color:#333232;width:73%;height:40px}.loadingLogin .linePass{width:73%;height:40px}
+.loadingLogin .dPassword{background-color:#333232;width:80%;height:40px}.loadingLogin .dPadlock{background-color:#333232;width:10%;height:40px}
+.loadingLogin .dBtnlogin{background-color:#333232;width:50%;height:45px}.loadingLogin .dLink{background-color:#333232;width:55%;height:19px}
+.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 .pace-inactive{display:none}.pace .pace-progress{background:#fff;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}
 .styleModal{background-color:rgba(0,0,0,0.9);min-height:160px}.styleModal .bodyModal{width:100%;height:130px}
 .styleModal .imageModal{max-width:100%;max-height:100%}.styleModal #textModal{font-size:18px}

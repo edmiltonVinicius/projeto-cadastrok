@@ -1,0 +1,33 @@
+@import 'loading.scss';
+
+.loadingLogin {
+    width: 90%;
+    height: 370px;
+    background-color: rgb(0, 0, 0);
+
+    @mixin patternDivs($width-div, $height-div) {
+        background-color: $bg-divs;
+        width: $width-div;
+        height: $height-div;
+    }
+
+    .dlogin {
+        @include patternDivs(73%, 40px);
+    }
+    .linePass {
+        width: 73%;
+        height: 40px;
+    }
+    .dPassword {
+        @include patternDivs(80%, 40px);
+    }
+    .dPadlock {
+        @include patternDivs(10%, 40px);
+    }
+    .dBtnlogin {
+        @include patternDivs(50%, 45px);
+    }
+    .dLink {
+        @include patternDivs(55%, 19px);
+    }
+}
