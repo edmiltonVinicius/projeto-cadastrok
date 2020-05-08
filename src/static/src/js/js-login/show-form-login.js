@@ -9,6 +9,7 @@ const showFormLogin = (b) => {
 
     clearInput('user')
     clearInput('pass')
+    document.querySelector('.errorLogin').style.display='none'
 
     btn.classList.remove('d-block')
     btn.classList.add('d-none')
