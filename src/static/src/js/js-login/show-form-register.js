@@ -6,9 +6,6 @@ function showAnswer(){
     } 
     myLink.addEventListener("click", stopPadrao) 
     
-    document.getElementById('entName').classList.add('border-light')
-    document.getElementById('entPass').classList.add('border-light')
-    document.getElementById('entEmail').classList.add('border-light')
 
     const divLogin = document.querySelector('.cont')
     const divLoad = document.querySelector('.loading')

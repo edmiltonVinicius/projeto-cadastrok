@@ -2,7 +2,7 @@ function clearInput(id){
     const input = document.getElementById(id)
     input.value=''
     input.style.background='none'
-    input.style.borderColor='#fff'
+    input.classList.add('border-light')
 }
 
 function createUser() {
