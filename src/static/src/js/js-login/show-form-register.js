@@ -6,6 +6,9 @@ function showAnswer(){
     } 
     myLink.addEventListener("click", stopPadrao) 
     
+    clearInput('entName')
+    clearInput('entPass')
+    clearInput('entEmail')
 
     const divLogin = document.querySelector('.cont')
     const divLoad = document.querySelector('.loading')

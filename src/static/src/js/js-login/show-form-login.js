@@ -7,6 +7,9 @@ const showFormLogin = (b) => {
         e.preventDefault()
     })
 
+    clearInput('user')
+    clearInput('pass')
+
     btn.classList.remove('d-block')
     btn.classList.add('d-none')
     divLogin.classList.add('d-none')
