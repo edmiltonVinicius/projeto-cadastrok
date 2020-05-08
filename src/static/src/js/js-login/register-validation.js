@@ -7,14 +7,18 @@ function validationInput(id, q) {
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
         camp.style.background = "url('../static/build/img/certo.png') 95% 50% no-repeat"
+        console.log(document.getElementById('entEmail').value)
+        emailCreate = false
         
     } else if(input.length == ''){
         camp.classList.add('border-light')
+        emailCreate = false
         
     } else {
         camp.classList.remove('border-light')
         camp.style.background = "none"
-        camp.classList.add('border-danger')  
+        camp.classList.add('border-danger') 
+        emailCreate = false 
     }
 }
 
@@ -41,7 +45,7 @@ function validationEmail(id, btn){
         emailLogin = true
         verificationButton(btn)
 
-    } else if(input.length == 0) {
+    } else if(input.length == 0 || input.value === '') {
         emailCreate = false
         emailCreate = false
         camp.classList.add('border-light')
