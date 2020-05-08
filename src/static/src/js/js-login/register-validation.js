@@ -7,7 +7,6 @@ function validationInput(id, q) {
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
         camp.style.background = "url('../static/build/img/certo.png') 95% 50% no-repeat"
-        console.log(document.getElementById('entEmail').value)
         emailCreate = false
         
     } else if(input.length == ''){
