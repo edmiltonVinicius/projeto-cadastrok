@@ -18,19 +18,30 @@ const LoginUser = () => {
     imgLoading.classList.remove('d-none')
 
     axios.post('/', { loginUser, passUser })
-        .then(res => {
+        .then((res) => {
+            const itoken = res.data.token
             setTimeout(() => {
                 if(res.data.message === 'valid data' && res.data.code === 200){
                     sessionStorage.setItem('token', res.data.token)
-                    imgLoading.classList.add('d-none')
-                    window.location.replace('/dashboard')
+                    
+                    axios.get('/dashboard', { headers: { authorization: itoken}})
+                    .then((res) => {
+                            imgLoading.classList.add('d-none')
+                            history.replaceState('', 'CadastrOk - Dashboard', '/dashboard')
+                            document.title='CadastrOk - Dashboard'
+                            document.querySelector('body').innerHTML=res.data
+                        })
+                        .catch((err) => {
+                            imgLoading.classList.add('d-none')
+                            textErro.innerHTML=res.data.message
+                            textErro.classList.remove('d-none')
+                        })
     
                 } 
                 if(res.data.code === 401){
                     imgLoading.classList.add('d-none')
                     textErro.innerHTML=res.data.message
                     textErro.classList.remove('d-none')
-                    
                 }
             }, 2000);
         })

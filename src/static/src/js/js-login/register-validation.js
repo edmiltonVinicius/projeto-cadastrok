@@ -61,32 +61,39 @@ function validationEmail(id, btn){
 }
 
 
-function disableButton(btn){
+const disableButton = (btn) => {
     const b = document.querySelector(btn)
     b.setAttribute('disabled', 'disabled')
     b.classList.remove('btn-outline-light')
     b.classList.add('btn-outline-secondary')
 }
 
-function enableButton(btn){
+const enableButton = (btn) => {
     const b = document.querySelector(btn)
     b.removeAttribute('disabled')
     b.classList.add('btn-outline-light')
 }
 
 
-function verificationButton(btn){
-    setInterval(() => {
+const verificationButton = (btn) => {
+    let a = setInterval(() => {
         if( (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
             (emailCreate === true) ){
                 enableButton(btn)
+                clearInterval(a)
 
         } else if(emailLogin === true && document.getElementById('pass').value.length >= 6) {
             enableButton(btn)
+            clearInterval(a)
 
         } else {
             disableButton(btn)
         }
     }, 100);
+
+}
+
+function clearTime(){
+    clearInterval(a)
 }
