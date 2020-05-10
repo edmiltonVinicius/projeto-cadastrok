@@ -23,6 +23,16 @@ const compilerSass = () => {
         }))
         .pipe(gulp.dest('src/static/build/css/'))
 }
+const sassErro = () => {
+    return gulp.src('src/static/src/css/error.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concat('erro.min.css'))
+        .pipe(uglifycss({
+            "uglyComments": true,
+            "maxLineLen": 80
+        }))
+        .pipe(gulp.dest('src/static/build/css/'))
+}
 
 const minifyJsLogin = () => {
     return gulp.src('src/static/src/js/js-login/*.js')
@@ -44,10 +54,13 @@ const minifyJsDashboard = () => {
 }
 
 const server = () => {
-    gulp.watch(['src/static/src/js/js-login/*.js', 'src/static/src/js/js-dashboard/*.js', 'src/static/src/css/**/*.scss'],
-    gulp.series(minifyJsLogin, minifyJsDashboard, compilerSass))
+    gulp.watch( ['src/static/src/js/js-login/*.js',
+                 'src/static/src/js/js-dashboard/*.js', 
+                 'src/static/src/css/**/*.scss',
+                 'src/static/src/css/error.scss'],
+    gulp.series(minifyJsLogin, minifyJsDashboard, compilerSass, sassErro))
 }
 
-exports.default = gulp.parallel(minifyImage, compilerSass, minifyJsLogin, minifyJsDashboard,
+exports.default = gulp.parallel(minifyImage, compilerSass, sassErro, minifyJsLogin, minifyJsDashboard,
     gulp.series(server))
     

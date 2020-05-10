@@ -1,0 +1,27 @@
+$font: 'Della Respira', serif;
+
+.containerErro {
+    width: 100%;
+    height: 100vh;
+    //background-image: linear-gradient(rgb(1, 2, 19), rgb(206, 203, 203));
+    font-family: $font;
+
+    @mixin sizeColor($size, $color) {
+        font-size: $size;
+        color: $color;
+    }
+
+    .text-l1 {
+        @include sizeColor(50pt, rgb(3, 3, 3))
+    }
+    .text-l2 {
+        @include sizeColor(19pt, rgb(41, 37, 37))
+    }
+    .text-l3 {
+        @include sizeColor(15pt, rgb(41, 37, 37))
+    }
+
+    a {
+        font-size: 15pt;
+    }
+}

@@ -20,5 +20,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/', routerLogin)
 app.use('/register', routerRegister)
 app.use('/dashboard', routerDashboard)
+app.use('/error', (req, res) => {
+    res.render('layouts/error')
+})
 
 app.listen(port, () => console.log('Servidor Node ON.'))
