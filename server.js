@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000
 const routerLogin = require('./src/routes/router-login')
 const routerRegister = require('./src/routes/router-register')
 const routerDashboard = require('./src/routes/router-dashboard')
+const routerError = require('./src/routes/router.error')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/src/views')
@@ -20,8 +21,14 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/', routerLogin)
 app.use('/register', routerRegister)
 app.use('/dashboard', routerDashboard)
-app.use('/error', (req, res) => {
-    res.render('layouts/error')
+app.use(routerError)
+
+
+app.use((error, req, res, next) => {
+    res.status(error.status || 500)
+    return res.render('layouts/error')
 })
+
+
 
 app.listen(port, () => console.log('Servidor Node ON.'))
