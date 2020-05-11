@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body onload="showFormLogin()">
 
     <div class="containner-fluid">
         <div class="row no-gutters">
@@ -44,7 +44,7 @@
                     <div class="dLink mx-auto rounded-pill"></div>
                 </div>
 
-                <div class="col-12 col-md-9 col-lg-12 mt-4 cont" id="cont">
+                <div class="col-12 col-md-9 col-lg-12 mt-4 d-none cont" id="cont">
                     <form id="formLogin" class="w-75 mx-auto">
                         <div class="form-group mb-4">
                             <label for="user" class="d-none">User</label>
@@ -66,7 +66,7 @@
                                 </div>
                         </div>
 
-                        <div class="text-center">
+                        <div class="text-center cont">
                             <button class="btn btn-outline-secondary py-2 px-5 btnLogin-js" disabled type="submit" onclick="LoginUser()">Log in</button>
                         </div>
                     </form>
