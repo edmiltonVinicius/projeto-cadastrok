@@ -1,4 +1,5 @@
-body{background-color:#252424}.navIndex{background-color:#111010;height:75px}.navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:18pt}
+body{background-color:#252424}.animation{background-color:#000;width:100%;height:100vh}
+.navIndex{background-color:#111010;height:75px}.navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:18pt}
 .navIndex img{height:60px}.divBtnsCrud{width:80% !important;height:40px;background-color:rgba(95,91,91,0.4);margin:auto}
 .divBtnsCrud li{display:inline-block}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
 .containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
