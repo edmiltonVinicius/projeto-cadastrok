@@ -11,8 +11,11 @@
         height: $height-div;
     }
 
+    .dImg {
+        @include patternDivs(23%, 65px);
+    }    
     .dlogin {
-        @include patternDivs(73%, 40px);
+        @include patternDivs(80%, 40px);
     }
     .linePass {
         width: 73%;

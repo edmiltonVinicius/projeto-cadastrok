@@ -1,18 +1,19 @@
 // Div Loading
 $bg-divs: #333232;
 
+@mixin patternDivs($width-div, $height-div) {
+    background-color: $bg-divs;
+    width: $width-div;
+    height: $height-div;
+}
+
 .loading {
     width: 90%;
     height: 370px;
     background-color: rgb(22, 22, 22);
     display: none;
-
-    @mixin patternDivs($width-div, $height-div) {
-        background-color: $bg-divs;
-        width: $width-div;
-        height: $height-div;
-    }
-
+    
+     
     .dtitle {
         @include patternDivs(47%, 32px)
     }
@@ -33,3 +34,6 @@ $bg-divs: #333232;
         @include patternDivs(30%, 10px);
     }
 }
+.dImg2 {
+    @include patternDivs(20%, 65px);
+} 
