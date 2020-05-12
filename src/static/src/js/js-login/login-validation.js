@@ -29,7 +29,12 @@ const LoginUser = () => {
                             imgLoading.classList.add('d-none')
                             history.replaceState('', 'CadastrOk - Dashboard', '/dashboard')
                             document.title='CadastrOk - Dashboard'
+                            document.querySelectorAll('link')[2].href='../../static/build/css/dashboard.min.css'
                             document.querySelector('body').innerHTML=res.data
+                            setTimeout(() => {
+                                document.querySelector('.animation').classList.add('d-none')
+                                document.querySelector('.containner-fluid').classList.remove('d-none')
+                            }, 2000)
                         })
                         .catch((err) => {
                             imgLoading.classList.add('d-none')
@@ -51,4 +56,3 @@ const LoginUser = () => {
         })
 
 }
-
