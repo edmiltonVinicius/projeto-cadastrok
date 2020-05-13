@@ -19,12 +19,11 @@ const LoginUser = () => {
 
     axios.post('/', { loginUser, passUser })
         .then((res) => {
-            const itoken = res.data.token
             setTimeout(() => {
                 if(res.data.message === 'valid data' && res.data.code === 200){
                     sessionStorage.setItem('token', res.data.token)
                     
-                    axios.get('/dashboard', { headers: { authorization: itoken}})
+                    axios.get('/dashboard', { headers: { authorization: sessionStorage.getItem('token')}})
                     .then((res) => {
                             imgLoading.classList.add('d-none')
                             history.replaceState('', 'CadastrOk - Dashboard', '/dashboard')
