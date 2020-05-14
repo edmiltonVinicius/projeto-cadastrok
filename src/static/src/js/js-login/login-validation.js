@@ -26,10 +26,12 @@ const LoginUser = () => {
                     axios.get('/dashboard', { headers: { authorization: sessionStorage.getItem('token')}})
                     .then((res) => {
                             imgLoading.classList.add('d-none')
-                            history.replaceState('', 'CadastrOk - Dashboard', '/dashboard')
                             document.title='CadastrOk - Dashboard'
                             document.querySelectorAll('link')[2].href='../../static/build/css/dashboard.min.css'
                             document.querySelector('body').innerHTML=res.data
+                            refreshJsDashboard('https://unpkg.com/axios/dist/axios.min.js')
+                            refreshJsDashboard('../../static/build/js/dashboard.min.js')
+                            refreshJsDashboard('../../static/build/js/pace.min.js')
                             const divLoad = document.querySelector('.animation')
                             setTimeout(() => {
                                 divLoad.classList.remove('d-flex')
