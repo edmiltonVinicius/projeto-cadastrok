@@ -5,10 +5,11 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
-const routerLogin = require('./src/routes/router-login')
-const routerRegister = require('./src/routes/router-register')
-const routerDashboard = require('./src/routes/router-dashboard')
-const routerError = require('./src/routes/router.error')
+const routerLogin = require('./src/routers/router-login')
+const routerRegister = require('./src/routers/router-register')
+const routerDashboard = require('./src/routers/router-dashboard')
+const routerError = require('./src/routers/router-error')
+const routerUploadImg = require('./src/routers/router-upload-img')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/src/views')
