@@ -8,5 +8,4 @@ router.get('/', middlleware, (req, res) => {
 })
 
 
-
 module.exports = router

@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/', routerLogin)
 app.use('/register', routerRegister)
 app.use('/dashboard', routerDashboard)
+app.use('/upload', routerUploadImg)
 
 app.use(routerError)
 app.use((error, req, res, next) => {
