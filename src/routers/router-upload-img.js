@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const multer = require('multer')
+const cloudinary = require('cloudinary').v2
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -27,12 +28,22 @@ const upload = multer({
     fileFilter: fileFitler
 })
 
+cloudinary.config({
+    cloud_name : process.env.CLOUD_NAME , 
+    api_key : process.env.API_KEY, 
+    api_secret : process.env.API_SECRET
+})
+
 router.post('/', upload.single('file'), (req, res) => {
-    const file = req.file
+    const file = req.file.path
     if(file){
-        return res.send(req.file)
+        cloudinary.uploader.upload(file, {folder: 'img-users-cadastrok/'}, (error, result) => {
+            if(error) return res.send(error)
+            return res.send(result)
+        })
+    }else {
+        return res.send('file nao receido')
     }
-    return res.send('file nao receido')
 })
 
 module.exports = router 

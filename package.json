@@ -20,6 +20,7 @@
   "homepage": "https://github.com/edmiltonvinicius/projeto-cadastrok#readme",
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "cloudinary": "^1.21.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
