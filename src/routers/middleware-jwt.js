@@ -6,6 +6,7 @@ module.exports = (req, res, next) => {
 
     jwt.verify(token, process.env.TOKEN_KEY, (err, decoded) => {
         if(err) return res.render('layouts/login')
+        req.idUser = decoded._id
         next()
     })
 }
