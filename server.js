@@ -24,10 +24,6 @@ app.use('/register', routerRegister)
 app.use('/dashboard', routerDashboard)
 app.use('/upload', routerUploadImg)
 
-app.get('/t', (req, res) => {
-    res.render('layouts/dashboard')
-})
-
 app.use(routerError)
 app.use((error, req, res, next) => {
     res.status(error.status || 500)
