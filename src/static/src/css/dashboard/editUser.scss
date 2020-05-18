@@ -4,6 +4,10 @@
     background-color: rgb(26, 24, 24);
     height: 270px;
 
+    .iconEdit {
+        width: 28px;
+        height: 28px;
+    }
     .h3 {
         font-size: 14pt;
     }
@@ -16,7 +20,7 @@
         font-size: 12pt !important;
     }
     input {
-        width: 97% !important;
+        width: 80% !important;
         font-size: 12pt;
     }
     .btnSubmit {

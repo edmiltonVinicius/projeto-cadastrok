@@ -2,9 +2,9 @@ body{background-color:#161515;font-family:'Poppins',sans-serif}.animation{backgr
 .navIndex{background-color:black;height:75px}.navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:16pt}
 .navIndex img{height:60px}.divBtnsCrud{width:80% !important;height:40px;background-color:rgba(58,57,57,0.4);margin:auto}
 .divBtnsCrud li{display:inline-block}.divBtnsCrud .bgBtns{background-color:rgba(37,36,36,0.4) !important}
-.editProfie{background-color:#1a1818;height:270px}.editProfie .h3{font-size:14pt}
-.editProfie .close{font-size:25pt !important}.editProfie label{font-size:12pt !important}
-.editProfie input{width:97% !important;font-size:12pt}.editProfie .btnSubmit{font-size:13pt}
+.editProfie{background-color:#1a1818;height:270px}.editProfie .iconEdit{width:28px;height:28px}
+.editProfie .h3{font-size:14pt}.editProfie .close{font-size:25pt !important}.editProfie label{font-size:12pt !important}
+.editProfie input{width:80% !important;font-size:12pt}.editProfie .btnSubmit{font-size:13pt}
 .imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
 .dropdown-menu{background-color:black !important;width:220px !important;height:270px !important}
 #inputSearch{background-color:black !important}.editProfile .iconEditUser{width:28px;height:28px}
