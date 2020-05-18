@@ -1,9 +1,10 @@
-const uploadImage = () => {
-    const divBtnsCrud = document.querySelector('.divBtnsCrud')
-    const divEdit = document.querySelector('.divEdit')
+const showHideDivUplado = (hide, show) => {
+    const divHide = document.querySelector(hide)
+    const divShow = document.querySelector(show)
 
-    divBtnsCrud.classList.add('d-none')
-    divEdit.classList.remove('d-none')
-    divEdit.classList.add('d-block')
+    divHide.classList.remove('d-block')
+    divHide.classList.add('d-none')
+    divShow.classList.remove('d-none')
+    divShow.classList.add('d-block')
 
 }
