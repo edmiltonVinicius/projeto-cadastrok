@@ -28,11 +28,11 @@ app.get('/t', (req, res) => {
     res.render('layouts/dashboard')
 })
 
-/*app.use(routerError)
+app.use(routerError)
 app.use((error, req, res, next) => {
     res.status(error.status || 500)
     return res.render('layouts/error')
-})*/
+})
 
 
 app.listen(port, () => console.log('Servidor Node ON.'))
