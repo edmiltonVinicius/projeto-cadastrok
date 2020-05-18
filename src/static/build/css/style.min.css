@@ -3,7 +3,8 @@ body{background-color:#252424}.animation{background-color:#000;width:100%;height
 .navIndex img{height:60px}.divBtnsCrud{width:80% !important;height:40px;background-color:rgba(95,91,91,0.4);margin:auto}
 .divBtnsCrud li{display:inline-block}.imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
 .dropdown-menu{background-color:#070707 !important;width:220px !important;height:310px !important}
-.editProfile .iconEditUser{width:28px;height:28px}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
+#inputSearch{background-color:#070707 !important}.editProfile .iconEditUser{width:28px;height:28px}
+.editProfile .editProfile{background-color:#070707 !important}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
 .containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
 .containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}
 body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}
