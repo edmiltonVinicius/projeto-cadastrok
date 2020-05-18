@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const multer = require('multer')
 const cloudinary = require('cloudinary').v2
-const jwt = require('jsonwebtoken')
 const middleware = require('./middleware-jwt')
+const User = require('./../database/user-schema')
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -38,11 +38,18 @@ cloudinary.config({
 
 router.post('/', middleware, upload.single('file'), (req, res) => {
     const file = req.file.path
+    const idUser = req.idUser
     if(file){
         cloudinary.uploader.upload(file, 
             {folder: 'img-users-cadastrok/', transformation: {width: 65, height: 55}}, (error, result) => {
             if(error) return res.send(error)
-            return res.send(result)
+        
+            User.findByIdAndUpdate(idUser, 
+                {image: { publicId : result.public_id, secureUrl : result.secure_url}},
+                { new: true }, (err, arq) => {
+                    if(err) return res.send(error)
+                    return res.send(arq)
+            })
         })
     }else {
         return res.send('file nao receido')

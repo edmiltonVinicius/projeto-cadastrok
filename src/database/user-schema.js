@@ -16,6 +16,14 @@ const UserSchema = new mongoose.Schema({
         type: String,
         lowercase: true,
         unique: true,
+    },
+    image: {
+        publicId: {
+            type: String
+        },
+        secureUrl: {
+            type: String
+        }
     }
 })
 
