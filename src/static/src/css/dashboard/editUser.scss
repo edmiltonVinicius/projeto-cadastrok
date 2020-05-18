@@ -2,10 +2,10 @@
 
 .editProfie {
     background-color: rgb(26, 24, 24);
-    height: 320px;
+    height: 270px;
 
     .h3 {
-        font-size: 13pt;
+        font-size: 14pt;
     }
 
     .close {
@@ -18,5 +18,8 @@
     input {
         width: 97% !important;
         font-size: 12pt;
+    }
+    .btnSubmit {
+        font-size: 13pt;
     }
 }
