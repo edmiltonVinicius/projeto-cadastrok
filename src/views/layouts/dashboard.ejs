@@ -43,20 +43,20 @@
                         </div>
 
                         <div class="mx-auto text-center">
-                            <button class="btn btn-outline-warning px-3" type="button"
-                                data-toggle="modal" data-target="#modalDeLogout">
+                            <button class="btn btn-outline-warning px-3" id="a" type="button"
+                                data-toggle="modal" data-target="#modalDeLogout" onclick="reappear()">
                                 Log out
                             </button>    
                         </div>
                     </div>
                 </div>
                 <div class="modal fade" id="modalDeLogout" role="dialog">
-                    <div class="modal-dialog modal-sm modal-dialog-centered" role="document" id="2">
+                    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-body text-center border border-warning rounded" style="background-color: rgb(0, 0, 0);">
                                 <p class="text-white">You're going out, are you sure?</p>
                                 <div class="px-4">
-                                    <button type="button" class="float-left btn btn-outline-danger">Cancel</button>
+                                    <button type="button" class="float-left btn btn-outline-danger" onclick="cancel()">Cancel</button>
                                     <button type="button" class="float-right btn btn-outline-warning px-3" onclick="logout()">Exit</button>
                                 </div>
                             </div>
