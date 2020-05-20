@@ -5,7 +5,7 @@
         <img class="border-0" src="../../static/build/img/gifLogin.gif" alt="Gif de loading com lamps">
     </div>
     
-    <div class="containner-fluid">
+    <div class="containner-fluid d-none">
         <header>
             <div class="navbar navbar-expand-lg navbar-light navIndex">
                 <a href="#" class="navbar-brand text-white ml-lg-2 pt-0">
@@ -43,12 +43,26 @@
                         </div>
 
                         <div class="mx-auto text-center">
-                            <button class="btn btn-outline-warning px-3" type="button" onclick="logout()">Log out</button>
+                            <button class="btn btn-outline-warning px-3" id="a" type="button"
+                                data-toggle="modal" data-target="#modalDeLogout" onclick="reappear()">
+                                Log out
+                            </button>    
                         </div>
-
                     </div>
                 </div>
-
+                <div class="modal fade" id="modalDeLogout" role="dialog">
+                    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body text-center border border-warning rounded" style="background-color: rgb(0, 0, 0);">
+                                <p class="text-white">You're going out, are you sure?</p>
+                                <div class="px-4">
+                                    <button type="button" class="float-left btn btn-outline-danger" onclick="cancel()">Cancel</button>
+                                    <button type="button" class="float-right btn btn-outline-warning px-3" onclick="logout()">Exit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -97,10 +111,10 @@
                                             id="upladoImage" accept="image/png, image/jpeg" required>
                                     </label>
                                 </div>
+                                <div class="ml-auto w-50 pt-3">
+                                    <button type="submit" class="btn btn-outline-warning px-4 btnSubmit" onclick="submitImage()">Submit</button>
+                                </div>
                             </form>
-                            <div class="ml-auto w-50 pt-3">
-                                <button class="btn btn-outline-warning px-4 btnSubmit">Submit</button>
-                            </div>
                         </div>
                     </div>
                 </div>

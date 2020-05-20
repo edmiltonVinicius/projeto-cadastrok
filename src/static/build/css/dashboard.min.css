@@ -7,5 +7,5 @@ body{background-color:#161515;font-family:'Poppins',sans-serif}.animation{backgr
 .editProfie input{width:80% !important;font-size:12pt}.editProfie .btnSubmit{font-size:13pt}
 .imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
 .dropdown-menu{background-color:black !important;width:220px !important;height:270px !important}
-#inputSearch{background-color:black !important}.editProfile .iconEditUser{width:28px;height:28px}
+#inputSearch{background-color:black !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
 .editProfile .editProfile{background-color:black !important}
