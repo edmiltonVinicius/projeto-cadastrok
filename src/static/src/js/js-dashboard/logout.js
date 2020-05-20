@@ -1,4 +1,4 @@
-function logout(){
+const logout = () => {
     sessionStorage.removeItem('token')
     window.location.replace('/')
 }
