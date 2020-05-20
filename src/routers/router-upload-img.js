@@ -5,6 +5,11 @@ const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
 
+function t(req, res, next){
+    console.log(req)
+    next()
+}
+
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, 'src/uploads-img-users/')
@@ -36,18 +41,20 @@ cloudinary.config({
     api_secret : process.env.API_SECRET
 })
 
-router.post('/', middleware, upload.single('file'), (req, res) => {
+router.post('/', middleware, t, upload.single('file'), (req, res) => {
+    console.log(req)
     const file = req.file.path
     const idUser = req.idUser
+    console.log(idUser, file)
     if(file){
         cloudinary.uploader.upload(file, 
             {folder: 'img-users-cadastrok/', transformation: {width: 65, height: 55}}, (error, result) => {
-            if(error) return res.send(error)
+            if(error) return res.send('erro no cloudinary')
         
             User.findByIdAndUpdate(idUser, 
                 {image: { publicId : result.public_id, secureUrl : result.secure_url}},
                 { new: true }, (err, arq) => {
-                    if(err) return res.send(error)
+                    if(err) return res.send('erro com o mongoose')
                     return res.send(arq)
             })
         })
