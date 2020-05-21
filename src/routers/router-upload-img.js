@@ -6,7 +6,8 @@ const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
 
 function t(req, res, next){
-    console.log(req)
+    console.log(req.headers)
+    console.log(req.body)
     next()
 }
 
@@ -41,8 +42,7 @@ cloudinary.config({
     api_secret : process.env.API_SECRET
 })
 
-router.post('/', middleware, t, upload.single('file'), (req, res) => {
-    console.log(req)
+router.post('/', t, middleware, upload.single('file'), (req, res) => {
     const file = req.file.path
     const idUser = req.idUser
     console.log(idUser, file)

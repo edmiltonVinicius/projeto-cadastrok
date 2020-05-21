@@ -5,12 +5,12 @@ const submitImage = () => {
         e.preventDefault()
     })
     
-    const itoken = localStorage.getItem('token')
+    const itoken = sessionStorage.getItem('token')
     const file = document.getElementById('upladoImage').value
 
-    axios.post('/upload', { file: file, headers: { authorization: itoken}})
+    axios.post('/upload', {data:file}, {headers: { authorization: itoken}})
         .then((res) => {
-            console.log(res)
+            console.log('resposta: ' + res)
             console.log(res.data)
         })
         .catch((error) => console.log('erro: ' + error))
