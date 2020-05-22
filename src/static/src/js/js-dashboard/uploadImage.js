@@ -8,7 +8,13 @@ const submitImage = () => {
     const itoken = sessionStorage.getItem('token')
     const file = document.getElementById('upladoImage').value
 
-    axios.post('/upload', {data:file}, {headers: { authorization: itoken}})
+    axios({
+        method: 'post',
+        url: '/upload', 
+        data: file,
+        headers: { 
+            authorization: itoken
+        }})
         .then((res) => {
             console.log('resposta: ' + res)
             console.log(res.data)

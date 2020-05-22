@@ -5,12 +5,6 @@ const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
 
-function t(req, res, next){
-    console.log(req.headers)
-    console.log(req.body)
-    next()
-}
-
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, 'src/uploads-img-users/')
@@ -42,7 +36,7 @@ cloudinary.config({
     api_secret : process.env.API_SECRET
 })
 
-router.post('/', t, middleware, upload.single('file'), (req, res) => {
+router.post('/', middleware, upload.single('file'), (req, res) => {
     const file = req.file.path
     const idUser = req.idUser
     console.log(idUser, file)

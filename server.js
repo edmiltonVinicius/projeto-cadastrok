@@ -3,6 +3,7 @@ global.banco = require('./src/database/connection')
 
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const port = process.env.PORT || 3000
 
 const routerLogin = require('./src/routers/router-login')
@@ -18,6 +19,7 @@ app.use('/static', express.static(__dirname + '/src/static/'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+app.use(cors())
 
 app.use('/', routerLogin)
 app.use('/register', routerRegister)
