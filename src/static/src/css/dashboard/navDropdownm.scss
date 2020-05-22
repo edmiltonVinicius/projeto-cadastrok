@@ -9,7 +9,27 @@ $bg-nav: rgb(0, 0, 0) !important;
 .dropdown-menu {
     background-color: $bg-nav;
     width: 220px !important;
-    height: 270px !important;
+    height: 310px !important;
+}
+
+
+.navIndex {
+    background-color: rgb(0, 0, 0);
+    height: 75px;
+
+    .navbar-brand {
+        font-family: 'Della Respira', serif;
+        font-size: 16pt;
+    }
+
+    img {
+        height: 60px;
+    }
+
+    .dataUser {
+        font-size: 17px;
+        color: #b4aaaa !important;
+    }
 }
 
 #inputSearch {
