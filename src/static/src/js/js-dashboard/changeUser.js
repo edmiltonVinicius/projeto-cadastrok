@@ -4,6 +4,7 @@ const showHideDivUplado = (hide, show) => {
 
     divHide.classList.remove('d-block')
     divHide.classList.add('d-none')
+    document.getElementById('upladoImage').value=''
     divShow.classList.remove('d-none')
     divShow.classList.add('d-block')
 

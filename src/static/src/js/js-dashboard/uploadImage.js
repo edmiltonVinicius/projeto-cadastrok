@@ -19,6 +19,7 @@ const submitImage = () => {
             console.log(res.data)
             document.getElementById('dropDrownNav').src=res.data
             document.getElementById('imgUser').src=res.data
+            showHideDivUplado('.divEdit', '.divBtnsCrud')
         })
         .catch((error) => console.log('erro: ' + error))
 
