@@ -5,9 +5,9 @@ body{background-color:#161515;font-family:'Poppins',sans-serif}.animation{backgr
 .editProfie .h3{font-size:14pt}.editProfie .close{font-size:25pt !important}.editProfie label{font-size:12pt !important}
 .editProfie input{width:80% !important;font-size:12pt}.editProfie .btnSubmit{font-size:13pt}
 .imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
-.dropdown-menu{background-color:black !important;width:220px !important;height:325px !important}
+.dropdown-menu{background-color:black !important;width:220px !important;height:350px !important}
 .navIndex{background-color:black;height:75px}.navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:16pt}
-.navIndex img{height:60px}.navIndex .dataUser{font-size:17px;color:#b4aaaa !important}
+.navIndex img{height:60px}.navIndex .dataUser{font-size:17px;color:#b4aaaa !important;width:100% !important}
 #inputSearch{background-color:black !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
 .editProfile .editProfile{background-color:black !important}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
 .containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}

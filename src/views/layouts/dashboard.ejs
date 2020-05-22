@@ -25,12 +25,12 @@
                         id="dropDrownNav" type="image" src="<%= user.image.secureUrl %>" alt="">
 
                     <div class="dropdown-menu px-2 pt-3 rounded border border-warning" id="dropDrownNav">
-                        <div class="mx-auto dataUser">
+                        <div class="mx-auto dataUser text-center">
                             <img class="ml-2 rounded-circle border border-warning" src="<%= user.image.secureUrl %>"
                                 id="imgUser" alt="">
 
-                            <span class="d-inline text-light font-weight-bold ml-1" id="nameUser"><%= user.name %></span>
-                            <p class="text-center pt-3"><%= user.email %></p>
+                            <p class="text-light font-weight-bold ml-1 pt-3" id="nameUser"><%= user.name %></p>
+                            <p><%= user.email %></p>
                         </div>
 
                         <div class="dropdown-divider mx-auto border border-dark"></div>
