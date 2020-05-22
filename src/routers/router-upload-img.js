@@ -49,7 +49,8 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
                 {image: { publicId : result.public_id, secureUrl : result.secure_url}},
                 { new: true }, (err, arq) => {
                     if(err) return res.send('erro com o mongoose')
-                    return res.send(arq)
+
+                    return res.send(arq.image.secureUrl)
             })
         })
     }else {
