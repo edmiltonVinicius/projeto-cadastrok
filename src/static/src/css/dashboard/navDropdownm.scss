@@ -9,7 +9,12 @@ $bg-nav: rgb(0, 0, 0) !important;
 .dropdown-menu {
     background-color: $bg-nav;
     width: 220px !important;
-    height: 350px !important;
+    min-height: 350px !important;
+
+    #imgUser {
+        height: 80px;
+    }
+
 }
 
 .navIndex {
