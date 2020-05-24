@@ -39,7 +39,6 @@ cloudinary.config({
 router.post('/', middleware, upload.single('file'), (req, res) => {
     const file = req.file.path
     const idUser = req.idUser
-    console.log(idUser, file)
     if(file){
         cloudinary.uploader.upload(file, 
             {folder: 'img-users-cadastrok/', transformation: {width: 65, height: 55}}, (error, result) => {
