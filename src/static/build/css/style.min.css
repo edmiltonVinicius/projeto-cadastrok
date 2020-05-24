@@ -1,16 +1,17 @@
 body{background-color:#161515;font-family:'Poppins',sans-serif}.animation{background-color:#000;width:100%;height:100vh}
 .divBtnsCrud{width:80% !important;height:40px;background-color:rgba(58,57,57,0.4);margin:auto}
 .divBtnsCrud li{display:inline-block}.divBtnsCrud .bgBtns{background-color:rgba(37,36,36,0.4) !important}
-.editProfie{background-color:#1a1818;height:270px}.editProfie .iconEdit{width:28px;height:28px}
-.editProfie .h3{font-size:14pt}.editProfie .close{font-size:25pt !important}.editProfie label{font-size:12pt !important}
-.editProfie input{width:80% !important;font-size:12pt}.editProfie .btnSubmit{font-size:13pt}
 .imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
 .dropdown-menu{background-color:black !important;width:220px !important;min-height:350px !important}
 .dropdown-menu #imgUser{height:80px}.navIndex{background-color:black;height:75px}
 .navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:16pt}
 .navIndex img{height:60px}.navIndex .dataUser{font-size:17px;color:#b4aaaa !important;width:100% !important}
 #inputSearch{background-color:black !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
-.editProfile .editProfile{background-color:black !important}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
+.editProfile .editProfile{background-color:black !important}.divUpload{background-color:#1a1818;min-height:270px}
+.divUpload .iconEdit{width:28px;height:28px}.divUpload .h3{font-size:14pt}.divUpload .close{font-size:25pt !important}
+.divUpload div.divPreviewImg{background-color:#000 !important;width:100px;height:100px;border-width:2px !important}
+.divUpload label{font-size:12pt !important}.divUpload input{width:80% !important;font-size:12pt}
+.divUpload .btnSubmit{font-size:13pt}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
 .containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
 .containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}
 body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-login.jpg");background-size:100% 100%}

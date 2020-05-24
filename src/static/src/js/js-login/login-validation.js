@@ -33,6 +33,7 @@ const LoginUser = () => {
                             refreshJsDashboard('../../static/build/js/dashboard.min.js')
                             refreshJsDashboard('../../static/build/js/pace.min.js')
                             const divLoad = document.querySelector('.animation')
+                            clearInterval(ver)
                             setTimeout(() => {
                                 divLoad.classList.remove('d-flex')
                                 divLoad.classList.add('d-none')

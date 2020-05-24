@@ -79,24 +79,22 @@ const enableButton = (btn) => {
     b.classList.add('btn-outline-light')
 }
 
+let ver = undefined
 
 const verificationButton = (btn) => {
-    let a = setInterval(() => {
+     ver = setInterval(() => {
         if( (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
             (emailCreate === true ) ){
                 enableButton(btn)
-                
 
         } else if(emailLogin === true && document.getElementById('pass').value.length >= 6) {
-            enableButton(btn)
-            
+            enableButton(btn)     
 
         } else {
             disableButton(btn)
         }
     }, 100);
-
 }
 
 function clearTime(){
