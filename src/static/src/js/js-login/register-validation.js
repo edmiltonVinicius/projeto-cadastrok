@@ -51,7 +51,7 @@ function validationEmail(id, btn){
 
     } else if(input.length == 0 || input.value === '') {
         emailCreate = false
-        emailCreate = false
+        emailLogin = false
         camp.classList.add('border-light')
         disableButton(btn)
         
