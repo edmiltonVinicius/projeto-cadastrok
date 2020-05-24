@@ -18,7 +18,7 @@ const submitImage = () => {
         .then((res) => {
             document.getElementById('dropDrownNav').src=res.data
             document.getElementById('imgUser').src=res.data
-            showHideDivUplado('.divEdit', '.divBtnsCrud')
+            showHideDivUplad('.divEdit', '.divBtnsCrud')
         })
         .catch((error) => console.log('erro: ' + error))
 
