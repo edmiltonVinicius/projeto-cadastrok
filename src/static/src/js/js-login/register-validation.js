@@ -1,3 +1,6 @@
+let emailCreate = false
+let emailLogin = false
+
 function validationInput(id, q) {
     const input = document.getElementById(id).value
     const camp = document.getElementById(id)
@@ -7,22 +10,24 @@ function validationInput(id, q) {
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
         camp.style.background = "url('../static/build/img/certo.png') 95% 50% no-repeat"
-        emailCreate = false
+        emailCreate = true
+        emailLogin = true
         
     } else if(input.length == ''){
         camp.classList.add('border-light')
         emailCreate = false
-        
+        emailLogin = false
+
     } else {
         camp.classList.remove('border-light')
         camp.style.background = "none"
         camp.classList.add('border-danger') 
         emailCreate = false 
+        emailLogin = false
     }
 }
 
-let emailCreate = false
-let emailLogin = false
+
 
 function validationEmail(id, btn){
     const input = document.getElementById(id).value
@@ -79,13 +84,13 @@ const verificationButton = (btn) => {
     let a = setInterval(() => {
         if( (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
-            (emailCreate === true) ){
+            (emailCreate === true ) ){
                 enableButton(btn)
-                clearInterval(a)
+                
 
         } else if(emailLogin === true && document.getElementById('pass').value.length >= 6) {
             enableButton(btn)
-            clearInterval(a)
+            
 
         } else {
             disableButton(btn)
@@ -95,5 +100,5 @@ const verificationButton = (btn) => {
 }
 
 function clearTime(){
-    clearInterval(a)
+    clearInterval()
 }
