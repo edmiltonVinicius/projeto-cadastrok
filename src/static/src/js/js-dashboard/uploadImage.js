@@ -16,7 +16,6 @@ const submitImage = () => {
             'Content-Type': 'multipart/form-data'
         }})
         .then((res) => {
-            console.log(res.data)
             document.getElementById('dropDrownNav').src=res.data
             document.getElementById('imgUser').src=res.data
             showHideDivUplado('.divEdit', '.divBtnsCrud')

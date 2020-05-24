@@ -1,7 +1,8 @@
 
+$bgDivUpload: rgb(26, 24, 24);
 
 .divUpload {
-    background-color: rgb(26, 24, 24);
+    background-color: $bgDivUpload;
     min-height: 270px;
 
     .iconEdit {

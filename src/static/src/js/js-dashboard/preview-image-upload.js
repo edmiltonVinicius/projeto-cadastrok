@@ -7,8 +7,9 @@ const previewImage = (event) => {
         setTimeout(() => {
             const imgPreview = document.getElementById('previewImg')
             imgPreview.src = reader.result
+            imgPreview.classList.remove('d-none')
 
-        }, 1100);
+        }, 900);
     }
     
     reader.readAsDataURL(event.target.files[0])

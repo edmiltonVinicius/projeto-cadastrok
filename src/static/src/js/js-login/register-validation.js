@@ -87,6 +87,7 @@ const verificationButton = (btn) => {
             (document.getElementById('entPass').value.length >= 6) &&
             (emailCreate === true ) ){
                 enableButton(btn)
+                clearInterval(ver)
 
         } else if(emailLogin === true && document.getElementById('pass').value.length >= 6) {
             enableButton(btn)     

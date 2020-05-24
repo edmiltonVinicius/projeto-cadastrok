@@ -1,0 +1,19 @@
+@import './../login/loading.scss';
+
+$bgDivUpload: rgb(31, 30, 30) !important;
+$bgDivs: rgb(68, 67, 67);
+
+.loadingUpload {
+    background-color: $bgDivUpload;
+    height: 270px !important;
+
+    .l1 {
+        @include patternDivs(70%, 35px);
+    }
+    .l2 {
+        @include patternDivs(80%, 40px);
+    }
+    .l3 {
+        @include patternDivs(40%, 40px);
+    }
+}   
