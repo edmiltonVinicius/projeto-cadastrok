@@ -79,6 +79,10 @@ const enableButton = (btn) => {
     b.classList.add('btn-outline-light')
 }
 
+function clearTime(param){
+    clearInterval(param)
+}
+
 let ver = undefined
 
 const verificationButton = (btn) => {
@@ -98,6 +102,3 @@ const verificationButton = (btn) => {
     }, 100);
 }
 
-function clearTime(){
-    clearInterval()
-}

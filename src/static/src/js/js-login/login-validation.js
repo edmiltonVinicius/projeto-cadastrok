@@ -25,6 +25,8 @@ const LoginUser = () => {
                     
                     axios.get('/dashboard', { headers: { authorization: sessionStorage.getItem('token')}})
                     .then((res) => {
+                        clearTime(ver)
+                        clearTime(ver)
                             imgLoading.classList.add('d-none')
                             document.title='CadastrOk - Dashboard'
                             document.querySelectorAll('link')[2].href='../../static/build/css/dashboard.min.css'
@@ -33,7 +35,6 @@ const LoginUser = () => {
                             refreshJsDashboard('../../static/build/js/dashboard.min.js')
                             refreshJsDashboard('../../static/build/js/pace.min.js')
                             const divLoad = document.querySelector('.animation')
-                            clearInterval(ver)
                             setTimeout(() => {
                                 divLoad.classList.remove('d-flex')
                                 divLoad.classList.add('d-none')
