@@ -86,9 +86,9 @@ function clearTime(param){
 }
 
 
-let ver = undefined
+let verification = undefined
 const verificationButton = (btn) => {
-     ver = setInterval(() => {
+    verification = setInterval(() => {
         if( (document.getElementById('entName') != null) &&
             (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
