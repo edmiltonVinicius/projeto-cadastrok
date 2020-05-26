@@ -41,10 +41,12 @@ const showHideDivUplad = (hide, show, efect) => {
         previewImg.classList.add('d-none')
         clearInputAndDiv.classList.add('d-none')
 
-        divHide.classList.remove('d-block')
-        divHide.classList.add('d-none')
-
-        divShow.classList.remove('d-none')
-        divShow.classList.add('d-block')
+        if(divHide || divShow){
+            divHide.classList.remove('d-block')
+            divHide.classList.add('d-none')
+    
+            divShow.classList.remove('d-none')
+            divShow.classList.add('d-block')
+        }
     }
 }
