@@ -68,9 +68,11 @@ function validationEmail(id, btn){
 
 const disableButton = (btn) => {
     const b = document.querySelector(btn)
-    b.setAttribute('disabled', 'disabled')
-    b.classList.remove('btn-outline-light')
-    b.classList.add('btn-outline-secondary')
+    if(b){
+        b.setAttribute('disabled', 'disabled')
+        b.classList.remove('btn-outline-light')
+        b.classList.add('btn-outline-secondary')
+    }
 }
 
 const enableButton = (btn) => {
@@ -83,21 +85,23 @@ function clearTime(param){
     clearInterval(param)
 }
 
-let ver = undefined
 
+let ver = undefined
 const verificationButton = (btn) => {
      ver = setInterval(() => {
-        if( (document.getElementById('entName').value.length >= 3) &&
+        if( (document.getElementById('entName') != null) &&
+            (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
             (emailCreate === true ) ){
-                enableButton(btn)
-                clearInterval(ver)
+                return enableButton(btn)
 
-        } else if(emailLogin === true && document.getElementById('pass').value.length >= 6) {
-            enableButton(btn)     
+        } else if(  (emailLogin === true) && 
+                    (document.getElementById('pass') != null) &&
+                    (document.getElementById('pass').value.length >= 6) ){
+            return enableButton(btn)     
 
         } else {
-            disableButton(btn)
+            return disableButton(btn)
         }
     }, 100);
 }
