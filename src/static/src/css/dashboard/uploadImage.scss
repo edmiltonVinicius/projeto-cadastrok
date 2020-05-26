@@ -21,6 +21,10 @@ $bgDivUpload: rgb(26, 24, 24);
         width: 100%;
         height: 120px;
         border-width: 2px !important;
+
+        img#previewImg {
+            width: 35%;
+        }
     }
 
     label {
