@@ -11,6 +11,9 @@ const showHideDivUplad = (hide, show, efect) => {
     
 
     if(efect){
+        divShow.classList.remove('d-block')
+        divShow.classList.add('d-none')
+        
         divHide.classList.remove('d-block')
         divHide.classList.add('d-none')
 
