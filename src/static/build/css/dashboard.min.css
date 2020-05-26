@@ -8,7 +8,7 @@ body{background-color:#161515;font-family:'Poppins',sans-serif}.animation{backgr
 .loadingUpload .l1{background-color:#333232;width:70%;height:35px}.loadingUpload .l2{background-color:#333232;width:80%;height:40px}
 .loadingUpload .l3{background-color:#333232;width:40%;height:40px}.imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
 .dropdown-menu{background-color:black !important;width:220px !important;min-height:350px !important}
-.dropdown-menu #imgUser{height:90px}.navIndex{background-color:black;height:75px}
+.dropdown-menu #imgUser{width:100px;height:100px}.navIndex{background-color:black;height:75px}
 .navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:16pt}
 .navIndex img{height:60px}.navIndex .dataUser{font-size:17px;color:#b4aaaa !important;width:100% !important}
 #inputSearch{background-color:black !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
