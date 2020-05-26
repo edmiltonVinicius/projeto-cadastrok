@@ -7,6 +7,7 @@ const showHideDivUplad = (hide, show, efect) => {
     const divLoadingUpload = document.querySelector('.loadingUpload')
     const divPreviewImg = document.querySelector('.divPreviewImg')
     const previewImg = document.getElementById('previewImg')
+    const clearInputAndDiv = document.getElementById('clearInputAndDiv')
     
 
     if(efect){
@@ -17,7 +18,8 @@ const showHideDivUplad = (hide, show, efect) => {
         divPreviewImg.classList.remove('d-block')
         divPreviewImg.classList.add('d-none')
         previewImg.classList.add('d-none')
-
+        clearInputAndDiv.classList.add('d-none')
+        
         divEfect.classList.remove('d-none')
         divEfect.classList.add('d-block')
 
@@ -37,11 +39,14 @@ const showHideDivUplad = (hide, show, efect) => {
 
         inputFile.value=''
         previewImg.classList.add('d-none')
+        clearInputAndDiv.classList.add('d-none')
 
-        divHide.classList.remove('d-block')
-        divHide.classList.add('d-none')
-
-        divShow.classList.remove('d-none')
-        divShow.classList.add('d-block')
+        if(divHide || divShow){
+            divHide.classList.remove('d-block')
+            divHide.classList.add('d-none')
+    
+            divShow.classList.remove('d-none')
+            divShow.classList.add('d-block')
+        }
     }
 }

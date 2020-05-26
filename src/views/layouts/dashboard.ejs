@@ -112,8 +112,14 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
 
-                            <div class="d-none mx-auto border border-dark text-center rounded-circle divPreviewImg">
-                                <img id="previewImg" class="rounded-circle w-100 h-100" alt="">
+                            <div class="d-none mx-auto divPreviewImg">
+                                <div class="w-25 h-100 text-right d-inline ml-2">
+                                    <img id="previewImg" class="rounded-circle w-25 h-100 border border-dark" alt="">
+                                </div>
+                                <div class="text-lef w-50 h-100 d-inline">
+                                    <img class="ml-4 border border-danger rounded-circle py-1 px-1" id="clearInputAndDiv"
+                                         src="./../../static/build/img/excluir.png" alt="" onclick="showHideDivUplad()">
+                                </div>
                             </div>
 
                             <form id="uploadImage" enctype="multipart/form-data" class="mt-4 mb-3">
