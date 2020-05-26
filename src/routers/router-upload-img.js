@@ -41,7 +41,7 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
     const idUser = req.idUser
     if(file){
         cloudinary.uploader.upload(file, 
-            {folder: 'img-users-cadastrok/', transformation: {width: 65, height: 55}}, (error, result) => {
+            {folder: 'img-users-cadastrok/'}, (error, result) => {
             if(error) return res.send('erro no cloudinary')
         
             User.findByIdAndUpdate(idUser, 
