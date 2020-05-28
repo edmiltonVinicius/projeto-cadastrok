@@ -27,7 +27,7 @@ const LoginUser = () => {
                     .then((res) => {
                         clearTime(verification)
                             imgLoading.classList.add('d-none')
-                            document.title='CadastrOk - Dashboard'
+                            document.title='Dashboard'
                             document.querySelectorAll('link')[2].href='../../static/build/css/dashboard.min.css'
                             document.querySelector('body').innerHTML=res.data
                             refreshJsDashboard('https://unpkg.com/axios/dist/axios.min.js')
