@@ -9,7 +9,7 @@ function validationInput(id, q) {
         camp.classList.remove('border-light')
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
-        camp.style.background = "url('../static/build/img/certo.png') 95% 50% no-repeat"
+        camp.style.background = "url('../static/build/img/input-text-right.png') 95% 50% no-repeat"
         emailCreate = true
         emailLogin = true
         
@@ -44,7 +44,7 @@ function validationEmail(id, btn){
         camp.classList.remove('border-light')
         camp.classList.remove('border-danger')
         camp.classList.add('border-success')
-        camp.style.background="url('../static/build/img/certo.png') 95% 50% no-repeat"
+        camp.style.background="url('../static/build/img/input-text-right.png') 95% 50% no-repeat"
         emailCreate = true
         emailLogin = true
         verificationButton(btn)
