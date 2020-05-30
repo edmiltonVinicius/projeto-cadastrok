@@ -6,7 +6,7 @@ const showFormLogin = (b=undefined) => {
     
     clearInput('user')
     clearInput('pass')
-    document.querySelector('.errorLogin').classList.add('d-none')
+    document.querySelector('.divErro').classList.add('d-none')
 
     if(b !== undefined){
         btn.addEventListener("click", (e) => {
