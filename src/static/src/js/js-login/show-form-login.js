@@ -4,14 +4,11 @@ const showFormLogin = (b=undefined) => {
     const divLoad = document.querySelector('.divEfectLoadingLogin')
     const btn = document.querySelector(b)
     
-    clearInput('user')
-    clearInput('pass')
+    clearInput('user', 'pass')
     document.querySelector('.divErro').classList.add('d-none')
 
     if(b !== undefined){
-        btn.addEventListener("click", (e) => {
-            e.preventDefault()
-        })
+        btn.addEventListener("click", (e) =>  e.preventDefault())
         
         btn.classList.remove('d-block')
         btn.classList.add('d-none')

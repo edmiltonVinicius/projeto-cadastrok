@@ -1,25 +1,22 @@
 
-function showAnswer(){
-    const myLink = document.getElementById('btnRegister-js')
-    function stopPadrao(event) {
-        event.preventDefault()
-    } 
-    myLink.addEventListener("click", stopPadrao) 
+const showFormRegister = () => {
+    const btnRegister = document.getElementById('btnRegister-js')
+    btnRegister.addEventListener("click", (e) => e.preventDefault()) 
     
-    clearInput('entName')
-    clearInput('entPass')
-    clearInput('entEmail')
+    clearInput('entName', 'entPass', 'entEmail')
 
     const divLogin = document.querySelector('.divLogin')
     const divEfectLoadingRegister = document.querySelector('.divEfectLoadingRegister')
-    const containerForm = document.querySelector('.containerForm')
+    const containerForm = document.querySelector('.containerFormRegister')
     const logo = document.querySelector('.logo')
     const divEfectLoadingRegisterImg = document.querySelector('.dImg2')
 
     divLogin.classList.remove('d-block')
     divLogin.classList.add('d-none')
+
     logo.classList.remove('d-block')
     logo.classList.add('d-none')
+
     divEfectLoadingRegister.classList.add('d-block')     
     divEfectLoadingRegisterImg.classList.add('d-block')     
          

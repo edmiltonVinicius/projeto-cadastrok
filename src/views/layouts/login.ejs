@@ -72,7 +72,7 @@
                         </div>
                     </form>
                     <div class="col mt-5 text-center">
-                        <button class="btn btn-outline-warning border-0" type="button" id="btnRegister-js" onclick="showAnswer()"
+                        <button class="btn btn-outline-warning border-0" type="button" id="btnRegister-js" onclick="showFormRegister()"
                             style="font-size: 14pt;">Ok, I want to register!</button>
                     </div>
 
@@ -87,7 +87,7 @@
                     <div class="dlink rounded-pill mx-auto"></div>
                 </div>
 
-                <div class="containerForm mx-auto text-center rounded mt-4" id="containerForm">
+                <div class="containerFormRegister mx-auto text-center rounded mt-4" id="containerFormRegister">
                     <p class="h2 text-info pt-3">- User Criation -</p>
                     <form id="formCreateUser" class="mt-4" autocomplete="off">
                         <div class="form-group">
@@ -116,10 +116,10 @@
                         </div>
                         <div class="pb-2 text-center">
                             <button class="btn btn-outline-secondary py-2 px-3 d-block mx-auto mb-4 btnCreate-js"
-                                data-toggle="modal" data-target="#modalRegister" disabled onclick="createUser()">
+                                data-toggle="modal" data-target="#modalRegister" disabled onclick="registerUser()">
                                 Create my user
                             </button>
-                            <p class="text-warning pt-2 link" id="back" onclick="showFormLogin('.containerForm')">←Come Back</p>
+                            <p class="text-warning pt-2 link" id="back" onclick="showFormLogin('.containerFormRegister')">←Come Back</p>
 
                             <div class="modal fade" role="dialog" id="modalRegister" aria-labelledby="modalRegister">
                                 <div class="modal-dialog" role="document">
@@ -133,7 +133,7 @@
                                         </div>
                                         <div class="modal-footer w-75 mx-auto" id="modal-footer">
                                             <button class="btn btn-warning mx-auto px-4" id="btnCloseModal" data-dismiss="modal" type="button">OK</button>
-                                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button" onclick="showFormLogin('.containerForm')">lets Login</button>
+                                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button" onclick="showFormLogin('.containerFormRegister')">lets Login</button>
                                         </div>
                                     </div>
                                 </div>
