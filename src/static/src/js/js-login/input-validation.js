@@ -1,7 +1,7 @@
 let emailCreate = false
 let emailLogin = false
 
-function validationInput(id, q) {
+const validationInput = (id, q) => {
     const input = document.getElementById(id).value
     const camp = document.getElementById(id)
     
@@ -29,7 +29,7 @@ function validationInput(id, q) {
 
 
 
-function validationEmail(id, btn){
+const validationEmail = (id, btn) => {
     const input = document.getElementById(id).value
     const camp = document.getElementById(id)
     const user = input.substring(0, input.indexOf('@'))
@@ -81,27 +81,27 @@ const enableButton = (btn) => {
     b.classList.add('btn-outline-light')
 }
 
-function clearTime(param){
+const clearTime = (param) => {
     clearInterval(param)
 }
 
-
 let verification = undefined
+
 const verificationButton = (btn) => {
     verification = setInterval(() => {
         if( (document.getElementById('entName') != null) &&
             (document.getElementById('entName').value.length >= 3) &&
             (document.getElementById('entPass').value.length >= 6) &&
             (emailCreate === true ) ){
-                return enableButton(btn)
+                enableButton(btn)
 
         } else if(  (emailLogin === true) && 
                     (document.getElementById('pass') != null) &&
                     (document.getElementById('pass').value.length >= 6) ){
-            return enableButton(btn)     
+            enableButton(btn)     
 
         } else {
-            return disableButton(btn)
+            disableButton(btn)
         }
     }, 100);
 }

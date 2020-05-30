@@ -34,7 +34,7 @@
                 </div>
                 <div class="dImg2 d-none mx-auto rounded-circle mt-4 mb-4"></div>
 
-                <div class="loadingLogin mx-auto rounded mt-4 d-none text-center">
+                <div class="divEfectLoadingLogin mx-auto rounded mt-4 d-none text-center">
                     <div class="dImg mx-auto rounded-circle mb-4"></div>
                     <div class="dlogin mx-auto rounded mb-4"></div>
                     <div class="linePass mx-auto mb-4">
@@ -45,7 +45,7 @@
                     <div class="dLink mx-auto rounded-pill"></div>
                 </div>
 
-                <div class="col-12 col-md-9 col-lg-12 mt-4 d-none cont" id="cont">
+                <div class="col-12 col-md-9 col-lg-12 mt-4 d-none divLogin" id="divLogin">
                     <form id="formLogin" class="w-75 mx-auto">
                         <div class="form-group mb-4">
                             <label for="user" class="d-none">User</label>
@@ -61,9 +61,9 @@
                                 <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
                                     aria-hidden="true"></i></button>
                                 
-                                <div class="errorLogin d-none mt-2 text-danger text-center style="font-size: 13pt;">
-                                    <p class="textErro d-none mt-3"></p>
-                                    <img class="d-none" id="imgLoading" src="../../static/build/img/icon-loading-login.gif" alt="Gif loading Login">
+                                <div class="divErro d-none mt-2 text-danger text-center style="font-size: 13pt;">
+                                    <p class="textDivErro d-none mt-3"></p>
+                                    <img class="d-none" id="imgLoadingLogin" src="../../static/build/img/icon-loading-login.gif" alt="Gif loading Login">
                                 </div>
                         </div>
 
@@ -72,13 +72,13 @@
                         </div>
                     </form>
                     <div class="col mt-5 text-center">
-                        <button class="btn btn-outline-warning border-0" type="button" id="btnRegister-js" onclick="showAnswer()"
+                        <button class="btn btn-outline-warning border-0" type="button" id="btnRegister-js" onclick="showFormRegister()"
                             style="font-size: 14pt;">Ok, I want to register!</button>
                     </div>
 
                 </div>
 
-                <div class="loading mx-auto rounded mt-4 pt-4">
+                <div class="divEfectLoadingRegister mx-auto rounded mt-4 pt-4">
                     <div class="dtitle rounded-pill mx-auto mb-4"></div>
                     <div class="dname rounded mx-auto mb-4"></div>
                     <div class="dpass rounded ml-5 mb-4"></div>
@@ -87,9 +87,9 @@
                     <div class="dlink rounded-pill mx-auto"></div>
                 </div>
 
-                <div class="containerForm mx-auto text-center rounded mt-4" id="containerForm">
+                <div class="containerFormRegister mx-auto text-center rounded mt-4" id="containerFormRegister">
                     <p class="h2 text-info pt-3">- User Criation -</p>
-                    <form id="for" class="mt-4" autocomplete="off">
+                    <form id="formCreateUser" class="mt-4" autocomplete="off">
                         <div class="form-group">
                             <label for="user" class="w-75">
                                 <input type="text" class="form-control" id="entName"
@@ -116,10 +116,10 @@
                         </div>
                         <div class="pb-2 text-center">
                             <button class="btn btn-outline-secondary py-2 px-3 d-block mx-auto mb-4 btnCreate-js"
-                                data-toggle="modal" data-target="#modalRegister" disabled onclick="createUser()">
+                                data-toggle="modal" data-target="#modalRegister" disabled onclick="registerUser()">
                                 Create my user
                             </button>
-                            <p class="text-warning pt-2 link" id="back" onclick="showFormLogin('.containerForm')">←Come Back</p>
+                            <p class="text-warning pt-2 link" id="back" onclick="showFormLogin('.containerFormRegister')">←Come Back</p>
 
                             <div class="modal fade" role="dialog" id="modalRegister" aria-labelledby="modalRegister">
                                 <div class="modal-dialog" role="document">
@@ -133,7 +133,7 @@
                                         </div>
                                         <div class="modal-footer w-75 mx-auto" id="modal-footer">
                                             <button class="btn btn-warning mx-auto px-4" id="btnCloseModal" data-dismiss="modal" type="button">OK</button>
-                                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button" onclick="showFormLogin('.containerForm')">lets Login</button>
+                                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button" onclick="showFormLogin('.containerFormRegister')">lets Login</button>
                                         </div>
                                     </div>
                                 </div>

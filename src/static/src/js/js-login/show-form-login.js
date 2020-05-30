@@ -1,17 +1,14 @@
 const showFormLogin = (b=undefined) => {
     const logo = document.querySelector('.logo')
-    const divLogin = document.querySelector('.cont')
-    const divLoad = document.querySelector('.loadingLogin')
+    const divLogin = document.querySelector('.divLogin')
+    const divLoad = document.querySelector('.divEfectLoadingLogin')
     const btn = document.querySelector(b)
     
-    clearInput('user')
-    clearInput('pass')
-    document.querySelector('.errorLogin').classList.add('d-none')
+    clearInput('user', 'pass')
+    document.querySelector('.divErro').classList.add('d-none')
 
     if(b !== undefined){
-        btn.addEventListener("click", (e) => {
-            e.preventDefault()
-        })
+        btn.addEventListener("click", (e) =>  e.preventDefault())
         
         btn.classList.remove('d-block')
         btn.classList.add('d-none')
