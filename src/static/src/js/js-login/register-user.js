@@ -1,16 +1,15 @@
-function clearInput(id){
+const clearInput = (id) => {
     const input = document.getElementById(id)
     input.value=''
     input.style.background='none'
     input.classList.add('border-light')
 }
 
-function createUser() {
-    const f = document.getElementById('for')
-    function stopPadrao2(event) {
-        event.preventDefault()
-    }
-    f.addEventListener('submit', stopPadrao2)
+const createUser = () => {
+    const formCreateUser = document.getElementById('formCreateUser')
+    formCreateUser.addEventListener('submit', (e) => {
+        e.preventDefault()
+    })
 
     
     document.getElementById('letsIndex').style.display='none'

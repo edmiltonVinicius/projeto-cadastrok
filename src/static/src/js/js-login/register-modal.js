@@ -3,6 +3,8 @@ function hideLoading(text){
     const textModal = document.getElementById('textModal')
     const footerModal = document.getElementById('modal-footer')
 
+   
+
     setTimeout(() => {
         bodyModal.style.display='none'
         textModal.innerHTML=text
@@ -15,10 +17,11 @@ const btnletsIndex = document.getElementById('letsIndex')
 const btnCloseModal = document.getElementById('btnCloseModal')
 
 function returnLogin() {
+    const containerForm = document.getElementById('containerForm')
+
     btnletsIndex.style.display='block'
     btnletsIndex.addEventListener('click', () => {
-        document.getElementById('cont').style.display='block'
-        document.getElementById('containerForm').style.display='none'
+        containerForm.classList.add('d-none')
     })
 }
 

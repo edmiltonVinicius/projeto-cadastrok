@@ -10,26 +10,26 @@ function showAnswer(){
     clearInput('entPass')
     clearInput('entEmail')
 
-    const divLogin = document.querySelector('.cont')
-    const divLoad = document.querySelector('.loading')
-    const divForm = document.querySelector('.containerForm')
+    const divLogin = document.querySelector('.divLogin')
+    const divEfectLoadingRegister = document.querySelector('.divEfectLoadingRegister')
+    const containerForm = document.querySelector('.containerForm')
     const logo = document.querySelector('.logo')
-    const divLoadImg = document.querySelector('.dImg2')
+    const divEfectLoadingRegisterImg = document.querySelector('.dImg2')
 
     divLogin.classList.remove('d-block')
     divLogin.classList.add('d-none')
     logo.classList.remove('d-block')
     logo.classList.add('d-none')
-    divLoad.classList.add('d-block')     
-    divLoadImg.classList.add('d-block')     
+    divEfectLoadingRegister.classList.add('d-block')     
+    divEfectLoadingRegisterImg.classList.add('d-block')     
          
 
     setTimeout(() => {
-        divLoad.classList.remove('d-block')
-        divLoadImg.classList.remove('d-block')
-        divForm.classList.remove('d-none')
+        divEfectLoadingRegister.classList.remove('d-block')
+        divEfectLoadingRegisterImg.classList.remove('d-block')
+        containerForm.classList.remove('d-none')
         logo.classList.remove('d-none')
-        divForm.classList.add('d-block')
+        containerForm.classList.add('d-block')
         logo.classList.add('d-block')   
     }, 2000);
 } 

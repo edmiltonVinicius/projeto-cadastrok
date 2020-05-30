@@ -1,7 +1,7 @@
 const showFormLogin = (b=undefined) => {
     const logo = document.querySelector('.logo')
-    const divLogin = document.querySelector('.cont')
-    const divLoad = document.querySelector('.loadingLogin')
+    const divLogin = document.querySelector('.divLogin')
+    const divLoad = document.querySelector('.divEfectLoadingLogin')
     const btn = document.querySelector(b)
     
     clearInput('user')
