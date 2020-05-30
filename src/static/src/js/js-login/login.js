@@ -31,9 +31,11 @@ const LoginUser = () => {
                             document.title='Dashboard'
                             document.querySelectorAll('link')[2].href='../../static/build/css/dashboard.min.css'
                             document.querySelector('body').innerHTML=res.data
-                            refreshJsDashboard('https://unpkg.com/axios/dist/axios.min.js')
-                            refreshJsDashboard('../../static/build/js/dashboard.min.js')
-                            refreshJsDashboard('../../static/build/js/pace.min.js')
+
+                            updatePageDashboard('https://unpkg.com/axios/dist/axios.min.js',
+                                                '../../static/build/js/dashboard.min.js',
+                                                '../../static/build/js/pace.min.js' )
+
                             const divLoad = document.querySelector('.animation')
                             setTimeout(() => {
                                 divLoad.classList.remove('d-flex')
