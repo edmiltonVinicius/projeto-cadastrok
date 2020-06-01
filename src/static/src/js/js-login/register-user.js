@@ -11,22 +11,15 @@ const registerUser = () => {
 
     axios.post('/register', { userName, userPassword, userEmail })
         .then((res) => {
-            if((res.status === 200) && (res.data.message === 'User created')){
+            if((res.status === 201) && (res.data === 'user created')){
                 clearInput('entName', 'entEmail', 'entPass')
-                hideLoadingShowResponse(res.data.message)
+                hideLoadingShowResponse(res.data)
+                window.console.clear()
                 returnLogin()
-
-            } else if(res.data.message === 'Email already Registered') {
-                hideLoadingShowResponse(res.data.message)
-                closeModal()
-
-            } else {
-                hideLoadingShowResponse('Sorry, an error occurred try again')
-                closeModal()
-            }
+            } 
         })
-        .catch(err => {
-            hideLoadingShowResponse('Sorry, an error occurred try again')
+        .catch(error => {
+            hideLoadingShowResponse(error.response.data)
             closeModal()
         })
 }
