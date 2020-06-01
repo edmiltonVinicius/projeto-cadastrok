@@ -29,7 +29,7 @@ app.use('/upload', routerUploadImg)
 app.use(routerError)
 app.use((error, req, res, next) => {
     res.status(error.status || 500)
-    return res.render('layouts/error')
+    return res.status(404).render('layouts/error')
 })
 
 
