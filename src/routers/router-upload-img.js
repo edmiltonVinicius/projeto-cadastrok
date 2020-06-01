@@ -42,18 +42,18 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
     if(file){
         cloudinary.uploader.upload(file, 
             {folder: 'img-users-cadastrok/'}, (error, result) => {
-            if(error) return res.send('erro no cloudinary')
+            if(error) return res.status(500).send('Error uploading to cloud.')
         
             User.findByIdAndUpdate(idUser, 
                 {image: { publicId : result.public_id, secureUrl : result.secure_url}},
                 { new: true }, (err, arq) => {
-                    if(err) return res.send('erro com o mongoose')
+                    if(err) return res.status(500).send('Error on Mongoose.')
 
-                    return res.send(arq.image.secureUrl)
+                    return res.status(201).send(arq.image.secureUrl)
             })
         })
     }else {
-        return res.send('file nao receido')
+        return res.status(404).send('File not received.')
     }
 })
 
@@ -61,7 +61,7 @@ router.delete('/', (req, res) => {
     cloudinary.uploader.destroy("img-users-cadastrok/mlno6jo6puea5rjefabp", 
     {invalidate: true},
     (error, result) => {
-        if(error) return res.send(error)
+        if(error) return res.status(500).send('Sorry, there was an error, please try again.')
         return res.send(result)
     })
 })
