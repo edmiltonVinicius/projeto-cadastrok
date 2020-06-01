@@ -18,9 +18,6 @@ body{background-color:#161515;font-family:'Poppins',sans-serif}.animation{backgr
 .divUpload div.divPreviewImg{width:100%;height:120px;border-width:2px !important}
 .divUpload div.divPreviewImg img#previewImg{width:35%}.divUpload label{font-size:12pt !important}
 .divUpload input{width:80% !important;font-size:12pt}.divUpload .btnSubmit{font-size:13pt}
-.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
-.containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
-.containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}
 body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
@@ -51,4 +48,6 @@ body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("..
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
 .back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
 form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
-form .btnLogin-js{font-size:13pt}
+form .btnLogin-js{font-size:13pt}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
+.containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
+.containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}
