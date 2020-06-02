@@ -38,6 +38,7 @@ cloudinary.config({
 
 router.post('/', middleware, upload.single('file'), (req, res) => {
     const file = req.file.path
+    console.log(file)
     const idUser = req.idUser
     if(file){
         cloudinary.uploader.upload(file, 
@@ -53,7 +54,8 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
             })
         })
     }else {
-        return res.status(404).send('File not received.')
+        console.log('erro 404')
+        //return res.status(404).send('File not received.')
     }
 })
 
