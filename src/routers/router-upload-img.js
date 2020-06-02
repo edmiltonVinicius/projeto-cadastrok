@@ -4,6 +4,7 @@ const multer = require('multer')
 const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
+const fs = require('fs')
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -38,7 +39,6 @@ cloudinary.config({
 
 router.post('/', middleware, upload.single('file'), (req, res) => {
     const file = req.file.path
-    console.log(file)
     const idUser = req.idUser
     if(file){
         cloudinary.uploader.upload(file, 
@@ -49,13 +49,16 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
                 {image: { publicId : result.public_id, secureUrl : result.secure_url}},
                 { new: true }, (err, arq) => {
                     if(err) return res.status(500).send('Error on Mongoose.')
-
+                    fs.unlink(file, (err) => {
+                        if(err) {
+                            return res.status(500).send('Sorry, an error has occurred.')
+                        }
+                    })
                     return res.status(201).send(arq.image.secureUrl)
             })
         })
     }else {
-        console.log('erro 404')
-        //return res.status(404).send('File not received.')
+        return res.status(404).send('File not received.')
     }
 })
 
