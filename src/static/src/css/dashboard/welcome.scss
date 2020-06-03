@@ -1,0 +1,20 @@
+@import './animate.scss';
+
+
+
+.divWelcome {
+    height: 450px;
+    border-width: 2px !important;
+    background-color: #000000;
+
+    animation: fadeIn 2s;
+
+    p.l1 {
+        color: #ffffff;
+        font-size: 18pt;
+    }
+    .l2 {
+        color: #e9e6e6;
+        font-size: 14pt; 
+    }
+}

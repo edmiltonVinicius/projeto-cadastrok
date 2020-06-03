@@ -15,7 +15,7 @@ const UserSchema = new mongoose.Schema({
     email: {
         type: String,
         lowercase: true,
-        unique: true,
+        unique: true,   
     },
     image: {
         publicId: {
@@ -25,6 +25,10 @@ const UserSchema = new mongoose.Schema({
             type: String,
             default: 'https://res.cloudinary.com/edmilton-cadastrok/image/upload/v1590125387/img-users-cadastrok/y6aj5gh31ktdp75ott22.jpg'
         }
+    },
+    firstAcsess: {
+        type: Boolean,
+        default: false
     }
 })
 
