@@ -12,7 +12,8 @@ const submitImage = () => {
         url: '/upload', 
         data: new FormData(form),
         headers: { 
-            authorization: itoken
+            authorization: itoken,
+            'Content-Type': 'multipart/form-data'
         }})
         .then((res) => {
             document.getElementById('dropDrownNav').src=res.data

@@ -54,7 +54,7 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
                     fs.unlink(file, (err) => {
                         if(err) return res.status(500).send('Error on Upload Image.')
                     })
-                    return res.status(201).send(arq.image.secureUrl)
+                    return res.send(arq.image.secureUrl)
             })
         })
     }else {
