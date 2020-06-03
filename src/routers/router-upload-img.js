@@ -6,10 +6,12 @@ const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
 
-const cloudinaryConfig = require('../config/config-cloudinary')
-//const multerConfig = require('../config/config-multer')
+module.exports = {
+    cloud_name : process.env.CLOUD_NAME , 
+    api_key : process.env.API_KEY, 
+    api_secret : process.env.API_SECRET
+}
 
-cloudinary.config(cloudinaryConfig) 
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
