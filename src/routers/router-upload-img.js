@@ -41,7 +41,7 @@ const upload = multer({
 router.post('/', middleware, upload.single('file'), (req, res) => {
     const file = req.file.path || req.file
     const idUser = req.idUser
-    if(file){
+    if(file != undefined){
         cloudinary.uploader.upload(file, 
             {folder: 'img-users-cadastrok/'}, (error, result) => {
             if(error) return res.status(500).send('Error uploading to cloud.')
@@ -58,7 +58,7 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
             })
         })
     }else {
-        return res.status(404).send('File not received.')
+        return res.send('File not received.')
     }
 })
 
