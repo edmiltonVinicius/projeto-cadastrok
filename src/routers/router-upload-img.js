@@ -4,6 +4,7 @@ const multer = require('multer')
 const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
+const fs = require('fs')
 
 cloudinary.config({
     cloud_name : process.env.CLOUD_NAME, 
@@ -38,7 +39,7 @@ const upload = multer({
 })
 
 router.post('/', middleware, upload.single('file'), (req, res) => {
-    const file = req.file.path
+    const file = req.file.path || req.file
     const idUser = req.idUser
     if(file){
         cloudinary.uploader.upload(file, 
@@ -50,6 +51,9 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
                     { new: true }, (err, arq) => {
                     if(err) return res.status(500).send('Error on Mongoose.')
                     
+                    fs.unlink(file, (err) => {
+                        if(err) return res.status(500).send('Error on Upload Image.')
+                    })
                     return res.status(201).send(arq.image.secureUrl)
             })
         })
