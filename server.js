@@ -1,5 +1,5 @@
 require('dotenv').config()
-global.banco = require('./src/database/connection')
+global.banco = require('./src/config/connection-mongoose')
 
 const express = require('express')
 const app = express()
