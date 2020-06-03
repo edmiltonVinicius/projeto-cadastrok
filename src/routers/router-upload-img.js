@@ -4,7 +4,6 @@ const multer = require('multer')
 const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
-const fs = require('fs')
 
 cloudinary.config({
     cloud_name : process.env.CLOUD_NAME, 
@@ -48,13 +47,9 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
         
             User.findByIdAndUpdate(idUser, 
                 {image: { publicId : result.public_id, secureUrl : result.secure_url}},
-                { new: true }, (err, arq) => {
+                    { new: true }, (err, arq) => {
                     if(err) return res.status(500).send('Error on Mongoose.')
-                    fs.unlink(file, (err) => {
-                        if(err) {
-                            return res.status(500).send('Sorry, an error has occurred.')
-                        }                        
-                    })
+                    
                     return res.status(201).send(arq.image.secureUrl)
             })
         })
