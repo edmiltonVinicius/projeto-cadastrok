@@ -5,6 +5,7 @@ const multer = require('multer')
 const cloudinary = require('cloudinary').v2
 const middleware = require('./middleware-jwt')
 const User = require('./../database/user-schema')
+const fs = require('fs')
 
 module.exports = {
     cloud_name : process.env.CLOUD_NAME , 
@@ -53,7 +54,7 @@ router.post('/', middleware, upload.single('file'), (req, res) => {
                     fs.unlink(file, (err) => {
                         if(err) {
                             return res.status(500).send('Sorry, an error has occurred.')
-                        }
+                        }                        
                     })
                     return res.status(201).send(arq.image.secureUrl)
             })
