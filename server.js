@@ -1,10 +1,15 @@
 require('dotenv').config()
+<<<<<<< HEAD
 global.banco = require('./src/database/connection-mongoose')
+=======
+>>>>>>> desenvolvimento
 
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 3000
+
+const connectionMongoose = require('./src/config/connection-mongoose')
 
 const routerLogin = require('./src/routers/router-login')
 const routerRegister = require('./src/routers/router-register')
@@ -14,6 +19,7 @@ const routerUploadImg = require('./src/routers/router-upload-img')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/src/views')
+
 app.use('/static', express.static(__dirname + '/src/static/'))
 
 app.use(express.json())
