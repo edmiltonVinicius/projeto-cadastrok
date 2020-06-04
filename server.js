@@ -1,11 +1,11 @@
 require('dotenv').config()
-global.banco = require('./src/database/connection-mongoose')
-
 
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 3000
+
+const connectionMongoose = require('./src/configs/connection-mongoose')
 
 const routerLogin = require('./src/routers/router-login')
 const routerRegister = require('./src/routers/router-register')
