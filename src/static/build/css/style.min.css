@@ -401,7 +401,7 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 .divUpload div.divPreviewImg{width:100%;height:120px;border-width:2px !important}
 .divUpload div.divPreviewImg img#previewImg{width:35%}.divUpload label{font-size:12pt !important}
 .divUpload input{width:80% !important;font-size:12pt}.divUpload .btnSubmit{font-size:13pt}
-/*Animate.css - http://daneden.me/animateLicensed under the MIT license - http://opensource.org/licenses/MITCopyright (c) 2015 Daniel Eden*/.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+/*Animate.css - http://daneden.me/animateLicensed under the MIT license - http://opensource.org/licenses/MITCopyright (c) 2015 Daniel Eden*/@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated-fast{-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}.animated.bounceIn,.animated.bounceOut{-webkit-animation-duration:.75s;animation-duration:.75s}
@@ -784,9 +784,11 @@ to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
 }@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
-}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.divWelcome{height:450px;border-width:2px !important;background-color:#000;animation:fadeIn 2s}
-.divWelcome p.l1{color:#fff;font-size:18pt}.divWelcome .l2{color:#e9e6e6;font-size:14pt}
-body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
+}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.divContainerWelcome{position:absolute;top:10px;left:auto}
+.divWelcome{width:100%;height:470px;border-left-width:5px !important;background-color:#000;font-family:'Roboto',sans-serif !important;animation:fadeIn 2s}
+.divWelcome p.l1{color:#fff;font-size:22pt;font-weight:bold}.divWelcome .l2{color:#e9e6e6;font-size:15pt}
+.divWelcome button{font-size:13pt !important}body{font-family:'Poppins',sans-serif}
+.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
 .back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
