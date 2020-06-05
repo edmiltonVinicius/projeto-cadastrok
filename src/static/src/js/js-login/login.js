@@ -41,7 +41,8 @@ const LoginUser = () => {
                         setTimeout(() => {
                             divLoad.classList.remove('d-flex')
                             divLoad.classList.add('d-none')
-                            document.querySelector('.containner-fluid').classList.remove('d-none')
+                            document.querySelector('.container-fluid').classList.remove('d-none')
+                        
                         }, 4000)
                     })
                     .catch((err) => {

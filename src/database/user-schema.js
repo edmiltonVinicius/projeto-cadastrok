@@ -26,9 +26,9 @@ const UserSchema = new mongoose.Schema({
             default: 'https://res.cloudinary.com/edmilton-cadastrok/image/upload/v1590125387/img-users-cadastrok/y6aj5gh31ktdp75ott22.jpg'
         }
     },
-    firstAcsess: {
+    firstAccess: {
         type: Boolean,
-        default: false
+        default: true
     }
 })
 

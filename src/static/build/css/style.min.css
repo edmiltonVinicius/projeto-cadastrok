@@ -784,8 +784,8 @@ to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
 }@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
-}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.divContainerWelcome{position:absolute;top:10px;left:auto}
-.divWelcome{width:100%;height:470px;border-left-width:5px !important;background-color:#000;font-family:'Roboto',sans-serif !important;animation:fadeIn 2s}
+}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.divContainerWelcome{position:absolute;top:10px;left:0}
+.divWelcome{width:100%;height:470px;border-left-width:5px !important;background-color:#000;font-family:'Roboto',sans-serif !important;animation:fadeIn 1s}
 .divWelcome p.l1{color:#fff;font-size:22pt;font-weight:bold}.divWelcome .l2{color:#e9e6e6;font-size:15pt}
 .divWelcome button{font-size:13pt !important}body{font-family:'Poppins',sans-serif}
 .img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
