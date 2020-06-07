@@ -399,7 +399,8 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 .editProfile .editProfile{background-color:black !important}.divUpload{background-color:#1a1818;min-height:270px}
 .divUpload .iconEdit{width:28px;height:28px}.divUpload .h3{font-size:14pt}.divUpload .close{font-size:25pt !important}
 .divUpload div.divPreviewImg{width:100%;height:120px;border-width:2px !important}
-.divUpload div.divPreviewImg img#previewImg{width:35%}.divUpload label{font-size:12pt !important}
+.divUpload div.divPreviewImg img#previewImg{width:35%}.divUpload div.divPreviewImg .iconLoadingUploading{width:60px;height:50px}
+.divUpload div.divPreviewImg .iconUploadRight{width:45px;height:40px}.divUpload label{font-size:12pt !important}
 .divUpload input{width:80% !important;font-size:12pt}.divUpload .btnSubmit{font-size:13pt}
 /*Animate.css - http://daneden.me/animateLicensed under the MIT license - http://opensource.org/licenses/MITCopyright (c) 2015 Daniel Eden*/@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated-fast{-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
@@ -785,6 +786,6 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 }@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
 }.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.divContainerWelcome{position:absolute;top:10px;left:0}
-.divWelcome{width:100%;height:470px;border-left-width:5px !important;background-color:#000;font-family:'Roboto',sans-serif !important;animation:fadeIn 1s}
+.divWelcome{width:100%;height:470px;border-left-width:10px !important;background-color:#000;font-family:'Roboto',sans-serif !important;animation:fadeIn 1s}
 .divWelcome p.l1{color:#fff;font-size:22pt;font-weight:bold}.divWelcome .l2{color:#e9e6e6;font-size:15pt}
 .divWelcome button{font-size:13pt !important}

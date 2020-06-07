@@ -7,7 +7,15 @@ const showHideDivUplad = (hide, show, efect) => {
     const divLoadingUpload = document.querySelector('.loadingUpload')
     const divPreviewImg = document.querySelector('.divPreviewImg')
     const previewImg = document.getElementById('previewImg')
-    const clearInputAndDiv = document.getElementById('clearInputAndDiv')
+    
+    const iconRight = document.getElementById('iconRight')
+    const gifUpload = document.getElementById('gifUpload')
+
+    gifUpload.classList.remove('d-inline')
+    gifUpload.classList.add('d-none')
+
+    iconRight.classList.remove('d-inline')
+    iconRight.classList.add('d-none')
     
 
     if(efect){

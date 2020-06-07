@@ -1,8 +1,12 @@
 const previewImage = (event) => {
     const divPreviewImg = document.querySelector('.divPreviewImg')
     const clearInputAndDiv = document.getElementById('clearInputAndDiv')
+    const gifUpload = document.getElementById('gifUpload')
     const reader = new FileReader()
     
+    gifUpload.classList.remove('d-inline')
+    gifUpload.classList.add('d-none')
+
     reader.onload = () => {
         divPreviewImg.classList.remove('d-none')
         setTimeout(() => {
