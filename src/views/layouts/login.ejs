@@ -49,13 +49,13 @@
                     <form id="formLogin" class="w-75 mx-auto">
                         <div class="form-group mb-4">
                             <label for="user" class="d-none">User</label>
-                            <input type="text" class="form-control border border-light w-100 mx-auto" name="loginUser"
+                            <input type="text" class="form-control pr-5 border border-light w-100 mx-auto" name="loginUser"
                                 id="user" oninput="validationEmail('user', '.btnLogin-js')" placeholder="Type your email">
                         </div>
 
                         <div class="form-group mb-4 text-center">
                             <label for="password" class="d-none">password</label>
-                            <input type="password" class="form-control d-inline border border-light w-75"
+                            <input type="password" class="form-control pr-5 d-inline border border-light w-75"
                                 id="pass" oninput="validationInput('pass', '6')" name="passUser" placeholder="Type your password">
                             
                                 <button type="button" class="btn border-0 text-light btnPassword" onclick="showHide('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
@@ -92,14 +92,14 @@
                     <form id="formCreateUser" class="mt-4" autocomplete="off">
                         <div class="form-group">
                             <label for="user" class="w-75">
-                                <input type="text" class="form-control" id="entName"
+                                <input type="text" class="form-control pr-5" id="entName"
                                     oninput="validationInput('entName','3')" name="userName"
                                     placeholder="Type your name" required />
                             </label>
                         </div>
                         <div class="form-group w-100 mb-2">
                             <label for="password" class="w-75">
-                                <input type="password" class="form-control d-inline w-75" id="entPass"
+                                <input type="password" class="form-control pr-5 d-inline w-75" id="entPass"
                                     oninput="validationInput('entPass','6')" name="userPassword"
                                     placeholder="Choose a password" required />
                                 <button type="button" class="btn border-0 text-light btnPassword"
@@ -110,7 +110,7 @@
                         </div>
                         <div class="form-group">
                             <label for="email" class="w-75">
-                                <input type="email" class="form-control" id="entEmail" oninput="validationEmail('entEmail', '.btnCreate-js')"
+                                <input type="email" class="form-control pr-5" id="entEmail" oninput="validationEmail('entEmail', '.btnCreate-js')"
                                     name="userEmail" placeholder="Now your e-mail" />
                             </label>
                         </div>
