@@ -3,7 +3,9 @@ const registerUser = () => {
     const formCreateUser = document.getElementById('formCreateUser')
     formCreateUser.addEventListener('submit', (e) => e.preventDefault())
     
-    const userName = document.getElementById('entName').value
+    let name = document.getElementById('entName').value
+
+    const userName = upperText(name)
     const userPassword = document.getElementById('entPass').value
     const userEmail = document.getElementById('entEmail').value
 
