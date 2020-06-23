@@ -6,15 +6,12 @@ const submitImage = () => {
     })
     
     const itoken = sessionStorage.getItem('token')
-    const clearInputAndDiv = document.getElementById('clearInputAndDiv')
-    const gifUpload = document.getElementById('gifUpload')
-    const iconRight = document.getElementById('iconRight')
 
-    clearInputAndDiv.classList.remove('d-block')
-    clearInputAndDiv.classList.add('d-none')
+    hideElement('clearInputAndDiv')
+    hideElement('.divErrorUpload')
 
-    gifUpload.classList.remove('d-none')
-    gifUpload.classList.add('d-inline')
+    showElementInline('gifUpload')
+
     axios({
         method: 'post',
         url: '/upload', 
@@ -24,11 +21,8 @@ const submitImage = () => {
             'Content-Type': 'multipart/form-data'
         }})
         .then((res) => {
-            gifUpload.classList.remove('d-inline')
-            gifUpload.classList.add('d-none')
-
-            iconRight.classList.remove('d-none')
-            iconRight.classList.add('d-inline')
+            hideElement('gifUpload')
+            showElementInline('iconRight')
 
             setTimeout(() => {
                 document.getElementById('dropDrownNav').src=res.data
@@ -37,6 +31,13 @@ const submitImage = () => {
                 
             }, 1100);
         })
-        .catch((error) => console.log('erro: ' + error))
+        .catch((error) => {
+            const divErrorUpload = document.querySelector('.divErrorUpload')
+            const textErrorUpload = document.querySelector('.textErrorUpload')
+
+            textErrorUpload.innerHTML='Error, please try again.'
+            showElement('.divErrorUpload')
+            
+        })
 
 }

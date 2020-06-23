@@ -144,7 +144,7 @@
                                     <img class="ml-4 border border-dark rounded-circle py-1 px-1 iconLoadingUploading" id="gifUpload"
                                         src="../../static/build/img/gif-upload-image.gif" alt="">
                                     <img class="ml-4 border border-success rounded-circle py-1 px-1 iconUploadRight" id="iconRight"
-                                        src="../../static/build/img/input-text-right.png" alt="">
+                                        src="../../static/build/img/right-bigger.png" alt="">
                                     
                                 </div>
                             </div>
@@ -157,6 +157,12 @@
                                             id="upladoImage" onchange="previewImage(event)" accept="image/png, image/jpeg" required>
                                     </label>
                                 </div>
+
+                                <div class="divErrorUpload d-none">
+                                    <img src="./../../static/build/img/icon-error.png" alt="">
+                                    <p class="ml-2 textErrorUpload text-danger d-inline"></p>
+                                </div>
+
                                 <div class="ml-auto w-50 pt-3">
                                     <button type="submit" class="btn btn-outline-warning px-4 btnSubmit" onclick="submitImage()">Submit</button>
                                 </div>
