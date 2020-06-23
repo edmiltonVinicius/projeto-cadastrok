@@ -11,12 +11,12 @@ const LoginUser = () => {
 
     const divErro = document.querySelector('.divErro')
     const textDivErro = document.querySelector('.textDivErro')
-    
-    const imgLoadingLogin = document.getElementById('imgLoadingLogin')
 
-    textDivErro.classList.add('d-none')
+    hideElement('.textDivErro')
+    hideElement('.iconErro')
+
     divErro.classList.remove('d-none')
-    imgLoadingLogin.classList.remove('d-none')
+    showElement('imgLoadingLogin')
 
     axios.post('/', { loginUser, passUser })
         .then((res) => {
@@ -28,7 +28,7 @@ const LoginUser = () => {
                     .then((res) => {
                         clearTime(verification)
                         window.console.clear()
-                        imgLoadingLogin.classList.add('d-none')
+                        hideElement('imgLoadingLogin')
                         document.title='Dashboard'
                         document.querySelectorAll('link')[2].href='../../static/build/css/dashboard.min.css'
                         document.querySelector('body').innerHTML=res.data
@@ -46,9 +46,10 @@ const LoginUser = () => {
                         }, 4000)
                     })
                     .catch((err) => {
-                        imgLoadingLogin.classList.add('d-none')
+                        hideElement('imgLoadingLogin')
                         textDivErro.innerHTML=res.data.message
-                        textDivErro.classList.remove('d-none')
+                        showElementInline('.textDivErro')
+                        showElementInline('.iconErro')
                     })
                 } 
                 
@@ -56,10 +57,10 @@ const LoginUser = () => {
         })
         .catch((error) => {
             setTimeout(() => {
-                imgLoadingLogin.classList.add('d-none')
+                hideElement('imgLoadingLogin')
                 textDivErro.innerHTML=error.response.data
-                textDivErro.classList.remove('d-none')
-                                
+                showElementInline('.textDivErro')
+                showElementInline('.iconErro')               
             }, 1000);            
         })
 
