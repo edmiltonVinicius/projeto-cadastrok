@@ -1,5 +1,6 @@
 const html = `<!DOCTYPE html>
                 <html lang="pt-br">
+
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,15 @@ const html = `<!DOCTYPE html>
                             width: 100%;
                             height: auto;
                             font-family: 'Roboto', sans-serif !important;
-                            font-size: 15pt;
+                            font-size: 11pt;
                         }
+
                         .title {
                             color: #000000;
                             font-weight: bolder;
                             padding-left: 5px;
                         }
+
                         p span {
                             display: block;
                         }
@@ -26,29 +29,34 @@ const html = `<!DOCTYPE html>
                             color: rgb(72, 73, 73);
                         }
 
+                        p.rodape {
+                            font-size: 10pt;
+                        }
                         p.rodape span {
                             font-weight: bolder;
                             padding-bottom: 10px;
+                            font-size: 11pt;
                         }
-
                     </style>
                 </head>
+
                 <body>
                     <div class="container">
                         <h3 class="title">Opaa, thanks for signing up!</h3>
                         <p class="text">
-                            This project, it's really cool, a creepy CRUD system! I hope you
-                            enjoy the experience with the application, it was developed by me, with
-                            a lot of affection, code and coffee at dawn :) :)
+                            Este projeto, é muito legal, um sistema CRUD sinistro. Espero que você
+                            aproveite a experiência com o aplicativo, ele foi desenvolvido por mim, com
+                            muito carinho, código e café nas madrugadas :) :)
 
-                            <span>There is, rest assured, I won't keep sending emails, gorgeous!</span>
+                            <span>Fique tranquilo, não vou continuar enviando e-mails, beleza?!</span>
                         </p>
                         <p class="rodape">
-                            <span>I'm at your service!</span>
+                            <span>Se precisar, estou a disposição!</span>
                             Att. Edmilton Vinicius - Web Developer.
                         </p>
                     </div>
                 </body>
+
                 </html>`
 
 
