@@ -1,5 +1,5 @@
 
-function showHide(id) {
+function showHidePassword(id) {
     const inputPass = document.getElementById(id)
 
     if(inputPass.type == 'password'){
