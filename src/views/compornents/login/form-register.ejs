@@ -1,0 +1,56 @@
+<div class="containerFormRegister mx-auto text-center rounded mt-4" id="containerFormRegister">
+    <p class="h2 text-info pt-3">- User Criation -</p>
+    <form id="formCreateUser" class="mt-4" autocomplete="off">
+        <div class="form-group">
+            <label for="user" class="w-75">
+                <input type="text" class="form-control pr-5" id="entName"
+                    oninput="validationInput('entName','3')" name="userName"
+                    placeholder="Type your name" required />
+            </label>
+        </div>
+        <div class="form-group w-100 mb-2">
+            <label for="password" class="w-75">
+                <input type="password" class="form-control pr-5 d-inline w-75" id="entPass"
+                    oninput="validationInput('entPass','6')" name="userPassword"
+                    placeholder="Choose a password" required />
+                <button type="button" class="btn border-0 text-light btnPassword"
+                    onclick="showHidePassword('entPass')"><i class="fa fa-unlock-alt fa-1x"
+                        aria-hidden="true"></i></button>
+                <small class="form-text ml-2 text-muted text-left">Add at least 6 characters</small>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="email" class="w-75">
+                <input type="email" class="form-control pr-5" id="entEmail" oninput="validationEmail('entEmail', '.btnCreate-js')"
+                    name="userEmail" placeholder="Now your e-mail" />
+            </label>
+        </div>
+        <div class="pb-2 text-center">
+            <button class="btn btn-outline-secondary py-2 px-3 d-block mx-auto mb-4 btnCreate-js"
+                data-toggle="modal" data-target="#modalRegister" disabled onclick="registerUser()">
+                Create my user
+            </button>
+            <button type="button" class="btn btn-outline-warning border-0 pt-2 link" id="back" onclick="showFormLogin('.containerFormRegister')">←Come Back</button>
+
+            <!-- Modal Register -->
+            <div class="modal fade" role="dialog" id="modalRegister" aria-labelledby="modalRegister">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content border-warning styleModal">
+                        <div class="modal-body">
+                            <div class="text-center bodyModal">
+                                <img src="../../static/build/img/gif-loading.gif" 
+                                class="imageModal" alt="Image center Loding">
+                            </div>
+                            <p class="text-white pt-2" id="textModal"></p>
+                        </div>
+                        <div class="modal-footer w-75 mx-auto" id="modal-footer">
+                            <button class="btn btn-warning mx-auto px-4" id="btnCloseModal" data-dismiss="modal" type="button">OK</button>
+                            <button class="btn btn-warning mx-auto px-4" id="letsIndex" data-dismiss="modal" type="button" onclick="showFormLogin('.containerFormRegister')">lets Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
