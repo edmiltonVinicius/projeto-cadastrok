@@ -381,7 +381,7 @@ to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
 }@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
-}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.cardPanel{background-color:rgba(43,40,40,0.2)}
+}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.cardPanel{background-color:rgba(26,24,24,0.7)}
 .cardPanel .card-img-top{height:130px !important}.cardPanel .borderName{width:50% !important;height:1px !important;background-color:#a39d9d !important;margin:6px auto 0 auto !important}
 .cardPanel ul li{background-color:rgba(80,75,75,0.4);padding-top:4px;width:90% !important;height:35px;margin-top:12px}
 .cardPanel ul li .bgBtns{background-color:rgba(43,40,40,0.2) !important}.cardPanel ul li .iconPanel{width:22px;height:22px}
