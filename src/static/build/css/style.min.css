@@ -1,36 +1,3 @@
-body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
-.shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
-.text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
-.back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
-form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
-form .btnLogin-js{font-size:13pt}.containerFormRegister{width:90%;background-color:rgba(23,24,23,0.5);display:none}
-.containerFormRegister .h2{font-size:1.5em}.containerFormRegister a{text-decoration:none}
-.containerFormRegister input{height:40px !important}.containerFormRegister .btnPassword{background-color:rgba(23,24,23,0.5);font-size:15pt}
-.divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
-.divEfectLoadingRegister .dtitle{background-color:#333232;width:47%;height:32px}.divEfectLoadingRegister .dname,.divEfectLoadingRegister .demail{background-color:#333232;width:73%;height:35px}
-.divEfectLoadingRegister .dpass{background-color:#333232;width:49%;height:35px}.divEfectLoadingRegister .dlogin{background-color:#333232;width:40%;height:45px}
-.divEfectLoadingRegister .dlink{background-color:#333232;width:30%;height:10px}.dImg2{background-color:#333232;width:20%;height:65px}
-.divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
-.divEfectLoadingRegister .dtitle{background-color:#333232;width:47%;height:32px}.divEfectLoadingRegister .dname,.divEfectLoadingRegister .demail{background-color:#333232;width:73%;height:35px}
-.divEfectLoadingRegister .dpass{background-color:#333232;width:49%;height:35px}.divEfectLoadingRegister .dlogin{background-color:#333232;width:40%;height:45px}
-.divEfectLoadingRegister .dlink{background-color:#333232;width:30%;height:10px}.dImg2{background-color:#333232;width:20%;height:65px}
-.divEfectLoadingLogin{width:90%;height:370px;background-color:black}.divEfectLoadingLogin .dImg{background-color:#333232;width:23%;height:65px}
-.divEfectLoadingLogin .dlogin{background-color:#333232;width:80%;height:40px}.divEfectLoadingLogin .linePass{width:73%;height:40px}
-.divEfectLoadingLogin .dPassword{background-color:#333232;width:80%;height:40px}.divEfectLoadingLogin .dPadlock{background-color:#333232;width:10%;height:40px}
-.divEfectLoadingLogin .dBtnlogin{background-color:#333232;width:50%;height:45px}.divEfectLoadingLogin .dLink{background-color:#333232;width:55%;height:19px}
-.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
-.pace-inactive{display:none}.pace .pace-progress{background:#fff;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}
-.styleModal{background-color:rgba(0,0,0,0.9);min-height:160px}.styleModal .bodyModal{width:100%;height:130px}
-.styleModal .imageModal{max-width:100%;max-height:100%}.styleModal #textModal{font-size:18px}
-.styleModal #modal-footer{display:none}.styleModal #btnCloseModal{display:none}.styleModal #letsIndex{display:none}
-body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
-.shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
-.text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
-.back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
-form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
-form .btnLogin-js{font-size:13pt}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
-.containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
-.containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}
 /*Animate.css - http://daneden.me/animateLicensed under the MIT license - http://opensource.org/licenses/MITCopyright (c) 2015 Daniel Eden*/.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated-fast{-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
@@ -414,7 +381,11 @@ to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
 }@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
-}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}body{background-color:#161515;font-family:'Poppins',sans-serif}
+}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.cardPanel{background-color:rgba(43,40,40,0.2)}
+.cardPanel .card-img-top{height:130px !important}.cardPanel .borderName{width:50% !important;height:1px !important;background-color:#a39d9d !important;margin:6px auto 0 auto !important}
+.cardPanel ul li{background-color:rgba(80,75,75,0.4);padding-top:4px;width:90% !important;height:35px;margin-top:12px}
+.cardPanel ul li .bgBtns{background-color:rgba(43,40,40,0.2) !important}.cardPanel ul li .iconPanel{width:22px;height:22px}
+.cardPanel ul li span{color:#c2bdbd;font-size:11 pt}body{background-color:#252424;font-family:'Poppins',sans-serif}
 .animation{background-color:#000;width:100%;height:100vh}.divBtnsCrud{width:80% !important;height:40px;background-color:rgba(58,57,57,0.4);margin:auto}
 .divBtnsCrud li{display:inline-block}.divBtnsCrud .bgBtns{background-color:rgba(37,36,36,0.4) !important}
 .divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
@@ -424,12 +395,12 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 .loadingUpload{background-color:#1f1e1e !important;height:270px !important}.loadingUpload .l1{background-color:#333232;width:70%;height:35px}
 .loadingUpload .l2{background-color:#333232;width:80%;height:40px}.loadingUpload .l3{background-color:#333232;width:40%;height:40px}
 .imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
-.dropdown-menu{background-color:black !important;width:220px !important;min-height:350px !important}
-.dropdown-menu #imgUser{width:100px;height:100px}.navIndex{background-color:black;height:75px}
+.dropdown-menu{background-color:#1a1919 !important;width:220px !important;min-height:350px !important}
+.dropdown-menu #imgUser{width:100px;height:100px}.navIndex{background-color:#1a1919;height:75px}
 .navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:16pt}
 .navIndex img{height:60px}.navIndex .dataUser{font-size:17px;color:#b4aaaa !important;width:100% !important}
-#inputSearch{background-color:black !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
-.editProfile .editProfile{background-color:black !important}.divUpload{background-color:#1a1818;min-height:270px}
+#inputSearch{background-color:#1a1919 !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
+.editProfile .editProfile{background-color:#1a1919 !important}.divUpload{background-color:#1a1818;min-height:270px}
 .divUpload .iconEdit{width:28px;height:28px}.divUpload .h3{font-size:14pt}.divUpload .close{font-size:25pt !important}
 .divUpload div.divPreviewImg{width:100%;height:120px;border-width:2px !important}
 .divUpload div.divPreviewImg img#previewImg{width:35%}.divUpload div.divPreviewImg .iconLoadingUploading{width:60px;height:50px}
@@ -821,4 +792,37 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 }.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.divContainerWelcome{position:absolute;top:20px;left:0}
 .divWelcome{width:100%;min-height:400px;border-left-width:15px !important;background-image:linear-gradient(#272525,#070707);font-family:'Roboto',sans-serif !important;animation:fadeIn 1s}
 .divWelcome p.l1{color:#fff;font-size:22pt;font-weight:bold}.divWelcome .l2{color:#e9e6e6;font-size:15pt}
-.divWelcome button{font-size:13pt !important}
+.divWelcome button{font-size:13pt !important}body{font-family:'Poppins',sans-serif}
+.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
+.shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
+.text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
+.back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
+form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
+form .btnLogin-js{font-size:13pt}.containerFormRegister{width:90%;background-color:rgba(23,24,23,0.5);display:none}
+.containerFormRegister .h2{font-size:1.5em}.containerFormRegister a{text-decoration:none}
+.containerFormRegister input{height:40px !important}.containerFormRegister .btnPassword{background-color:rgba(23,24,23,0.5);font-size:15pt}
+.divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
+.divEfectLoadingRegister .dtitle{background-color:#333232;width:47%;height:32px}.divEfectLoadingRegister .dname,.divEfectLoadingRegister .demail{background-color:#333232;width:73%;height:35px}
+.divEfectLoadingRegister .dpass{background-color:#333232;width:49%;height:35px}.divEfectLoadingRegister .dlogin{background-color:#333232;width:40%;height:45px}
+.divEfectLoadingRegister .dlink{background-color:#333232;width:30%;height:10px}.dImg2{background-color:#333232;width:20%;height:65px}
+.divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
+.divEfectLoadingRegister .dtitle{background-color:#333232;width:47%;height:32px}.divEfectLoadingRegister .dname,.divEfectLoadingRegister .demail{background-color:#333232;width:73%;height:35px}
+.divEfectLoadingRegister .dpass{background-color:#333232;width:49%;height:35px}.divEfectLoadingRegister .dlogin{background-color:#333232;width:40%;height:45px}
+.divEfectLoadingRegister .dlink{background-color:#333232;width:30%;height:10px}.dImg2{background-color:#333232;width:20%;height:65px}
+.divEfectLoadingLogin{width:90%;height:370px;background-color:black}.divEfectLoadingLogin .dImg{background-color:#333232;width:23%;height:65px}
+.divEfectLoadingLogin .dlogin{background-color:#333232;width:80%;height:40px}.divEfectLoadingLogin .linePass{width:73%;height:40px}
+.divEfectLoadingLogin .dPassword{background-color:#333232;width:80%;height:40px}.divEfectLoadingLogin .dPadlock{background-color:#333232;width:10%;height:40px}
+.divEfectLoadingLogin .dBtnlogin{background-color:#333232;width:50%;height:45px}.divEfectLoadingLogin .dLink{background-color:#333232;width:55%;height:19px}
+.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+.pace-inactive{display:none}.pace .pace-progress{background:#fff;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}
+.styleModal{background-color:rgba(0,0,0,0.9);min-height:160px}.styleModal .bodyModal{width:100%;height:130px}
+.styleModal .imageModal{max-width:100%;max-height:100%}.styleModal #textModal{font-size:18px}
+.styleModal #modal-footer{display:none}.styleModal #btnCloseModal{display:none}.styleModal #letsIndex{display:none}
+body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
+.shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
+.text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
+.back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
+form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
+form .btnLogin-js{font-size:13pt}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
+.containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
+.containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}

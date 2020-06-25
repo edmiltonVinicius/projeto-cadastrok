@@ -27,6 +27,7 @@ const submitImage = () => {
             setTimeout(() => {
                 document.getElementById('dropDrownNav').src=res.data
                 document.getElementById('imgUser').src=res.data
+                document.querySelector('.card-img-top').src=res.data
                 showHideDivUplad('.divUpload', '.divBtnsCrud')
                 
             }, 1100);

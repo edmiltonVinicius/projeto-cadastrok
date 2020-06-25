@@ -381,7 +381,11 @@ to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
 }@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}
-}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}body{background-color:#161515;font-family:'Poppins',sans-serif}
+}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}.cardPanel{background-color:rgba(43,40,40,0.2)}
+.cardPanel .card-img-top{height:130px !important}.cardPanel .borderName{width:50% !important;height:1px !important;background-color:#a39d9d !important;margin:6px auto 0 auto !important}
+.cardPanel ul li{background-color:rgba(80,75,75,0.4);padding-top:4px;width:90% !important;height:35px;margin-top:12px}
+.cardPanel ul li .bgBtns{background-color:rgba(43,40,40,0.2) !important}.cardPanel ul li .iconPanel{width:22px;height:22px}
+.cardPanel ul li span{color:#c2bdbd;font-size:11 pt}body{background-color:#252424;font-family:'Poppins',sans-serif}
 .animation{background-color:#000;width:100%;height:100vh}.divBtnsCrud{width:80% !important;height:40px;background-color:rgba(58,57,57,0.4);margin:auto}
 .divBtnsCrud li{display:inline-block}.divBtnsCrud .bgBtns{background-color:rgba(37,36,36,0.4) !important}
 .divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
@@ -391,12 +395,12 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 .loadingUpload{background-color:#1f1e1e !important;height:270px !important}.loadingUpload .l1{background-color:#333232;width:70%;height:35px}
 .loadingUpload .l2{background-color:#333232;width:80%;height:40px}.loadingUpload .l3{background-color:#333232;width:40%;height:40px}
 .imgDrop{width:65px !important;height:55px !important;border-style:2px !important}
-.dropdown-menu{background-color:black !important;width:220px !important;min-height:350px !important}
-.dropdown-menu #imgUser{width:100px;height:100px}.navIndex{background-color:black;height:75px}
+.dropdown-menu{background-color:#1a1919 !important;width:220px !important;min-height:350px !important}
+.dropdown-menu #imgUser{width:100px;height:100px}.navIndex{background-color:#1a1919;height:75px}
 .navIndex .navbar-brand{font-family:'Della Respira',serif;font-size:16pt}
 .navIndex img{height:60px}.navIndex .dataUser{font-size:17px;color:#b4aaaa !important;width:100% !important}
-#inputSearch{background-color:black !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
-.editProfile .editProfile{background-color:black !important}.divUpload{background-color:#1a1818;min-height:270px}
+#inputSearch{background-color:#1a1919 !important;color:#fff}.editProfile .iconEditUser{width:28px;height:23px}
+.editProfile .editProfile{background-color:#1a1919 !important}.divUpload{background-color:#1a1818;min-height:270px}
 .divUpload .iconEdit{width:28px;height:28px}.divUpload .h3{font-size:14pt}.divUpload .close{font-size:25pt !important}
 .divUpload div.divPreviewImg{width:100%;height:120px;border-width:2px !important}
 .divUpload div.divPreviewImg img#previewImg{width:35%}.divUpload div.divPreviewImg .iconLoadingUploading{width:60px;height:50px}
