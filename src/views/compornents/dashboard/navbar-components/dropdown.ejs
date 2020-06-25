@@ -1,0 +1,33 @@
+<div class="dropdown dropleft">
+    <input class="dropdown-toggle imgDrop rounded-circle border border-warning mr-2 mt-1" data-toggle="dropdown"
+        id="dropDrownNav" type="image" src="<%= user.image.secureUrl %>" alt="">
+
+    <div class="dropdown-menu px-2 pt-3 rounded border border-warning" id="dropDrownNav">
+        <div class="mx-auto mb-3 dataUser text-center">
+            <img class="rounded-circle border border-warning" src="<%= user.image.secureUrl %>"
+                id="imgUser" alt="">
+
+            <p class="text-light font-weight-bold ml-1 pt-3" id="nameUser"><%= user.name %></p>
+            <div style="Word-wrap: break-Word;">
+                <%= user.email %>
+            </div>
+        </div>
+
+        <div class="dropdown-divider mx-auto border border-dark"></div>
+
+        <div class="editProfile w-100 text-center pt-4 mb-5">
+            <img class="iconEditUser" src="../../static/build/img/icon-camera.png" alt="">
+            <button type="button" class="editProfile text-decoration-none text-light border-0 p-0" 
+                onclick="showHideDivUplad('.divBtnsCrud', '.divUpload', '.loadingUpload')">
+                    Change my photo
+            </button>
+        </div>
+
+        <div class="mx-auto text-center mb-3">
+            <button class="btn btn-outline-warning px-3" id="a" type="button"
+                data-toggle="modal" data-target="#modalDeLogout" onclick="reappear()">
+                Log out
+            </button>    
+        </div>
+    </div>
+</div>

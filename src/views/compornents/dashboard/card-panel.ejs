@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 d-none d-lg-inline">
+            <div class="card cardPanel border border-warning">
+                <img src="<%= user.image.secureUrl %>" 
+                    class="card-img-top" alt="...">
+
+                <div class="card-body p-0">
+                    <p class="pt-3 pb-0 mb-0 font-weight-bold text-light text-center"><%= user.name %></p>
+                    
+                    <div class="borderName"></div>
+
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item mt-2 border border-0 rounded-pill pl-4 mx-auto">
+                            <button type="button" class="bgBtns border-0">
+                                <img src="../../static/build/img/icon-create.png" 
+                                    class="iconPanel" alt="Icon Create">
+                            </button><span>Create User</span> 
+                        </li>
+                        <li class="nav-item mt-2 border border-0 rounded-pill pl-4 mx-auto">
+                            <button type="button" class="bgBtns border-0">
+                                <img src="../../static/build/img/icon-read.png" 
+                                    class="iconPanel" alt="Icon Read">
+                            </button><span>Read User</span> 
+                            
+                        </li>
+                        <li class="nav-item mt-2 border border-0 rounded-pill pl-4 mx-auto">
+                            <button type="button" class="bgBtns border-0">
+                                <img src="../../static/build/img/icon-update.png" 
+                                    class="iconPanel" alt="Icon Update">
+                            </button><span>Update User</span> 
+                            
+                        </li>
+                        <li class="nav-item mt-2 border border-0 rounded-pill pl-4 mx-auto">
+                            <button type="button" class="bgBtns border-0">
+                                <img src="../../static/build/img/icon-delete.png" 
+                                    class="iconPanel" alt="Icon Delete">
+                            </button><span>Delete User</span> 
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center mt-3 pt-2 pb-4">
+                    <button type="button" class="btn btn-warning">Log out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
