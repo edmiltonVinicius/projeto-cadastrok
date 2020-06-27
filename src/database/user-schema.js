@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
+const listFriends = require('./friends-schema')
+
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -28,7 +30,8 @@ const UserSchema = new mongoose.Schema({
     firstAccess: {
         type: Boolean,
         default: true
-    }
+    },
+    friends: [listFriends]
 })
 
 UserSchema.pre('save', function(next) {

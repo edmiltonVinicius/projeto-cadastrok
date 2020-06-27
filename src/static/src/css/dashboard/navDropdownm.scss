@@ -4,7 +4,7 @@
     border-style: 2px !important;
 }
 
-$bg-nav: rgb(26, 25, 25) !important;
+$bg-nav: rgba(26, 24, 24, 0.7)!important;
 
 .dropdown-menu {
     background-color: $bg-nav;
@@ -19,7 +19,7 @@ $bg-nav: rgb(26, 25, 25) !important;
 }
 
 .navIndex {
-    background-color: rgb(26, 25, 25);
+    background-color: rgba(26, 24, 24, 0.8);
     height: 75px;
 
     .navbar-brand {
