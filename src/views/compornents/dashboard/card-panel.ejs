@@ -40,9 +40,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card-footer text-center mt-3 pt-2 pb-4">
-                    <button type="button" class="btn btn-outline-warning">Log out</button>
+                <div class="mx-auto text-center my-4">
+                    <button class="btn btn-outline-warning px-3" id="a" type="button"
+                        data-toggle="modal" data-target="#modalDeLogout" onclick="reappear()">
+                        Log out
+                    </button>    
                 </div>
+                <% include('navbar-components/modal-logout') %>
+
             </div>
         </div>
     </div>
