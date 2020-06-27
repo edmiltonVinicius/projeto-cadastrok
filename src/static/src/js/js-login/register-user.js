@@ -9,8 +9,7 @@ const registerUser = () => {
     const userPassword = document.getElementById('entPass').value
     const userEmail = document.getElementById('entEmail').value
 
-    hideElements()
-
+    
     axios.post('/register', { userName, userPassword, userEmail })
         .then((res) => {
             if((res.status === 201) && (res.data === 'user created')){

@@ -20,12 +20,12 @@ router.post('/', (req, res) => {
         })
 
         newUser.save(err => {
-            if(err) return res.status(500).send('Erro on Register')  
+            if(err) return res.status(500).send('Erro on Register') 
         })
         transporter.sendMail(mailOptions.mailOptions(userEmail), (err, info) => {
             if(err) return res.status(500).send('Something went wrong with the serivdorr') 
         })
-        return res.status(201).send('user created')
+        res.status(201).send('user created')
     })
     
 })
