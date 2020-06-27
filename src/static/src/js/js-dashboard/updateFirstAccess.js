@@ -13,6 +13,7 @@ const updateFirstAccess = () => {
         }
     })
     .then((res) => {
+        document.querySelector('.cardPanelContainer').classList.remove('d-none')
         console.log(res.data)
     })
     
