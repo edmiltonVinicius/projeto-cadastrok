@@ -45,7 +45,7 @@
                         <div class="editProfile w-100 text-center pt-4 mb-5">
                             <img class="iconEditUser" src="../../static/build/img/icon-camera.png" alt="">
                             <button type="button" class="editProfile text-decoration-none text-light border-0 p-0" 
-                                onclick="showHideDivUplad('.divBtnsCrud', '.divUpload', '.loadingUpload')">
+                            onclick="showHideDivUplad('.loadingUpload', ['.divUpload'], ['.divBtnsCrud', '.cardPanelContainer', '.divUpload'] )">
                                     Change my photo
                             </button>
                         </div>
@@ -134,7 +134,7 @@
                                 class="mt-3 mb-3 iconEdit" alt="">
                             <p class="h3 text-warning d-inline">Change profile photo</p>
                             <button type="button" class="close mr-3 mt-2 text-light" aria-label="Close"
-                                onclick="showHideDivUplad(null, ['.divBtnsCrud', '.cardPanelContainer'], ['.divUpload'])">
+                            onclick="showHideDivUplad(null, ['.divBtnsCrud', '.cardPanelContainer'], ['.divUpload'])">
                                 <span aria-hidden="true">&times;</span>
                             </button>
             
