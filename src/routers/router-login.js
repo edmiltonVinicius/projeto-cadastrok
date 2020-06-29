@@ -20,6 +20,7 @@ router.post('/', (req, res) => {
                     const token = jwt.sign({_id: arq._id}, process.env.TOKEN_KEY, 
                         {expiresIn: '1d'}, (err, token) => {
                             if(err) return res.status(500).json({message: 'Sorry, there was an error, please try again'})
+                            console.log(token)
                             return res.status(200).json({message: 'valid data', token})
                     })
                 }else {

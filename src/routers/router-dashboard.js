@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router()
-
+const crudOperationsContact = require('./crud-operations-contact')
 const middlleware = require('./middleware-jwt')
 const User = require('../database/user-schema')
+
+router.use(crudOperationsContact)
 
 router.get('/', middlleware, (req, res) => {
     const idUser = req.idUser
@@ -22,5 +24,7 @@ router.patch('/firstAccess', middlleware, (req, res) => {
         return res.status(204).send('Upadate Success')
     })
 })
+
+
 
 module.exports = router

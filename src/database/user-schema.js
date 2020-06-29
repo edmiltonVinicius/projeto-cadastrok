@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt')
 
 const contactSchema = require('./contact-schema')
 
+
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
