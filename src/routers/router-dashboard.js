@@ -9,9 +9,9 @@ router.get('/', middlleware, (req, res) => {
     User.findById(idUser, {_id: 0, password:0}, (err, adventure) => {
         if(err) return res.status(500).send('Sorry, there was an error, please try again.')
         if(adventure.firstAccess === true){
-            return res.status(200).render('layouts/dashboard', {user: adventure, firstAccess: 'd-block'})
+            return res.status(200).render('layouts/dashboard', {user: adventure, firstAccess: 'd-block', cardPanel: 'd-none'})
         }
-        return res.status(200).render('layouts/dashboard', {user: adventure, firstAccess: 'd-none'})
+        return res.status(200).render('layouts/dashboard', {user: adventure, firstAccess: 'd-none', cardPanel: ''})
     } )
 })
 
