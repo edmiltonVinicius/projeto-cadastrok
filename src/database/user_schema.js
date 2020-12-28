@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
-const contactSchema = require('./contact-schema')
+const contactSchema = require('./contact_schema')
 
 
 const UserSchema = new mongoose.Schema({

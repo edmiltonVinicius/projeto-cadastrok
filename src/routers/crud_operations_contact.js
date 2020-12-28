@@ -1,6 +1,6 @@
 const express = require('express')
-const middlleware = require('./middleware-jwt')
-const User = require('../database/user-schema')
+const middlleware = require('./middleware_jwt')
+const User = require('../database/user_schema')
 const router = express.Router()
 
 router.patch('/create', middlleware, (req, res) => {

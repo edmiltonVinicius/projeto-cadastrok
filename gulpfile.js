@@ -13,7 +13,7 @@ const minifyImage = () => {
         .pipe(gulp.dest('src/static/build/img'))
 }
 
-const compilerSassLogin = () => {
+const compilerSass = () => {
     return gulp.src('src/static/src/css/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.min.css'))
@@ -23,32 +23,13 @@ const compilerSassLogin = () => {
         }))
         .pipe(gulp.dest('src/static/build/css/'))
 }
-const compilerSassDashboard = () => {
-    return gulp.src('src/static/src/css/dashboard/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(concat('dashboard.min.css'))
-        .pipe(uglifycss({
-            "uglyComments": true,
-            "maxLineLen": 80
-        }))
-        .pipe(gulp.dest('src/static/build/css/'))
-}
 
-const minifyJsLogin = () => {
-    return gulp.src('src/static/src/js/js-login/*.js')
+const minifyJs = () => {
+    return gulp.src('src/static/src/js/**/*.js')
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))
         .pipe(concat('index.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('src/static/build/js/'))
-}
-const minifyJsDashboard = () => {
-    return gulp.src('src/static/src/js/js-dashboard/*.js')
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(concat('dashboard.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('src/static/build/js/'))
 }
@@ -58,9 +39,9 @@ const server = () => {
                  'src/static/src/js/js-dashboard/*.js', 
                  'src/static/src/css/login/*.scss',
                  'src/static/src/css/dashboard/*.scss'],
-    gulp.series(minifyJsLogin, minifyJsDashboard, compilerSassLogin, compilerSassDashboard))
+    gulp.series(minifyJs,compilerSass))
 }
 
-exports.default = gulp.parallel(minifyImage, compilerSassLogin, compilerSassDashboard, minifyJsLogin, minifyJsDashboard,
+exports.default = gulp.parallel(minifyImage, compilerSass, minifyJs,
     gulp.series(server))
     

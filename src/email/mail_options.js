@@ -1,4 +1,4 @@
-const html = require('./template-mail-user')
+const html = require('./template_mail_user')
 
 const mailOptions = (mailUser) => {
     return {

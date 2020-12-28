@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const crudOperationsContact = require('./crud-operations-contact')
-const middlleware = require('./middleware-jwt')
-const User = require('../database/user-schema')
+const crudOperationsContact = require('./crud_operations_contact')
+const middlleware = require('./middleware_jwt')
+const User = require('../database/user_schema')
 
 router.use(crudOperationsContact)
 

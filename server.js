@@ -5,13 +5,13 @@ const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 3000
 
-const connectionMongoose = require('./src/configs/connection-mongoose')
+const connectionMongoose = require('./src/configs/connection_mongoose')
 
-const routerLogin = require('./src/routers/router-login')
-const routerRegister = require('./src/routers/router-register')
-const routerDashboard = require('./src/routers/router-dashboard')
-const routerError = require('./src/routers/router-error')
-const routerUploadImg = require('./src/routers/router-upload-img')
+const routerLogin = require('./src/routers/router_login')
+const routerRegister = require('./src/routers/router_register')
+const routerDashboard = require('./src/routers/router_dashboard')
+const routerError = require('./src/routers/router_error')
+const routerUploadImg = require('./src/routers/router_upload_img')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/src/views')
