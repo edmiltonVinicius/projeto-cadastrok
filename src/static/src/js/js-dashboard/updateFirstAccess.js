@@ -14,7 +14,11 @@ const updateFirstAccess = () => {
     })
     .then((res) => {
         document.querySelector('.cardPanelContainer').classList.remove('d-none')
-        console.log(res.data)
+        console.log('Sucess no update first access')
+    })
+    .catch(error => {
+        document.querySelector('.cardPanelContainer').classList.remove('d-none')
+        console.log('Error no update first access' + error)
     })
     
 }

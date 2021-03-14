@@ -20,14 +20,12 @@ const LoginUser = () => {
 
     axios.post('/', { loginUser, passUser })
         .then((res) => {
-            setTimeout(() => {
-                if(res.data.message === 'valid data' && res.status === 200){
-                    sessionStorage.setItem('token', res.data.token)
-                    
-                    axios.get('/dashboard', { headers: { authorization: sessionStorage.getItem('token')}})
+            if(res.data.success === true && res.status === 200){
+                sessionStorage.setItem('token', res.data.token)
+                
+                axios.get('/dashboard', { headers: { authorization: sessionStorage.getItem('token')}})
                     .then((res) => {
                         clearTime(verification)
-                        window.console.clear()
                         hideElement('imgLoadingLogin')
                         document.title='Dashboard'
                         document.querySelector('body').innerHTML=res.data
@@ -36,8 +34,7 @@ const LoginUser = () => {
                         setTimeout(() => {
                             divLoad.classList.remove('d-flex')
                             divLoad.classList.add('d-none')
-                            document.querySelector('.containner-fluid').classList.remove('d-none')
-                        
+                            document.querySelector('.containner-fluid').classList.remove('d-none')                        
                         }, 4000)
                     })
                     .catch((err) => {
@@ -46,9 +43,9 @@ const LoginUser = () => {
                         showElementInline('.textDivErro')
                         showElementInline('.iconErro')
                     })
-                } 
-                
-            }, 2000);
+            } else {
+                throw 'Sorry, Erro in Login, Try again'
+            } 
         })
         .catch((error) => {
             setTimeout(() => {

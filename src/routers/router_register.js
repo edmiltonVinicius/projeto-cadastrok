@@ -8,11 +8,11 @@ const mailOptions = require('../email/mail_options')
 router.post('/', (req, res) => {
     const { userName, userPassword, userEmail} = req.body
 
-    if(userName && userPassword && userEmail != undefined){
-        User.findOne({email: userEmail}, (err, arq) => {
+    if(userName != undefined && userPassword != undefined && userEmail != undefined){
+        User.find({email: userEmail}, (err, arq) => {
             if(err) return res.status(500).send('Error occurred, try again')
-            
-            if(arq) return res.status(400).send('Email already Registered')
+
+            if(arq.length > 0) return res.status(400).send('Email already Registered')
             
             const newUser = new User({
                 name: userName,
@@ -21,15 +21,28 @@ router.post('/', (req, res) => {
             })
 
             newUser.save(err => {
-                if(err) return res.status(500).send('Erro on Register') 
+                if(err) {
+                    console.log(err)
+                    return res.status(500).send('Erro on Register') 
+                }
             })
-            transporter.sendMail(mailOptions.mailOptions(userEmail), (err, info) => {
-                if(err) return res.status(500).send('Something went wrong with the serivdorr') 
-            })
-            return res.status(201).send('user created')
+
+            // E-mail desabilatado por enquanto
+            // transporter.sendMail(mailOptions.mailOptions(userEmail), (err, info) => {
+            //     if(err) {
+            //         console.log(userEmail)
+            //         console.log(err)
+            //         return res.status(500).send('Something went wrong with the serivdor') 
+            //     }
+
+            //     console.log(info)
+            // })
+            
+            return res.status(201).send('User created')
         })
+
     } else {
-        return res.status(400).send('Please, insert datas required')
+       res.status(400).send('Please, insert datas required')
     }
     
 })

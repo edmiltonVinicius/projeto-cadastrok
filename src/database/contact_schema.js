@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const ContactSchema = new mongoose.Schema({
     nameContact: {
         type: String,
+        lowercase: true,
         minlength: 3
     },
     numberContact: {

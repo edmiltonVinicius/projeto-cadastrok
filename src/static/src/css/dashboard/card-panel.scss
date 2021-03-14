@@ -4,7 +4,11 @@
     background-color: rgb(26, 24, 24);
 
     .card-img-top {
-        height: 130px !important;
+        height: auto;
+        width: auto;
+        max-width: max-content;
+        margin: 5px auto 0 auto;
+        border-radius: 50%;
     }
     
     .borderName {
@@ -20,6 +24,7 @@
         width: 90% !important;
         height: 35px;
         margin-top: 12px;
+        cursor: pointer;
 
         .bgBtns {
             background-color: rgba(43, 40, 40, 0.2) !important;

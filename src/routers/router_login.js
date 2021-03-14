@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const { loginUser, passUser} = req.body
 
-    if((loginUser && passUser != undefined) && (loginUser && passUser != null)){
+    if(loginUser != undefined && passUser != undefined){
         User.findOne({email: loginUser}, (err, arq) => {
             if(err) return res.status(500).send('Sorry, there was an error, please try again.')
             if(arq){
@@ -21,10 +21,10 @@ router.post('/', (req, res) => {
                         const token = jwt.sign({_id: arq._id}, process.env.TOKEN_KEY, 
                             {expiresIn: '1d'}, (err, token) => {
                                 if(err) return res.status(500).json({message: 'Sorry, there was an error, please try again'})
-                                return res.status(200).json({message: 'valid data', token})
+                                return res.status(200).json({success: true, token})
                         })
                     }else {
-                        return res.status(401).send('Invalid username or password!')    
+                        return res.status(401).json({ success: false, message: 'Login or Password Invalid.' })    
                     } 
                 })
             }else {
@@ -33,9 +33,7 @@ router.post('/', (req, res) => {
         })    
     }else {
         return res.status(400).send('Please, insert datas required form login')
-    }
-    
-      
+    }   
 })
 
 module.exports = router

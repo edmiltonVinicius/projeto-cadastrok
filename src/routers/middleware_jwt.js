@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
     const jwt = require('jsonwebtoken')
-    const token = req.headers.authorization || req.body.headers.authorization 
+    const token = req.headers.authorization
 
     if(!token) return res.status(412).render('layouts/login')
 
