@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
                     })
                 }
 
-                transporter.sendMail(emailResetMail(result.email, result.name, token), (err, info) => {
+                transporter.sendMail(emailResetMail(result.email, result.name, key), (err, info) => {
                     if(err){
                         console.log(err)
                         return res.status(500).json({
