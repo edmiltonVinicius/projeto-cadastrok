@@ -1,9 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../database/user_schema')
-
 const transporter = require('../configs/nodemailer_transporter')
-const mailOptions = require('../email/mail_options')
+const { emailRegisterUser } = require('../email/mail_options_resgister_user')
 
 router.post('/', (req, res) => {
     const { userName, userPassword, userEmail} = req.body
@@ -22,30 +21,22 @@ router.post('/', (req, res) => {
 
             newUser.save(err => {
                 if(err) {
-                    console.log(err)
                     return res.status(500).send('Erro on Register') 
                 }
             })
 
-            // E-mail desabilatado por enquanto
-            // transporter.sendMail(mailOptions.mailOptions(userEmail), (err, info) => {
-            //     if(err) {
-            //         console.log(userEmail)
-            //         console.log(err)
-            //         return res.status(500).send('Something went wrong with the serivdor') 
-            //     }
-
-            //     console.log(info)
-            // })
+            transporter.sendMail(emailRegisterUser(userEmail), (err, info) => {
+                if(err) {
+                    return res.status(500).send('Something went wrong with the serivdor') 
+                }
+            })
             
             return res.status(201).send('User created')
         })
 
     } else {
        res.status(400).send('Please, insert datas required')
-    }
-    
+    }    
 })
-
 
 module.exports = router

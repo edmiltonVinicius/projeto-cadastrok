@@ -1,4 +1,4 @@
-const html = `<!DOCTYPE html>
+const templateRegisterUser = `<!DOCTYPE html>
                 <html lang="pt-br">
 
                 <head>
@@ -52,7 +52,7 @@ const html = `<!DOCTYPE html>
                         </p>
                         <p class="rodape">
                             <span>Se precisar, estou a disposição!</span>
-                            Att. Edmilton Vinicius - Web Developer.
+                            Att. <br>Edmilton Vinicius - Web Developer.
                         </p>
                     </div>
                 </body>
@@ -60,4 +60,4 @@ const html = `<!DOCTYPE html>
                 </html>`
 
 
-module.exports = html
+module.exports = templateRegisterUser

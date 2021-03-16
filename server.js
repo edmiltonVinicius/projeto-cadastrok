@@ -12,6 +12,7 @@ const routerRegister = require('./src/routers/router_register')
 const routerDashboard = require('./src/routers/router_dashboard')
 const routerError = require('./src/routers/router_error')
 const routerUploadImg = require('./src/routers/router_upload_img')
+const routerResetPassword = require('./src/routers/router_reset_password')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/src/views')
@@ -27,6 +28,7 @@ app.use('/', routerLogin)
 app.use('/register', routerRegister)
 app.use('/dashboard', routerDashboard)
 app.use('/upload', routerUploadImg)
+app.use('/reset-password', routerResetPassword)
 
 app.use(routerError)
 app.use((error, req, res, next) => {
