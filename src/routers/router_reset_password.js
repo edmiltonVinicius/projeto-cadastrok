@@ -4,9 +4,32 @@ const jwt = require('jsonwebtoken')
 const User = require('../database/user_schema')
 const transporter = require('../configs/nodemailer_transporter')
 const { emailResetMail } = require('../email/mail_options_resgister_user')
+const middllewareResetPassword = require('./middleware_reset_password')
+const bcrypt = require('bcrypt')
 
 router.get('/', (req, res) => {
     res.send(`<h1>Reset Password CadastrOk</h1> <br> <p> ${req.query.token}</p>`)
+})
+
+router.patch('/', middllewareResetPassword, async (req, res) => {
+    const { newPassword } = req.body
+    const token = req.tokenResetPassowrd
+    const saltRounds = 10
+    const resultHasPassowrd = await bcrypt.hash(newPassword, saltRounds)
+0
+    User.findByIdAndUpdate({_id: token}, {password: resultHasPassowrd}, (err, result) => {
+        if(err){
+            return res.status(500).json({
+                error: true,
+                message: 'Error in Query Reset Password'
+            })
+        } 
+        res.status(200).json({
+            error: false,
+            message: 'Password update success'
+        })
+    })
+    
 })
 
 router.post('/', (req, res) => {
