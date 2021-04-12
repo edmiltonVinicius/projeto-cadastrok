@@ -794,12 +794,12 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 .divWelcome{width:100%;min-height:400px;border-left-width:15px !important;background-image:linear-gradient(#272525,#070707);font-family:'Roboto',sans-serif !important;animation:fadeIn 1s}
 .divWelcome p.l1{color:#fff;font-size:22pt;font-weight:bold}.divWelcome .l2{color:#e9e6e6;font-size:15pt}
 .divWelcome button{font-size:13pt !important}body{font-family:'Poppins',sans-serif}
-.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
+.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:cover;background-repeat:no-repeat}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
-.back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
-form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
-form .btnLogin-js{font-size:13pt}.containerFormRegister{width:90%;background-color:rgba(23,24,23,0.5);display:none}
+.back-form{min-height:100vh !important;background-size:100% 100%;background-color:#201c1c}
+.back-form form input{color:#aaa8a8 !important;height:40px !important}.back-form form .btnLogin-js{font-size:13pt}
+.containerFormRegister{width:90%;background-color:rgba(23,24,23,0.5);display:none}
 .containerFormRegister .h2{font-size:1.5em}.containerFormRegister a{text-decoration:none}
 .containerFormRegister input{height:40px !important}.containerFormRegister .btnPassword{background-color:rgba(23,24,23,0.5);font-size:15pt}
 .divEfectLoadingRegister{width:90%;height:370px;background-color:#161616;display:none}
@@ -810,20 +810,23 @@ form .btnLogin-js{font-size:13pt}.containerFormRegister{width:90%;background-col
 .divEfectLoadingRegister .dtitle{background-color:#333232;width:47%;height:32px}.divEfectLoadingRegister .dname,.divEfectLoadingRegister .demail{background-color:#333232;width:73%;height:35px}
 .divEfectLoadingRegister .dpass{background-color:#333232;width:49%;height:35px}.divEfectLoadingRegister .dlogin{background-color:#333232;width:40%;height:45px}
 .divEfectLoadingRegister .dlink{background-color:#333232;width:30%;height:10px}.dImg2{background-color:#333232;width:20%;height:65px}
-.divEfectLoadingLogin{width:90%;height:370px;background-color:black}.divEfectLoadingLogin .dImg{background-color:#333232;width:23%;height:65px}
+.divEfectLoadingLogin{width:90%;height:370px;background-color:#201c1c}.divEfectLoadingLogin .dImg{background-color:#333232;width:23%;height:65px}
 .divEfectLoadingLogin .dlogin{background-color:#333232;width:80%;height:40px}.divEfectLoadingLogin .linePass{width:73%;height:40px}
 .divEfectLoadingLogin .dPassword{background-color:#333232;width:80%;height:40px}.divEfectLoadingLogin .dPadlock{background-color:#333232;width:10%;height:40px}
 .divEfectLoadingLogin .dBtnlogin{background-color:#333232;width:50%;height:45px}.divEfectLoadingLogin .dLink{background-color:#333232;width:55%;height:19px}
 .pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 .pace-inactive{display:none}.pace .pace-progress{background:#fff;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}
-.styleModal{background-color:rgba(0,0,0,0.9);min-height:160px}.styleModal .bodyModal{width:100%;height:130px}
-.styleModal .imageModal{max-width:100%;max-height:100%}.styleModal #textModal{font-size:18px}
-.styleModal #modal-footer{display:none}.styleModal #btnCloseModal{display:none}.styleModal #letsIndex{display:none}
-body{font-family:'Poppins',sans-serif}.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:100% 100%}
+.body-reset-password{background-repeat:no-repeat;background-position:center bottom;background-size:cover;min-height:95vh}
+.body-reset-password form input{background-color:rgba(44,44,44,0.9) !important;color:#fff !important}
+.body-reset-password form input::placeholder{color:#fff !important}.styleModal{background-color:rgba(0,0,0,0.9);min-height:160px}
+.styleModal .bodyModal{width:100%;height:130px}.styleModal .imageModal{max-width:100%;max-height:100%}
+.styleModal #textModal{font-size:18px}.styleModal #modal-footer{display:none}.styleModal #btnCloseModal{display:none}
+.styleModal #letsIndex{display:none}body{font-family:'Poppins',sans-serif}
+.img-login{height:100vh;background:url("../../build/img/image-index.jpg");background-size:cover;background-repeat:no-repeat}
 .shadow{background-color:rgba(0,0,0,0.7)}.text .l1{font-family:"Della Respira",serif;color:#fff}
 .text .l2{font-family:"Della Respira",serif;font-size:16pt;color:#dad6d6}
-.back-form{min-height:100vh !important;background-size:100% 100%;background-color:black}
-form input{background-color:rgba(0,0,0,0.3) !important;color:#aaa8a8 !important;height:40px !important}
-form .btnLogin-js{font-size:13pt}.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
+.back-form{min-height:100vh !important;background-size:100% 100%;background-color:#201c1c}
+.back-form form input{color:#aaa8a8 !important;height:40px !important}.back-form form .btnLogin-js{font-size:13pt}
+.containerErro{width:100%;height:100vh;font-family:"Della Respira",serif}
 .containerErro .text-l1{font-size:50pt;color:#030303}.containerErro .text-l2{font-size:19pt;color:#292525}
 .containerErro .text-l3{font-size:15pt;color:#292525}.containerErro a{font-size:15pt}

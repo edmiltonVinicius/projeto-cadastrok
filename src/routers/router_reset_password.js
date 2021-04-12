@@ -8,7 +8,7 @@ const middllewareResetPassword = require('./middleware_reset_password')
 const bcrypt = require('bcrypt')
 
 router.get('/', (req, res) => {
-    res.send(`<h1>Reset Password CadastrOk</h1> <br> <p> ${req.query.token}</p>`)
+    res.status(200).render('layouts/reset_password')
 })
 
 router.patch('/', middllewareResetPassword, async (req, res) => {

@@ -24,7 +24,7 @@
                 <div class="shadow w-100 h-100">
                     <div class="text pt-5">
                         <p class="h1 l1 pt-5 pl-3 m-0">CadastrOk</p>
-                        <p class="l2 pl-3">- A simple CRUD, log in a start playing -</p>
+                        <p class="l2 pl-3">A simple CRUD, log in a start playing</p>
                     </div>
                 </div>
             </div>
@@ -64,25 +64,32 @@
                             <input type="password" class="form-control pr-5 d-inline border border-light w-75"
                                 id="pass" oninput="validationInput('pass', '6')" name="passUser" placeholder="Type your password">
                             
-                                <button type="button" class="btn border-0 text-light btnPassword" onclick="showHidePassword('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
-                                    aria-hidden="true"></i></button>
-                                
-                                <div class="divErro d-none mt-3 text-danger text-center" style="font-size: 11pt;">
-                                    <img src="./../../static/build/img/icon-error.png" class="d-none iconErro" alt="">
-                                    <img class="d-none mx-auto" id="imgLoadingLogin" src="../../static/build/img/icon-loading-login.gif" alt="Gif loading Login">
-                                    <p class="textDivErro d-none mt-3 ml-1 d-inline"></p>
-                                </div>
+                            <button type="button" class="btn border-0 text-light btnPassword" onclick="showHidePassword('pass')" style="font-size: 15pt;"><i class="fa fa-unlock-alt fa-1x"
+                                aria-hidden="true"></i></button>
+                            
+                            <div class="divErro d-none mt-3 text-danger text-center" style="font-size: 11pt;">
+                                <img src="./../../static/build/img/icon-error.png" class="d-none iconErro" alt="">
+                                <img class="d-none mx-auto" id="imgLoadingLogin" src="../../static/build/img/icon-loading-login.gif" alt="Gif loading Login">
+                                <p class="textDivErro d-none mt-3 ml-1 d-inline"></p>
+                            </div>
                         </div>
                 
                         <div class="text-center cont">
                             <button class="btn btn-outline-secondary py-2 px-5 btnLogin-js" disabled type="submit" onclick="LoginUser()">Log in</button>
                         </div>
                     </form>
+
                     <div class="col mt-5 text-center">
+                        <span class="text-white mr-1">Forgot your password</span>
+                        <a href="/reset-password" title="Forgout password">
+                            Click here
+                        </a>
+                    </div>
+
+                    <div class="col mt-3 text-center">
                         <button class="btn btn-outline-warning border-0" type="button" id="btnRegister-js" onclick="showFormRegister()"
                             style="font-size: 14pt;">Ok, I want to register!</button>
-                    </div>
-                
+                    </div>                
                 </div>
 
                 <!-- Div efect Register User -->

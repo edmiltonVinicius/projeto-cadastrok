@@ -8,8 +8,7 @@ const ContactSchema = new mongoose.Schema({
     },
     numberContact: {
         type: Number,
-        minlength: 9,
-        unique: true
+        minlength: 9
     },
     imageContact: {
         secureUrl: {
@@ -19,7 +18,6 @@ const ContactSchema = new mongoose.Schema({
     sexoContact: String,
     emailContact: {
         type: String,
-        unique: true,
         lowercase: true
     }
     /*

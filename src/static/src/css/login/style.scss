@@ -8,7 +8,8 @@ $font-text: 'Della Respira', serif;
 .img-login {
     height: 100vh;
     background: url('../../build/img/image-index.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .shadow {
@@ -31,12 +32,11 @@ $font-text: 'Della Respira', serif;
 .back-form {
     min-height: 100vh !important;
     background-size: 100% 100%;//background-image: linear-gradient(to right, rgb(15, 15, 15), rgb(20, 17, 0));
-    background-color: rgb(0, 0, 0);
+    background-color: #201c1c;
 }
 
-form {
+.back-form form {
     input {
-        background-color: rgba(0, 0, 0, 0.3) !important;
         color: rgb(170, 168, 168) !important;
         height: 40px !important;
     }

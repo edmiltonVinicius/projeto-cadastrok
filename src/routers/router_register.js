@@ -21,17 +21,17 @@ router.post('/', (req, res) => {
 
             newUser.save(err => {
                 if(err) {
+                    console.log(err)
                     return res.status(500).send('Erro on Register') 
                 }
             })
 
             transporter.sendMail(emailRegisterUser(userEmail), (err, info) => {
                 if(err) {
-                    return res.status(500).send('Something went wrong with the serivdor') 
+                    return res.status(500).send('There was an error sending the welcome email') 
                 }
+                return res.status(201).send('User created')
             })
-            
-            return res.status(201).send('User created')
         })
 
     } else {

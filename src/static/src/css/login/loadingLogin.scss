@@ -3,7 +3,8 @@
 .divEfectLoadingLogin {
     width: 90%;
     height: 370px;
-    background-color: rgb(0, 0, 0);
+    background-color: #201c1c;
+    // background-color: #171313;
 
     @mixin patternDivs($width-div, $height-div) {
         background-color: $bg-divs;

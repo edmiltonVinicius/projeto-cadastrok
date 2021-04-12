@@ -3,7 +3,6 @@ $font: 'Della Respira', serif;
 .containerErro {
     width: 100%;
     height: 100vh;
-    //background-image: linear-gradient(rgb(1, 2, 19), rgb(206, 203, 203));
     font-family: $font;
 
     @mixin sizeColor($size, $color) {
