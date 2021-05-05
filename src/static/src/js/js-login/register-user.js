@@ -16,7 +16,6 @@ const registerUser = () => {
             if((res.status === 201) && (res.data === 'user created')){
                 clearInput('entName', 'entEmail', 'entPass')
                 hideLoadingShowResponse(res.data)
-                window.console.clear()
                 returnLogin()
             } 
         })

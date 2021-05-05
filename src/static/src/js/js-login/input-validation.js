@@ -13,7 +13,7 @@ const validationInput = (id, q) => {
         emailCreate = true
         emailLogin = true
         
-    } else if(input.length == ''){
+    } else if(input.value == ''){
         camp.classList.add('border-light')
         emailCreate = false
         emailLogin = false

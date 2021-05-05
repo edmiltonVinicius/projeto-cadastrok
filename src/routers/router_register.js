@@ -28,6 +28,7 @@ router.post('/', (req, res) => {
 
             transporter.sendMail(emailRegisterUser(userEmail), (err, info) => {
                 if(err) {
+                    console.log(err)
                     return res.status(500).send('There was an error sending the welcome email') 
                 }
                 return res.status(201).send('User created')

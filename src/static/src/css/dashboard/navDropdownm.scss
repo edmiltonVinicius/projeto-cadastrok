@@ -4,7 +4,7 @@
     border-style: 2px !important;
 }
 
-$bg-nav: rgb(26, 24, 24);
+$bg-nav: #1e1d1d;
 
 .dropdown-menu {
     background-color: $bg-nav;
@@ -19,8 +19,8 @@ $bg-nav: rgb(26, 24, 24);
 }
 
 .navIndex {
-    background-color: rgb(26, 24, 24);
     height: 75px;
+    background-color: #1e1d1d;
 
     .navbar-brand {
         font-family: 'Della Respira', serif;

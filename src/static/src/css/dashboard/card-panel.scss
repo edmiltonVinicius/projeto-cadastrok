@@ -1,13 +1,13 @@
 
 
 .cardPanel {
-    background-color: rgb(26, 24, 24);
+    background-color: #1e1d1d;
 
     .card-img-top {
         height: auto;
         width: auto;
         max-width: max-content;
-        margin: 5px auto 0 auto;
+        margin: 15px auto 0 auto;
         border-radius: 50%;
     }
     
@@ -25,6 +25,11 @@
         height: 35px;
         margin-top: 12px;
         cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+            opacity: .7;
+        }
 
         .bgBtns {
             background-color: rgba(43, 40, 40, 0.2) !important;

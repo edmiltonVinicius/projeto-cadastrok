@@ -19,7 +19,6 @@
 
     <div class="containner-fluid">
         <div class="row no-gutters">
-            <!-- Img back left from login -->
             <div class="img-login col-lg-7 d-none d-lg-block">
                 <div class="shadow w-100 h-100">
                     <div class="text pt-5">
@@ -30,13 +29,12 @@
             </div>
 
             <div class="back-form col-12 col-lg-5 pt-2">
-                <!-- logo above -->
+
                 <div class="text-center pt-4 logo d-none">
                     <img class="border rounded-pill border-dark img-fluid" src="../../static/build/img/logo-cadastrok.png"
                         alt="Logo CadastroOK">
                 </div>
 
-                <!-- Div efect login -->
                 <div class="dImg2 d-none mx-auto rounded-circle mt-4 mb-4"></div>
 
                 <div class="divEfectLoadingLogin mx-auto rounded mt-4 d-none text-center">
@@ -50,7 +48,6 @@
                     <div class="dLink mx-auto rounded-pill"></div>
                 </div>
 
-                <!-- Form Login -->
                 <div class="col-12 col-md-9 col-lg-12 mt-4 d-none divLogin" id="divLogin">
                     <form id="formLogin" class="w-75 mx-auto">
                         <div class="form-group mb-4">
@@ -92,7 +89,6 @@
                     </div>                
                 </div>
 
-                <!-- Div efect Register User -->
                 <div class="divEfectLoadingRegister mx-auto rounded mt-4 pt-4">
                     <div class="dtitle rounded-pill mx-auto mb-4"></div>
                     <div class="dname rounded mx-auto mb-4"></div>
@@ -102,9 +98,9 @@
                     <div class="dlink rounded-pill mx-auto"></div>
                 </div>
 
-                <!-- Container Form register -->
                 <div class="containerFormRegister mx-auto text-center rounded mt-4" id="containerFormRegister">
                     <p class="h2 text-info pt-3">- User Criation -</p>
+
                     <form id="formCreateUser" class="mt-4" autocomplete="off">
                         <div class="form-group">
                             <label for="user" class="w-75">
@@ -113,6 +109,7 @@
                                     placeholder="Type your name" required />
                             </label>
                         </div>
+
                         <div class="form-group w-100 mb-2">
                             <label for="password" class="w-75">
                                 <input type="password" class="form-control pr-5 d-inline w-75" id="entPass"
@@ -124,20 +121,22 @@
                                 <small class="form-text ml-2 text-muted text-left">Add at least 6 characters</small>
                             </label>
                         </div>
+
                         <div class="form-group">
                             <label for="email" class="w-75">
                                 <input type="email" class="form-control pr-5" id="entEmail" oninput="validationEmail('entEmail', '.btnCreate-js')"
                                     name="userEmail" placeholder="Now your e-mail" />
                             </label>
                         </div>
+
                         <div class="pb-2 text-center">
                             <button class="btn btn-outline-secondary py-2 px-3 d-block mx-auto mb-4 btnCreate-js"
                                 data-toggle="modal" data-target="#modalRegister" disabled onclick="registerUser()">
                                 Create my user
                             </button>
+
                             <button type="button" class="btn btn-outline-warning border-0 pt-2 link" id="back" onclick="showFormLogin('.containerFormRegister')">←Come Back</button>
-                
-                            <!-- Modal Register -->
+
                             <div class="modal fade" role="dialog" id="modalRegister" aria-labelledby="modalRegister">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content border-warning styleModal">
@@ -154,8 +153,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                
+                            </div>                
                         </div>
                     </form>
                 </div>

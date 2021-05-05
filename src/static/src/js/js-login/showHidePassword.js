@@ -4,7 +4,9 @@ function showHidePassword(id) {
 
     if(inputPass.type == 'password'){
         inputPass.type = 'text'
+        inputPass.focus()
     }else {
         inputPass.type = 'password'
+        inputPass.focus()
     }
 }
