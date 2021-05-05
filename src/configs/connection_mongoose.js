@@ -6,6 +6,4 @@ mongoose.connect(process.env.URL_MONGO, { useNewUrlParser: true, useUnifiedTopol
     })
     .catch((err) => console.log('Erro na conexão com o banco!' + err))
 
-    
-
 module.exports = mongoose
